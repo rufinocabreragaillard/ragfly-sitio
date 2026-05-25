@@ -21,8 +21,8 @@
     "ctaSecundario": "Veja como funciona"
   },
   "insights": {
-    "titulo": "A informação já estava ali. O Server LM a encontra.",
-    "subtitulo": "Busca semântica vetorial para entender o significado, e busca relacional para consultas e tarefas de precisão.",
+    "titulo": "O que nos torna diferentes.",
+    "subtitulo": "Privacidade real, alcance internacional e isolamento total por organização — desde o primeiro dia.",
     "card1Stat": "100%",
     "card1Desc": "Privacidade. Seus arquivos físicos nunca saem da sua rede interna — apenas o texto processado é sincronizado com o chat.",
     "card2Stat": "5",
@@ -61,7 +61,7 @@
     "cardATitulo": "Converse com seus documentos",
     "cardADesc": "Para profissionais, equipes e empresas com grandes volumes de documentos. Pergunte em linguagem natural e obtenha respostas com citações, sem navegar por pastas nem abrir arquivos um a um.",
     "cardAB0": "Busca semântica vetorial + relacional",
-    "cardAB1": "Comparações, resumos e análises em uma mensagem",
+    "cardAB1": "Respostas com citações verificáveis aos seus arquivos de origem",
     "cardAB2": "Controle granular de permissões por usuário",
     "cardACta": "Experimente grátis por 15 dias",
     "cardBTag": "B · Plataforma",
@@ -125,22 +125,6 @@
     "paso3N": "04",
     "paso3Titulo": "Obtenha a resposta",
     "paso3Desc": "Busca semântica entre todos os seus documentos e resposta precisa, citando os arquivos de origem."
-  },
-  "diferenciadores": {
-    "eyebrow": "Diferenciais",
-    "titulo": "O que nos torna diferentes.",
-    "item0Titulo": "Privacidade total",
-    "item0Desc": "Os documentos não são enviados à nuvem: a indexação e vetorização ocorrem «no ar» e os dados ficam criptografados (AES-256) no banco de dados. Com o Client LM, a indexação não sai da sua rede interna.",
-    "item1Titulo": "Multi-tenant por design",
-    "item1Desc": "A informação de cada grupo, entidade e cliente permanece isolada estruturalmente desde o banco de dados. Mesmo código, milhares de tenants, zero vazamentos cruzados.",
-    "item2Titulo": "Identidade própria por grupo",
-    "item2Desc": "Cores primária, secundária e de destaque, logo e nome do app por grupo. Ao mudar de grupo, a interface adapta sua aparência dinamicamente.",
-    "item3Titulo": "Permissões granulares",
-    "item3Desc": "Aplicações, Papéis, Funções e Cargos: o menu de cada usuário é construído dinamicamente, ocultando tudo o que não lhe corresponde.",
-    "item4Titulo": "Multilíngue",
-    "item4Desc": "Interface em espanhol, inglês, português, francês e alemão. Pensada para equipes internacionais e corporações multi-país.",
-    "item5Titulo": "Tudo por prompts",
-    "item5Desc": "Regras de negócio e comportamento do assistente em texto puro. O sistema compila essas instruções em comportamento executável. Sem programadores."
   },
   "modulos": {
     "eyebrow": "Módulos",

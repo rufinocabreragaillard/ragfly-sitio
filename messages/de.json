@@ -21,8 +21,8 @@
     "ctaSecundario": "So funktioniert's"
   },
   "insights": {
-    "titulo": "Die Information war schon da. Server LM findet sie.",
-    "subtitulo": "Vektorielle semantische Suche, um Bedeutung zu verstehen, und relationale Suche für präzise Abfragen und Aufgaben.",
+    "titulo": "Was uns anders macht.",
+    "subtitulo": "Echter Datenschutz, internationale Reichweite und vollständige Isolation pro Organisation — vom ersten Tag an.",
     "card1Stat": "100 %",
     "card1Desc": "Datenschutz. Deine physischen Dateien verlassen nie dein internes Netzwerk — nur der verarbeitete Text wird mit dem Chat synchronisiert.",
     "card2Stat": "5",
@@ -61,7 +61,7 @@
     "cardATitulo": "Sprich mit deinen Dokumenten",
     "cardADesc": "Für Fachleute, Teams und Unternehmen mit großen Dokumentenmengen. Frage in natürlicher Sprache und erhalte Antworten mit Quellenangaben, ohne Ordner zu durchsuchen oder Dateien einzeln zu öffnen.",
     "cardAB0": "Vektorielle semantische + relationale Suche",
-    "cardAB1": "Vergleiche, Zusammenfassungen und Analysen in einer Nachricht",
+    "cardAB1": "Antworten mit überprüfbaren Quellenangaben zu deinen Quelldateien",
     "cardAB2": "Granulare Berechtigungskontrolle pro Benutzer",
     "cardACta": "15 Tage kostenlos testen",
     "cardBTag": "B · Plattform",
@@ -125,22 +125,6 @@
     "paso3N": "04",
     "paso3Titulo": "Erhalte die Antwort",
     "paso3Desc": "Semantische Suche über alle deine Dokumente und eine präzise Antwort, die die Quelldateien zitiert."
-  },
-  "diferenciadores": {
-    "eyebrow": "Unterscheidungsmerkmale",
-    "titulo": "Was uns anders macht.",
-    "item0Titulo": "Vollständiger Datenschutz",
-    "item0Desc": "Dokumente werden nicht in die Cloud geladen: Indexierung und Vektorisierung erfolgen „in der Luft“ und die Daten bleiben verschlüsselt (AES-256) in der Datenbank. Mit Client LM verlässt die Indexierung nie dein internes Netzwerk.",
-    "item1Titulo": "Mandantenfähig durch Design",
-    "item1Desc": "Die Informationen jeder Gruppe, Entität und jedes Kunden bleiben strukturell ab der Datenbank isoliert. Gleicher Code, Tausende Mandanten, null Querlecks.",
-    "item2Titulo": "Eigenes Branding pro Gruppe",
-    "item2Desc": "Primär-, Sekundär- und Akzentfarben, Logo und App-Name pro Gruppe. Beim Wechsel der Gruppe passt die Oberfläche ihr Erscheinungsbild dynamisch an.",
-    "item3Titulo": "Granulare Berechtigungen",
-    "item3Desc": "Anwendungen, Rollen, Funktionen und Positionen: das Menü jedes Benutzers wird dynamisch aufgebaut und blendet alles aus, was ihn nicht betrifft.",
-    "item4Titulo": "Mehrsprachig",
-    "item4Desc": "Oberfläche auf Spanisch, Englisch, Portugiesisch, Französisch und Deutsch. Konzipiert für internationale Teams und länderübergreifende Konzerne.",
-    "item5Titulo": "Alles per Prompts",
-    "item5Desc": "Geschäftsregeln und Verhalten des Assistenten in Klartext. Das System kompiliert diese Anweisungen in ausführbares Verhalten. Ohne Programmierer."
   },
   "modulos": {
     "eyebrow": "Module",

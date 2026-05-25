@@ -649,41 +649,6 @@ function HowItWorksSection() {
 }
 
 /* ------------------------------------------------------------------ */
-/* DifferentiatorsSection                                               */
-/* ------------------------------------------------------------------ */
-function DifferentiatorsSection() {
-  const t = useTranslations()
-  const items = [0, 1, 2, 3, 4, 5].map((i) => ({
-    titulo: t(`diferenciadores.item${i}Titulo` as Parameters<typeof t>[0]),
-    desc: t(`diferenciadores.item${i}Desc` as Parameters<typeof t>[0]),
-  }))
-  return (
-    <section className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-light">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-16">
-        <div className="max-w-[680px] flex flex-col gap-6">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('diferenciadores.eyebrow')}</span>
-          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('diferenciadores.titulo')}
-          </BlurIn>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {items.map((it, i) => (
-            <div key={it.titulo} className="bg-white rounded-[24px] p-8 flex flex-col gap-4 border border-slm-dark/5">
-              <div className="flex items-center gap-3">
-                <span className="inline-block w-2.5 h-2.5 rounded-sm bg-gradient-to-br from-slm-brand-dark to-slm-brand-light" />
-                <span className="text-xs text-slm-gray-light">{String(i + 1).padStart(2, '0')}</span>
-              </div>
-              <h3 className="font-helvetica-neue text-2xl font-medium text-slm-dark tracking-[-0.02em] leading-tight">{it.titulo}</h3>
-              <p className="text-slm-gray font-helvetica-neue text-base leading-relaxed">{it.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ------------------------------------------------------------------ */
 /* ModulesSection                                                       */
 /* ------------------------------------------------------------------ */
 function ModulesSection() {
@@ -1017,7 +982,6 @@ export default function Home() {
       <ProblemSolutionSection />
       <CapabilitiesSection />
       <HowItWorksSection />
-      <DifferentiatorsSection />
       <ModulesSection />
       <TextFillSection />
       <SecuritySection />

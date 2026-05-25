@@ -21,8 +21,8 @@
     "ctaSecundario": "See how it works"
   },
   "insights": {
-    "titulo": "The information was already there. Server LM finds it.",
-    "subtitulo": "Vector semantic search to understand meaning, and relational search for precise queries and tasks.",
+    "titulo": "What makes us different.",
+    "subtitulo": "Real privacy, international reach and total isolation per organization — from day one.",
     "card1Stat": "100%",
     "card1Desc": "Privacy. Your physical files never leave your internal network — only the processed text is synced to the chat.",
     "card2Stat": "5",
@@ -61,7 +61,7 @@
     "cardATitulo": "Chat with your documents",
     "cardADesc": "For professionals, teams and companies with large document volumes. Ask in natural language and get answers with citations, without browsing folders or opening files one by one.",
     "cardAB0": "Vector semantic + relational search",
-    "cardAB1": "Comparisons, summaries and analysis in one message",
+    "cardAB1": "Answers with verifiable citations to your source files",
     "cardAB2": "Granular permission control per user",
     "cardACta": "Try it free for 15 days",
     "cardBTag": "B · Platform",
@@ -125,22 +125,6 @@
     "paso3N": "04",
     "paso3Titulo": "Get the answer",
     "paso3Desc": "Semantic search across all your documents and a precise answer, citing the source files."
-  },
-  "diferenciadores": {
-    "eyebrow": "Differentiators",
-    "titulo": "What makes us different.",
-    "item0Titulo": "Total privacy",
-    "item0Desc": "Documents aren't uploaded to the cloud: indexing and vectorization happen «on the fly» and the data stays encrypted (AES-256) in the database. With Client LM, indexing never leaves your internal network.",
-    "item1Titulo": "Multi-tenant by design",
-    "item1Desc": "Each group, entity and client's information stays structurally isolated from the database. Same code, thousands of tenants, zero cross leaks.",
-    "item2Titulo": "Own branding per group",
-    "item2Desc": "Primary, secondary and accent colors, logo and app name per group. When switching groups, the interface adapts its appearance dynamically.",
-    "item3Titulo": "Granular permissions",
-    "item3Desc": "Applications, Roles, Functions and Positions: each user's menu is built dynamically, hiding everything that doesn't concern them.",
-    "item4Titulo": "Multilingual",
-    "item4Desc": "Interface in Spanish, English, Portuguese, French and German. Designed for international teams and multi-country corporations.",
-    "item5Titulo": "Everything by prompts",
-    "item5Desc": "Business rules and assistant behavior in plain text. The system compiles those instructions into executable behavior. No programmers."
   },
   "modulos": {
     "eyebrow": "Modules",

@@ -21,8 +21,8 @@
     "ctaSecundario": "Ver cómo funciona"
   },
   "insights": {
-    "titulo": "La información ya estaba ahí. Server LM la encuentra.",
-    "subtitulo": "Búsqueda semántica vectorial para entender significado, y búsqueda relacional para consultas y tareas de precisión.",
+    "titulo": "Lo que nos hace distintos.",
+    "subtitulo": "Privacidad real, alcance internacional y aislamiento total por organización — desde el primer día.",
     "card1Stat": "100%",
     "card1Desc": "Privacidad. Tus archivos físicos nunca salen de tu red interna — solo se sincroniza el texto procesado al chat.",
     "card2Stat": "5",
@@ -61,7 +61,7 @@
     "cardATitulo": "Conversa con tus documentos",
     "cardADesc": "Para profesionales, equipos y empresas con grandes volúmenes documentales. Pregunta en lenguaje natural y obtén respuestas con citas, sin navegar carpetas ni abrir archivos uno a uno.",
     "cardAB0": "Búsqueda semántica vectorial + relacional",
-    "cardAB1": "Comparaciones, resúmenes y análisis en un mensaje",
+    "cardAB1": "Respuestas con citas verificables a tus archivos fuente",
     "cardAB2": "Control granular de permisos por usuario",
     "cardACta": "Pruébalo gratis 15 días",
     "cardBTag": "B · Plataforma",
@@ -125,22 +125,6 @@
     "paso3N": "04",
     "paso3Titulo": "Obtén la respuesta",
     "paso3Desc": "Búsqueda semántica entre todos tus documentos y respuesta precisa, citando los archivos fuente."
-  },
-  "diferenciadores": {
-    "eyebrow": "Diferenciadores",
-    "titulo": "Lo que nos hace distintos.",
-    "item0Titulo": "Privacidad total",
-    "item0Desc": "Los documentos no se cargan a la nube: la indexación y vectorización ocurren «en el aire» y los datos quedan encriptados (AES-256) en base de datos. Con Client LM, la indexación no sale de tu red interna.",
-    "item1Titulo": "Multi-tenant por diseño",
-    "item1Desc": "La información de cada grupo, entidad y cliente permanece aislada estructuralmente desde la base de datos. Mismo código, miles de tenants, cero fugas cruzadas.",
-    "item2Titulo": "Branding propio por grupo",
-    "item2Desc": "Colores primario, secundario y acento, logo y nombre de la app por grupo. Al cambiar de grupo, la interfaz adapta su apariencia dinámicamente.",
-    "item3Titulo": "Permisos granulares",
-    "item3Desc": "Aplicaciones, Roles, Funciones y Cargos: el menú de cada usuario se construye dinámicamente, ocultando todo lo que no le corresponde.",
-    "item4Titulo": "Multilingüe",
-    "item4Desc": "Interfaz en español, inglés, portugués, francés y alemán. Pensada para equipos internacionales y corporaciones multi-país.",
-    "item5Titulo": "Todo por prompts",
-    "item5Desc": "Reglas de negocio y comportamiento del asistente en texto plano. El sistema compila esas instrucciones a comportamiento ejecutable. Sin programadores."
   },
   "modulos": {
     "eyebrow": "Módulos",

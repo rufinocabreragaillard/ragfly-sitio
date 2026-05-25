@@ -21,8 +21,8 @@
     "ctaSecundario": "Voir comment ça marche"
   },
   "insights": {
-    "titulo": "L'information était déjà là. Server LM la trouve.",
-    "subtitulo": "Recherche sémantique vectorielle pour comprendre le sens, et recherche relationnelle pour les requêtes et tâches de précision.",
+    "titulo": "Ce qui nous rend différents.",
+    "subtitulo": "Confidentialité réelle, portée internationale et isolation totale par organisation — dès le premier jour.",
     "card1Stat": "100 %",
     "card1Desc": "Confidentialité. Tes fichiers physiques ne quittent jamais ton réseau interne — seul le texte traité est synchronisé avec le chat.",
     "card2Stat": "5",
@@ -61,7 +61,7 @@
     "cardATitulo": "Discute avec tes documents",
     "cardADesc": "Pour les professionnels, équipes et entreprises avec de grands volumes documentaires. Pose tes questions en langage naturel et obtiens des réponses avec citations, sans naviguer dans les dossiers ni ouvrir les fichiers un par un.",
     "cardAB0": "Recherche sémantique vectorielle + relationnelle",
-    "cardAB1": "Comparaisons, résumés et analyses en un message",
+    "cardAB1": "Des réponses avec citations vérifiables vers tes fichiers sources",
     "cardAB2": "Contrôle granulaire des permissions par utilisateur",
     "cardACta": "Essaie gratuitement 15 jours",
     "cardBTag": "B · Plateforme",
@@ -125,22 +125,6 @@
     "paso3N": "04",
     "paso3Titulo": "Obtiens la réponse",
     "paso3Desc": "Recherche sémantique parmi tous tes documents et réponse précise, en citant les fichiers sources."
-  },
-  "diferenciadores": {
-    "eyebrow": "Différenciateurs",
-    "titulo": "Ce qui nous rend différents.",
-    "item0Titulo": "Confidentialité totale",
-    "item0Desc": "Les documents ne sont pas envoyés dans le cloud : l'indexation et la vectorisation se font « à la volée » et les données restent chiffrées (AES-256) en base de données. Avec Client LM, l'indexation ne quitte pas ton réseau interne.",
-    "item1Titulo": "Multi-tenant par conception",
-    "item1Desc": "L'information de chaque groupe, entité et client reste isolée structurellement depuis la base de données. Même code, des milliers de tenants, zéro fuite croisée.",
-    "item2Titulo": "Identité propre par groupe",
-    "item2Desc": "Couleurs primaire, secondaire et d'accent, logo et nom de l'app par groupe. En changeant de groupe, l'interface adapte son apparence dynamiquement.",
-    "item3Titulo": "Permissions granulaires",
-    "item3Desc": "Applications, Rôles, Fonctions et Postes : le menu de chaque utilisateur est construit dynamiquement, masquant tout ce qui ne le concerne pas.",
-    "item4Titulo": "Multilingue",
-    "item4Desc": "Interface en espagnol, anglais, portugais, français et allemand. Pensée pour les équipes internationales et les entreprises multi-pays.",
-    "item5Titulo": "Tout par prompts",
-    "item5Desc": "Règles métier et comportement de l'assistant en texte clair. Le système compile ces instructions en comportement exécutable. Sans programmeurs."
   },
   "modulos": {
     "eyebrow": "Modules",
