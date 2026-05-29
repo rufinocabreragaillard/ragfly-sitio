@@ -110,10 +110,10 @@
     "paso1Titulo": "AI indexes the knowledge",
     "paso1Desc": "Extracts the text, splits it into fragments and creates a semantic base. Each fragment is ready to be found by concept.",
     "paso2N": "03",
-    "paso2Titulo": "Ask your question",
+    "paso2Titulo": "Ask your questions",
     "paso2Desc": "Ask directly in plain language —\"Give me the active contracts\"— or let your own agents query for you.",
     "paso3N": "04",
-    "paso3Titulo": "Get the answer",
+    "paso3Titulo": "Precise answers",
     "paso3Desc": "A precise answer via semantic search, citing the source files. In the chat or served straight to your agents."
   },
   "seguridad": {

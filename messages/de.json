@@ -110,10 +110,10 @@
     "paso1Titulo": "Die KI indexiert das Wissen",
     "paso1Desc": "Extrahiert den Text, teilt ihn in Fragmente und erstellt eine semantische Basis. Jedes Fragment ist bereit, nach Konzept gefunden zu werden.",
     "paso2N": "03",
-    "paso2Titulo": "Stelle deine Frage",
+    "paso2Titulo": "Stelle deine Fragen",
     "paso2Desc": "Frage direkt in normaler Sprache — „Gib mir die gültigen Verträge“ — oder lass deine eigenen Agenten für dich anfragen.",
     "paso3N": "04",
-    "paso3Titulo": "Erhalte die Antwort",
+    "paso3Titulo": "Präzise Antworten",
     "paso3Desc": "Präzise Antwort per semantischer Suche, die die Quelldateien zitiert. Im Chat oder direkt an deine Agenten geliefert."
   },
   "seguridad": {

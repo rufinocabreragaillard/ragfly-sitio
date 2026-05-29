@@ -110,10 +110,10 @@
     "paso1Titulo": "La IA indexa el conocimiento",
     "paso1Desc": "Extrae el texto, lo divide en fragmentos y crea una base semántica. Cada fragmento queda listo para encontrarse por concepto.",
     "paso2N": "03",
-    "paso2Titulo": "Haz tu pregunta",
+    "paso2Titulo": "Haz tus preguntas",
     "paso2Desc": "Pregunta directo en lenguaje normal —\"Dame los contratos vigentes\"— o deja que tus propios agentes consulten por ti.",
     "paso3N": "04",
-    "paso3Titulo": "Obtén la respuesta",
+    "paso3Titulo": "Respuestas precisas",
     "paso3Desc": "Respuesta precisa por búsqueda semántica, citando los archivos fuente. En el chat o servida directo a tus agentes."
   },
   "seguridad": {
