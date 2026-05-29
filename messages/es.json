@@ -7,6 +7,7 @@
     "producto": "Producto",
     "capacidades": "Capacidades",
     "comoFunciona": "Cómo funciona",
+    "paraAgentes": "Para Agentes",
     "seguridad": "Seguridad",
     "planes": "Planes",
     "iniciarSesion": "Iniciar sesión",
@@ -62,6 +63,20 @@
     "cardBB2": "Multi-tenant, seguro y configurable por prompts",
     "cardBCta": "Dar contexto a mi agente"
   },
+  "enBreve": {
+    "eyebrow": "En breve",
+    "titulo": "Lo esencial, de un vistazo",
+    "colPregunta": "Pregunta",
+    "colRespuesta": "Respuesta",
+    "q0": "¿Qué es Server LM?",
+    "a0": "Infraestructura RAG multi-tenant lista para usar: conversa con tus documentos en lenguaje natural y entrega a cualquier agente de IA el contexto documental exacto que necesita, filtrado por RBAC.",
+    "q1": "¿Para quién es?",
+    "a1": "Para profesionales, equipos, empresas y holdings que trabajan con grandes volúmenes de documentos; y para desarrolladores que construyen agentes de IA y necesitan contexto documental resuelto.",
+    "q2": "¿Cómo funciona?",
+    "a2": "Apuntas Server LM al directorio de tus documentos; el sistema los escanea, vectoriza e indexa automáticamente. Luego consultas por significado y obtienes respuestas con citas a la fuente.",
+    "q3": "¿Cuánto cuesta?",
+    "a3": "Professional USD $7,99/mes, Team USD $49,99/mes, Business USD $199/mes, Enterprise USD $1.990/mes y Corporate a medida. Prueba gratis de 15 días sin método de pago."
+  },
   "textFill": "Hazle preguntas a tus contratos, informes y procedimientos. Obtén respuestas con citas verificables. Define las reglas en lenguaje natural — sin programadores, sin que tus datos salgan.",
   "problema": {
     "eyebrow": "El problema",
@@ -115,6 +130,22 @@
     "paso3N": "04",
     "paso3Titulo": "Respuestas precisas",
     "paso3Desc": "Respuesta precisa por búsqueda semántica, citando los archivos fuente. En el chat o servida directo a tus agentes."
+  },
+  "paraAgentes": {
+    "eyebrow": "Para Agentes",
+    "titulo1": "Consumible por",
+    "tituloAccent": "agentes de IA",
+    "descripcion": "Server LM expone su conocimiento documental como contexto para agentes externos vía MCP, CLI y API REST —siempre filtrado por RBAC. Estas son las operaciones disponibles; el catálogo completo está publicado en formato máquina-legible.",
+    "conexionTitulo": "Conexión MCP",
+    "authLabel": "Autenticación",
+    "scopeLabel": "Alcance",
+    "ctaJson": "Ver agents.json",
+    "ctaCatalogo": "Ver catálogo (Markdown)",
+    "totalLabel": "{total} operaciones disponibles para agentes.",
+    "colTool": "Herramienta MCP",
+    "colCli": "CLI",
+    "colDesc": "Descripción",
+    "colAcceso": "Acceso"
   },
   "seguridad": {
     "eyebrow": "Seguridad y privacidad",
@@ -218,13 +249,14 @@
     "legal": "Legal",
     "capacidades": "Capacidades",
     "comoFunciona": "Cómo funciona",
+    "paraAgentes": "Para Agentes",
     "planesLink": "Planes",
     "seguridadLink": "Seguridad",
     "contacto": "Contacto",
     "terminos": "Términos",
     "privacidad": "Privacidad",
     "copyright": "© {year} Server LM — Todos los derechos reservados.",
-    "sitio": "serverlm.ai"
+    "actualizado": "Actualizado {fecha}"
   },
   "selector": {
     "label": "Idioma"

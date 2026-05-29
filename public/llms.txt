@@ -1,0 +1,24 @@
+# Server LM
+
+> Infraestructura RAG multi-tenant, lista para usar. Cumple un doble propósito: (1) permitir a personas y organizaciones conversar con sus documentos en lenguaje natural, y (2) entregar a cualquier agente de IA el contexto documental exacto que necesita, filtrado por RBAC, vía MCP, CLI y API REST.
+
+Server LM convierte el sistema de archivos de una organización en conocimiento consultable. El cliente apunta Server LM al directorio de sus documentos y el sistema los escanea, vectoriza e indexa automáticamente —sin instalación ni configuración previa— hasta dejar lista una base de datos semántica.
+
+- Qué ofrece: chat con RAG sobre tus documentos + contexto para agentes de IA.
+- Para quién: profesionales, equipos, empresas y holdings; y desarrolladores o integradores que construyen agentes.
+- Cómo funciona: apunta a tus carpetas → indexación y vectorización automáticas → consulta por significado, con citas a la fuente.
+- Precios: Professional USD $7,99/mes · Team USD $49,99/mes · Business USD $199/mes · Enterprise USD $1.990/mes · Corporate a medida.
+- Privacidad: los documentos no se cargan a la nube; indexación «en el aire», datos encriptados, RBAC granular, multi-tenant aislado.
+
+## Para agentes
+
+- [Catálogo de operaciones (Markdown)](https://serverlm.ai/llms-full.txt): las operaciones MCP/CLI que un agente puede invocar.
+- [Catálogo de operaciones (JSON)](https://serverlm.ai/agents.json): el mismo catálogo, máquina-legible, con endpoint MCP y autenticación.
+- Conexión MCP (SSE): https://seguridad-backend-production-6250.up.railway.app/mcp
+- Conexión MCP (HTTP streamable): https://seguridad-backend-production-6250.up.railway.app/mcp-http
+- Autenticación: `Authorization: Bearer <JWT | API_KEY>`. Alcance acotado al grupo y entidad del usuario.
+
+## Enlaces
+
+- [Aplicación](https://app.serverlm.ai): iniciar sesión y operar.
+- [Sitio](https://serverlm.ai): producto, capacidades, planes y seguridad.

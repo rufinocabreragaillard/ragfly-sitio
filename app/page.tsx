@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { SelectorIdioma } from '../components/SelectorIdioma'
 import planesMeta from '../content/planes-meta.json'
+import agentes from '../content/agentes-data.json'
 
 /* ------------------------------------------------------------------ */
 /* BlurIn                                                               */
@@ -15,11 +16,13 @@ function BlurIn({
   as: Tag = 'div',
   className = '',
   delay = 0,
+  id,
 }: {
   children: React.ReactNode
   as?: keyof React.JSX.IntrinsicElements
   className?: string
   delay?: number
+  id?: string
 }) {
   const ref = useRef<HTMLElement>(null)
   const inViewHook = useInView(ref as React.RefObject<Element>, { once: true, amount: 0.1 })
@@ -42,6 +45,7 @@ function BlurIn({
   return (
     <MotionTag
       ref={ref}
+      id={id}
       className={className}
       initial={{ filter: 'blur(20px)', opacity: 0 }}
       animate={inView ? { filter: 'blur(0px)', opacity: 1 } : { filter: 'blur(20px)', opacity: 0 }}
@@ -96,6 +100,7 @@ function Header() {
     { l: t('nav.producto'), h: '#dos-formas' },
     { l: t('nav.capacidades'), h: '#capacidades' },
     { l: t('nav.comoFunciona'), h: '#como-funciona' },
+    { l: t('nav.paraAgentes'), h: '#para-agentes' },
     { l: t('nav.seguridad'), h: '#seguridad' },
     { l: t('nav.planes'), h: '#planes' },
   ]
@@ -772,6 +777,7 @@ function Footer() {
             <span className="text-xs uppercase tracking-[0.18em] text-white/60">{t('footer.producto' as Parameters<typeof t>[0])}</span>
             <a href="#capacidades" className="font-helvetica-neue text-sm hover:text-white">{t('footer.capacidades')}</a>
             <a href="#como-funciona" className="font-helvetica-neue text-sm hover:text-white">{t('footer.comoFunciona')}</a>
+            <a href="#para-agentes" className="font-helvetica-neue text-sm hover:text-white">{t('footer.paraAgentes')}</a>
             <a href="#planes" className="font-helvetica-neue text-sm hover:text-white">{t('footer.planesLink')}</a>
           </div>
           <div className="flex flex-col gap-3">
@@ -788,9 +794,128 @@ function Footer() {
       </div>
       <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs font-helvetica-neue">
         <span>{t('footer.copyright', { year })}</span>
-        <span>{t('footer.sitio')}</span>
+        <span>{t('footer.actualizado', { fecha: agentes.actualizado })}</span>
       </div>
     </footer>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* KeyFactsSection — "En breve": tabla semántica de las 4 preguntas    */
+/* ------------------------------------------------------------------ */
+function KeyFactsSection() {
+  const t = useTranslations()
+  const rows = [0, 1, 2, 3].map((i) => ({
+    q: t(`enBreve.q${i}` as Parameters<typeof t>[0]),
+    a: t(`enBreve.a${i}` as Parameters<typeof t>[0]),
+  }))
+  return (
+    <section id="en-breve" aria-labelledby="en-breve-h" className="px-6 md:px-12 lg:px-[60px] py-20 md:py-28 bg-slm-light">
+      <div className="max-w-[1000px] mx-auto flex flex-col gap-10">
+        <div className="flex flex-col gap-4">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('enBreve.eyebrow')}</span>
+          <BlurIn as="h2" id="en-breve-h" className="text-slm-dark text-3xl md:text-4xl lg:text-5xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('enBreve.titulo')}
+          </BlurIn>
+        </div>
+        <div className="overflow-hidden rounded-[24px] border border-slm-dark/8 bg-white">
+          <table className="w-full border-collapse text-left">
+            <caption className="sr-only">{t('enBreve.titulo')}</caption>
+            <thead>
+              <tr className="border-b border-slm-dark/8">
+                <th scope="col" className="px-6 py-4 text-xs uppercase tracking-[0.18em] text-slm-gray-light font-medium w-[38%]">{t('enBreve.colPregunta')}</th>
+                <th scope="col" className="px-6 py-4 text-xs uppercase tracking-[0.18em] text-slm-gray-light font-medium">{t('enBreve.colRespuesta')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, i) => (
+                <tr key={i} className="border-b border-slm-dark/5 last:border-0">
+                  <th scope="row" className="px-6 py-5 align-top font-helvetica-neue text-base md:text-lg font-medium text-slm-dark">{r.q}</th>
+                  <td className="px-6 py-5 align-top font-helvetica-neue text-base md:text-lg text-slm-gray leading-relaxed">{r.a}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* ForAgentsSection — "Para Agentes": catálogo de operaciones MCP/CLI   */
+/* ------------------------------------------------------------------ */
+function ForAgentsSection() {
+  const t = useTranslations()
+  const ops = agentes.operaciones
+  return (
+    <section id="para-agentes" aria-labelledby="para-agentes-h" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <div className="max-w-[760px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('paraAgentes.eyebrow')}</span>
+          <BlurIn as="h2" id="para-agentes-h" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('paraAgentes.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('paraAgentes.tituloAccent')}</span>
+          </BlurIn>
+          <p className="text-base md:text-lg text-slm-gray font-helvetica-neue leading-relaxed">{t('paraAgentes.descripcion')}</p>
+        </div>
+
+        {/* Conexión MCP */}
+        <div className="rounded-[24px] bg-slm-dark text-slm-light p-6 md:p-8 flex flex-col gap-4">
+          <span className="text-xs uppercase tracking-[0.18em] text-slm-brand-light">{t('paraAgentes.conexionTitulo')}</span>
+          <dl className="grid sm:grid-cols-2 gap-x-8 gap-y-4 font-mono text-sm">
+            <div className="flex flex-col gap-1">
+              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">MCP · SSE</dt>
+              <dd className="break-all text-slm-light/90">{agentes.mcp.endpointSSE}</dd>
+            </div>
+            <div className="flex flex-col gap-1">
+              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">MCP · HTTP</dt>
+              <dd className="break-all text-slm-light/90">{agentes.mcp.endpointHTTP}</dd>
+            </div>
+            <div className="flex flex-col gap-1">
+              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">{t('paraAgentes.authLabel')}</dt>
+              <dd className="break-all text-slm-light/90">{agentes.mcp.auth}</dd>
+            </div>
+            <div className="flex flex-col gap-1">
+              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">{t('paraAgentes.scopeLabel')}</dt>
+              <dd className="text-slm-light/90 font-sans">{agentes.mcp.scope}</dd>
+            </div>
+          </dl>
+          <div className="flex flex-wrap gap-3 mt-2">
+            <a href="/agents.json" className="bg-slm-brand-light text-slm-dark px-5 py-2.5 rounded-full font-medium text-sm hover:opacity-90 transition-opacity font-sans">{t('paraAgentes.ctaJson')}</a>
+            <a href="/llms-full.txt" className="border border-white/30 text-slm-light px-5 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 transition-colors font-sans">{t('paraAgentes.ctaCatalogo')}</a>
+          </div>
+        </div>
+
+        {/* Catálogo de operaciones */}
+        <div className="flex flex-col gap-4">
+          <p className="text-sm text-slm-gray font-helvetica-neue">{t('paraAgentes.totalLabel', { total: ops.length })}</p>
+          <div className="overflow-x-auto rounded-[24px] border border-slm-dark/8">
+            <table className="w-full border-collapse text-left text-sm">
+              <caption className="sr-only">{t('paraAgentes.titulo1')} {t('paraAgentes.tituloAccent')}</caption>
+              <thead>
+                <tr className="border-b border-slm-dark/10 bg-slm-light">
+                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colTool')}</th>
+                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colCli')}</th>
+                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colDesc')}</th>
+                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colAcceso')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ops.map((o) => (
+                  <tr key={o.id} className="border-b border-slm-dark/5 last:border-0 align-top">
+                    <td className="px-5 py-4"><code className="font-mono text-slm-dark font-medium">{o.id}</code></td>
+                    <td className="px-5 py-4"><code className="font-mono text-slm-brand-dark whitespace-nowrap">{o.cli}</code></td>
+                    <td className="px-5 py-4 text-slm-gray leading-relaxed min-w-[280px]">{o.descripcion}</td>
+                    <td className="px-5 py-4"><span className="inline-block text-[11px] uppercase tracking-wider text-slm-brand bg-slm-brand/10 px-2 py-1 rounded">{o.tipo_acceso}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -807,9 +932,11 @@ export default function Home() {
       </div>
       <ZeroSetupSection />
       <TwoPathsSection />
+      <KeyFactsSection />
       <ProblemSolutionSection />
       <CapabilitiesSection />
       <HowItWorksSection />
+      <ForAgentsSection />
       <TextFillSection />
       <SecuritySection />
       <PricingSection />

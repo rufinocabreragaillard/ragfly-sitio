@@ -7,6 +7,7 @@
     "producto": "Product",
     "capacidades": "Capabilities",
     "comoFunciona": "How it works",
+    "paraAgentes": "For Agents",
     "seguridad": "Security",
     "planes": "Plans",
     "iniciarSesion": "Log in",
@@ -62,6 +63,20 @@
     "cardBB2": "Multi-tenant, secure and configurable by prompts",
     "cardBCta": "Give my agent context"
   },
+  "enBreve": {
+    "eyebrow": "At a glance",
+    "titulo": "The essentials, at a glance",
+    "colPregunta": "Question",
+    "colRespuesta": "Answer",
+    "q0": "What is Server LM?",
+    "a0": "Ready-to-use multi-tenant RAG infrastructure: chat with your documents in natural language and give any AI agent the exact documental context it needs, filtered by RBAC.",
+    "q1": "Who is it for?",
+    "a1": "For professionals, teams, companies and holdings working with large volumes of documents; and for developers building AI agents who need documental context solved.",
+    "q2": "How does it work?",
+    "a2": "Point Server LM at your documents directory; the system scans, vectorizes and indexes them automatically. Then you query by meaning and get answers with citations to the source.",
+    "q3": "How much does it cost?",
+    "a3": "Professional USD $7.99/mo, Team USD $49.99/mo, Business USD $199/mo, Enterprise USD $1,990/mo and Corporate custom. 15-day free trial, no payment method required."
+  },
   "textFill": "Ask questions of your contracts, reports and procedures. Get answers with verifiable citations. Define the rules in natural language — no programmers, without your data leaving.",
   "problema": {
     "eyebrow": "The problem",
@@ -115,6 +130,22 @@
     "paso3N": "04",
     "paso3Titulo": "Precise answers",
     "paso3Desc": "A precise answer via semantic search, citing the source files. In the chat or served straight to your agents."
+  },
+  "paraAgentes": {
+    "eyebrow": "For Agents",
+    "titulo1": "Consumable by",
+    "tituloAccent": "AI agents",
+    "descripcion": "Server LM exposes its documental knowledge as context for external agents via MCP, CLI and REST API —always filtered by RBAC. These are the available operations; the full catalog is published in machine-readable format.",
+    "conexionTitulo": "MCP Connection",
+    "authLabel": "Authentication",
+    "scopeLabel": "Scope",
+    "ctaJson": "View agents.json",
+    "ctaCatalogo": "View catalog (Markdown)",
+    "totalLabel": "{total} operations available to agents.",
+    "colTool": "MCP Tool",
+    "colCli": "CLI",
+    "colDesc": "Description",
+    "colAcceso": "Access"
   },
   "seguridad": {
     "eyebrow": "Security and privacy",
@@ -218,13 +249,14 @@
     "legal": "Legal",
     "capacidades": "Capabilities",
     "comoFunciona": "How it works",
+    "paraAgentes": "For Agents",
     "planesLink": "Plans",
     "seguridadLink": "Security",
     "contacto": "Contact",
     "terminos": "Terms",
     "privacidad": "Privacy",
     "copyright": "© {year} Server LM — All rights reserved.",
-    "sitio": "serverlm.ai"
+    "actualizado": "Updated {fecha}"
   },
   "selector": {
     "label": "Language"

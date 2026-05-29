@@ -7,6 +7,7 @@
     "producto": "Produkt",
     "capacidades": "Funktionen",
     "comoFunciona": "So funktioniert's",
+    "paraAgentes": "Für Agenten",
     "seguridad": "Sicherheit",
     "planes": "Tarife",
     "iniciarSesion": "Anmelden",
@@ -62,6 +63,20 @@
     "cardBB2": "Mandantenfähig, sicher und per Prompts konfigurierbar",
     "cardBCta": "Meinem Agenten Kontext geben"
   },
+  "enBreve": {
+    "eyebrow": "Auf einen Blick",
+    "titulo": "Das Wesentliche auf einen Blick",
+    "colPregunta": "Frage",
+    "colRespuesta": "Antwort",
+    "q0": "Was ist Server LM?",
+    "a0": "Sofort einsatzbereite Multi-Tenant-RAG-Infrastruktur: Unterhalten Sie sich in natürlicher Sprache mit Ihren Dokumenten und liefern Sie jedem KI-Agenten den exakten dokumentarischen Kontext, den er benötigt – gefiltert per RBAC.",
+    "q1": "Für wen ist es?",
+    "a1": "Für Fachleute, Teams, Unternehmen und Holdings, die mit großen Dokumentmengen arbeiten; und für Entwickler, die KI-Agenten bauen und gelösten dokumentarischen Kontext benötigen.",
+    "q2": "Wie funktioniert es?",
+    "a2": "Richten Sie Server LM auf Ihr Dokumentverzeichnis; das System scannt, vektorisiert und indexiert sie automatisch. Dann fragen Sie nach Bedeutung und erhalten Antworten mit Quellenangaben.",
+    "q3": "Was kostet es?",
+    "a3": "Professional 7,99 USD/Monat, Team 49,99 USD/Monat, Business 199 USD/Monat, Enterprise 1.990 USD/Monat und Corporate nach Maß. 15 Tage kostenlos testen, ohne Zahlungsmethode."
+  },
   "textFill": "Stelle deinen Verträgen, Berichten und Verfahren Fragen. Erhalte Antworten mit überprüfbaren Quellenangaben. Definiere die Regeln in natürlicher Sprache — ohne Programmierer, ohne dass deine Daten dein Haus verlassen.",
   "problema": {
     "eyebrow": "Das Problem",
@@ -115,6 +130,22 @@
     "paso3N": "04",
     "paso3Titulo": "Präzise Antworten",
     "paso3Desc": "Präzise Antwort per semantischer Suche, die die Quelldateien zitiert. Im Chat oder direkt an deine Agenten geliefert."
+  },
+  "paraAgentes": {
+    "eyebrow": "Für Agenten",
+    "titulo1": "Nutzbar durch",
+    "tituloAccent": "KI-Agenten",
+    "descripcion": "Server LM stellt sein dokumentarisches Wissen als Kontext für externe Agenten über MCP, CLI und REST-API bereit – stets per RBAC gefiltert. Dies sind die verfügbaren Operationen; der vollständige Katalog ist in maschinenlesbarem Format veröffentlicht.",
+    "conexionTitulo": "MCP-Verbindung",
+    "authLabel": "Authentifizierung",
+    "scopeLabel": "Geltungsbereich",
+    "ctaJson": "agents.json ansehen",
+    "ctaCatalogo": "Katalog ansehen (Markdown)",
+    "totalLabel": "{total} für Agenten verfügbare Operationen.",
+    "colTool": "MCP-Werkzeug",
+    "colCli": "CLI",
+    "colDesc": "Beschreibung",
+    "colAcceso": "Zugriff"
   },
   "seguridad": {
     "eyebrow": "Sicherheit und Datenschutz",
@@ -218,13 +249,14 @@
     "legal": "Rechtliches",
     "capacidades": "Funktionen",
     "comoFunciona": "So funktioniert's",
+    "paraAgentes": "Für Agenten",
     "planesLink": "Tarife",
     "seguridadLink": "Sicherheit",
     "contacto": "Kontakt",
     "terminos": "AGB",
     "privacidad": "Datenschutz",
     "copyright": "© {year} Server LM — Alle Rechte vorbehalten.",
-    "sitio": "serverlm.ai"
+    "actualizado": "Aktualisiert {fecha}"
   },
   "selector": {
     "label": "Sprache"

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:planes": "node scripts/build-planes.mjs"
+    "build:planes": "node scripts/build-planes.mjs",
+    "build:agentes": "node scripts/build-agentes.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
