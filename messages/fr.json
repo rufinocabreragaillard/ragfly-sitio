@@ -43,9 +43,9 @@
   },
   "dosFormas": {
     "eyebrow": "Deux façons d'utiliser Server LM",
-    "titulo1": "Le chat est",
-    "tituloEm": "un",
-    "titulo2": "des usages. Pas le seul.",
+    "titulo1": "Conçu pour être utilisé par",
+    "tituloEm": "les humains et les agents",
+    "titulo2": "",
     "descripcion": "La même plateforme qui te permet de discuter avec tes documents est la couche qui fournit à n'importe quel agent IA le contexte documentaire exact dont il a besoin.",
     "cardATag": "A · Produit",
     "cardATitulo": "Discute avec tes documents",

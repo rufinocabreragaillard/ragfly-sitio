@@ -43,9 +43,9 @@
   },
   "dosFormas": {
     "eyebrow": "Dos formas de usar Server LM",
-    "titulo1": "El chat es",
-    "tituloEm": "uno",
-    "titulo2": "de los usos. No el único.",
+    "titulo1": "Diseñado para ser usado por",
+    "tituloEm": "personas y agentes",
+    "titulo2": "",
     "descripcion": "La misma plataforma que te deja conversar con tus documentos es la capa que entrega a cualquier agente de IA el contexto documental exacto que necesita.",
     "cardATag": "A · Producto",
     "cardATitulo": "Conversa con tus documentos",
