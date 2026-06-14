@@ -18,98 +18,95 @@
 //   - "resaltado: true" marca el plan recomendado (solo uno).
 //   - "limites" se muestran como features al inicio de la tarjeta.
 //
-// Precios y límites son la fuente de verdad de Paddle (captura 2026-05-26).
+// MODELO (jun-2026): cobro por PÁGINA procesada + uso de recuperación, en
+// páginas y dólares (no créditos). Superficies MCP/REST/CLI en todos los
+// planes. Margen vive en la recuperación (valor); storage/infra a costo.
+// Fuente de cifras: "RAGfly - Modelo de Pricing.xlsx".
 // ─────────────────────────────────────────────────────────────────────────
 
 export const planes = [
   {
-    nombre: 'Professional',
-    sub: 'Para profesionales independientes',
-    precio: 'USD $7,99/mes',
+    nombre: 'Free',
+    sub: 'Para probar',
+    precio: 'USD $0/mes',
     resaltado: false,
-    cta: 'Probar 15 días',
+    cta: 'Empezar gratis',
     limites: {
-      tokens: 'Hasta 300.000 tokens al mes',
-      vectores: 'Hasta 2.500 documentos vectorizados',
+      tokens: '~1.000 páginas procesadas incluidas',
+      vectores: '1 entidad',
     },
     features: [
-      'Chat ilimitado con tus documentos',
-      'Búsqueda semántica vectorial',
-      'Procesamiento PDF, Word, Excel',
-      'Historial de conversaciones',
+      'MCP, REST y CLI',
+      'Recuperación con citas',
+      'Página adicional Fast $0,02 / Hi-res $0,05',
+    ],
+  },
+  {
+    nombre: 'Starter',
+    sub: 'Para un dev en solitario',
+    precio: 'USD $19/mes',
+    resaltado: false,
+    cta: 'Empezar',
+    limites: {
+      tokens: '~4.000 páginas procesadas incluidas',
+      vectores: '1 entidad',
+    },
+    features: [
+      'Todo lo de Free',
+      'MCP, REST y CLI',
+      'Recuperación con citas',
+      'Soporte por comunidad',
     ],
   },
   {
     nombre: 'Team',
-    sub: 'Para equipos colaborativos',
-    precio: 'USD $49,99/mes',
-    resaltado: false,
-    cta: 'Probar 15 días',
+    sub: 'Para consultoras que sirven a varios clientes',
+    precio: 'USD $95/mes',
+    resaltado: true,
+    cta: 'Empezar',
     limites: {
-      tokens: 'Hasta 3.000.000 tokens al mes',
-      vectores: 'Hasta 15.000 documentos vectorizados',
+      tokens: '~10.000 páginas procesadas incluidas',
+      vectores: 'Hasta 3 entidades aisladas',
     },
     features: [
-      'Todo lo del plan Professional',
-      'Control de acceso por área o perfil',
-      'Cada miembro ve sólo su área',
-      'Administrador del equipo',
-      'Auditoría de accesos',
+      'Todo lo de Starter',
+      'Multi-tenant: un corpus aislado por cliente',
+      'Control por Área y perfil',
+      'Panel único para todas las entidades',
     ],
   },
   {
-    nombre: 'Business',
-    sub: 'Control estricto y privacidad',
-    precio: 'USD $199/mes',
-    resaltado: true,
-    cta: 'Regístrate y prueba',
+    nombre: 'Scale',
+    sub: 'Para producción a escala',
+    precio: 'USD $490/mes',
+    resaltado: false,
+    cta: 'Empezar',
     limites: {
-      tokens: 'Hasta 15.000.000 tokens al mes',
-      vectores: 'Hasta 60.000 documentos vectorizados',
+      tokens: '~60.000 páginas procesadas incluidas',
+      vectores: 'Hasta 15 entidades aisladas',
     },
     features: [
-      'Todo lo del plan Team',
-      'RAGfly Desktop: la indexación no sale de tu red',
-      'Elección de IA: Claude, GPT, Gemini, open source',
-      'Permisos granulares por rol, función y perfil',
-      'Branding propio (color, logo, nombre)',
-      'API de integración con sistemas internos',
-      'Soporte prioritario',
+      'Todo lo de Team',
+      'Client LM / on-prem opcional',
+      'BYO base vectorial + BYO LLM',
+      'Storage a costo (sin markup de valor)',
     ],
   },
   {
     nombre: 'Enterprise',
-    sub: 'Gran volumen y máxima escala',
-    precio: 'USD $1.990/mes',
+    sub: 'Regulado, soberano o gran volumen',
+    precio: 'Inbound',
     resaltado: false,
-    cta: 'Hablar con ventas',
+    cta: 'Hablar con nosotros',
     limites: {
-      tokens: 'Hasta 150.000.000 tokens al mes',
-      vectores: 'Hasta 600.000 documentos vectorizados',
+      tokens: 'Páginas y entidades a definir',
+      vectores: 'Despliegue managed u on-prem/soberano',
     },
     features: [
-      'Todo lo del plan Business',
-      'Multi-entidad para holdings',
-      'Administración centralizada',
-      'Espacio de BD propio (BYO infrastructure)',
-      'Soporte dedicado y SLA garantizado',
-    ],
-  },
-  {
-    nombre: 'Corporate',
-    sub: 'Corporaciones y holdings — a medida',
-    precio: 'A medida',
-    resaltado: false,
-    cta: 'Hablar con ventas',
-    limites: {
-      tokens: 'Tokens y capacidad a medida',
-      vectores: 'Volumen de documentos sin límite definido',
-    },
-    features: [
-      'Todo lo del plan Enterprise',
-      'Arquitectura y despliegue a medida',
-      'Integraciones y modelos a pedido',
-      'Acuerdo comercial y SLA personalizados',
+      'Todo lo de Scale',
+      'Client LM / on-prem garantizado',
+      'Seguridad, compliance y DPA',
+      'SLA y soporte dedicado',
     ],
   },
 ]

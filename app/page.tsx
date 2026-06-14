@@ -97,10 +97,9 @@ function Header() {
   const t = useTranslations()
   const [open, setOpen] = useState(false)
   const links = [
-    { l: t('nav.producto'), h: '#dos-formas' },
-    { l: t('nav.capacidades'), h: '#capacidades' },
-    { l: t('nav.comoFunciona'), h: '#como-funciona' },
-    { l: t('nav.paraAgentes'), h: '#para-agentes' },
+    { l: t('nav.producto'), h: '#que-es' },
+    { l: t('nav.capacidades'), h: '#diferencia' },
+    { l: t('nav.comoFunciona'), h: '#como-se-usa' },
     { l: t('nav.seguridad'), h: '#seguridad' },
     { l: t('nav.planes'), h: '#planes' },
   ]
@@ -211,17 +210,17 @@ function Hero() {
           <span className="text-xs md:text-sm tracking-[0.04em] text-slm-dark/80">{t('hero.eyebrow')}</span>
         </BlurIn>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-center z-10 gap-5">
+      <div className="flex-1 flex flex-col items-center justify-center z-10 gap-6">
         <BlurIn
           as="h1"
-          className="text-center font-helvetica-neue font-medium leading-[1.05] text-slm-dark max-w-3xl"
+          className="text-center font-helvetica-neue font-medium leading-[1.05] text-slm-dark max-w-4xl"
         >
           <span className="block text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em]">{t('hero.headlineLead')}</span>
           <span className="block text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">
             {t('hero.headlineAccent')}
           </span>
         </BlurIn>
-        <BlurIn delay={0.1} className="font-helvetica-neue text-lg md:text-xl text-slm-gray tracking-[0.01em]">
+        <BlurIn delay={0.1} className="font-helvetica-neue text-base md:text-xl text-slm-gray tracking-[0.01em] max-w-2xl text-center leading-relaxed">
           {t('hero.tagline')}
         </BlurIn>
       </div>
@@ -234,7 +233,7 @@ function Hero() {
             {t('hero.ctaPrimario')}
           </a>
           <a
-            href="#dos-formas"
+            href="#pruebalo"
             className="border border-slm-dark text-slm-dark px-7 py-3 rounded-full font-medium text-base hover:bg-gray-50 transition-colors"
           >
             {t('hero.ctaSecundario')}
@@ -247,163 +246,43 @@ function Hero() {
 }
 
 /* ------------------------------------------------------------------ */
-/* ZeroSetupSection                                                     */
+/* BuildingSection — "¿Qué estás construyendo?" · 3 perfiles            */
 /* ------------------------------------------------------------------ */
-function ZeroSetupSection() {
+function BuildingSection() {
   const t = useTranslations()
-  const bullets = [0, 1, 2].map((i) => t(`zeroSetup.bullet${i}` as Parameters<typeof t>[0]))
-  const folders = [0, 1, 2, 3].map((i) => ({
-    name: t(`zeroSetup.folder${i}Name` as Parameters<typeof t>[0]),
-    count: t(`zeroSetup.folder${i}Count` as Parameters<typeof t>[0]),
-  }))
-  return (
-    <section className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
-      <div className="max-w-[1280px] mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
-        <div className="flex flex-col gap-7">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('zeroSetup.eyebrow')}</span>
-          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('zeroSetup.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('zeroSetup.tituloAccent')}</span>
-          </BlurIn>
-          <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed max-w-[480px]">
-            {t('zeroSetup.descripcion')}
-          </p>
-          <ul className="flex flex-col gap-3 mt-2">
-            {bullets.map((s, i) => (
-              <li key={i} className="flex gap-3 text-slm-dark/85 font-helvetica-neue text-base leading-snug">
-                <span className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-slm-brand flex-none" />{s}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="relative">
-          <div className="rounded-[28px] bg-gradient-to-br from-slm-light via-white to-slm-light border border-slm-dark/8 p-6 md:p-8 relative overflow-hidden">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block" aria-hidden="true">
-              <svg width="80" height="200" viewBox="0 0 80 200" fill="none">
-                <path d="M 0 100 C 30 100, 50 100, 80 100" stroke="url(#beam)" strokeWidth="1.5" strokeDasharray="3 4">
-                  <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite" />
-                </path>
-                <defs>
-                  <linearGradient id="beam" x1="0" y1="0" x2="80" y2="0">
-                    <stop offset="0%" stopColor="#4089CD" stopOpacity="0.1" />
-                    <stop offset="100%" stopColor="#4089CD" stopOpacity="0.8" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            <div className="text-xs uppercase tracking-[0.18em] text-slm-dark/40 mb-4">{t('zeroSetup.seleccionados')}</div>
-
-            <ul className="flex flex-col gap-2.5">
-              {folders.map((f, i) => (
-                <li
-                  key={i}
-                  className="group flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slm-dark/8"
-                  style={{ animation: 'folderScan 6s ease-in-out infinite', animationDelay: `${i * 0.6}s` }}
-                >
-                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-slm-light border border-slm-dark/8 flex-none">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4A82" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
-                    </svg>
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-medium text-sm text-slm-dark truncate">{f.name}</div>
-                    <div className="text-xs text-slm-dark/50">{f.count}</div>
-                  </div>
-                  <span className="text-[10px] uppercase tracking-[0.18em] flex-none zs-status">{t('zeroSetup.indexado')}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-5 flex items-center justify-between rounded-xl bg-slm-dark text-slm-light px-4 py-3">
-              <span className="text-xs uppercase tracking-[0.18em] text-slm-brand-light">{t('zeroSetup.pipeline')}</span>
-              <span className="text-sm flex items-center gap-2">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-slm-brand-light animate-pulse" />
-                {t('zeroSetup.reindexacion')}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ------------------------------------------------------------------ */
-/* TwoPathsSection                                                      */
-/* ------------------------------------------------------------------ */
-function TwoPathsSection() {
-  const t = useTranslations()
-  const paths = [
-    {
-      tag: t('dosFormas.cardATag'),
-      h: t('dosFormas.cardATitulo'),
-      d: t('dosFormas.cardADesc'),
-      bullets: [0, 1, 2].map((i) => t(`dosFormas.cardAB${i}` as Parameters<typeof t>[0])),
-      cta: t('dosFormas.cardACta'),
-      dark: false,
-    },
-    {
-      tag: t('dosFormas.cardBTag'),
-      h: t('dosFormas.cardBTitulo'),
-      d: t('dosFormas.cardBDesc'),
-      bullets: [0, 1, 2].map((i) => t(`dosFormas.cardBB${i}` as Parameters<typeof t>[0])),
-      cta: t('dosFormas.cardBCta'),
-      dark: true,
-    },
+  const cards = [
+    { tag: t('construyendo.cardATag'), h: t('construyendo.cardATitulo'), d: t('construyendo.cardADesc'), cta: t('construyendo.cardACta'), href: 'https://app.ragfly.ai' },
+    { tag: t('construyendo.cardBTag'), h: t('construyendo.cardBTitulo'), d: t('construyendo.cardBDesc'), cta: t('construyendo.cardBCta'), href: '#diferencia' },
+    { tag: t('construyendo.cardCTag'), h: t('construyendo.cardCTitulo'), d: t('construyendo.cardCDesc'), cta: t('construyendo.cardCCta'), href: '#como-se-usa' },
   ]
   return (
-    <section id="dos-formas" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+    <section id="construyendo" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-16">
-        <div className="max-w-[720px] flex flex-col gap-6">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('dosFormas.eyebrow')}</span>
+        <div className="max-w-[760px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('construyendo.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('dosFormas.titulo1')}{' '}
-            <em className="not-italic bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('dosFormas.tituloEm')}</em>{' '}
-            {t('dosFormas.titulo2')}
+            {t('construyendo.titulo1')}{' '}
+            <em className="not-italic bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('construyendo.tituloEm')}</em>{' '}
+            {t('construyendo.titulo2')}
           </BlurIn>
           <p className="text-base md:text-lg text-slm-gray font-helvetica-neue max-w-[560px] leading-relaxed">
-            {t('dosFormas.descripcion')}
+            {t('construyendo.descripcion')}
           </p>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-5">
-          {paths.map((p) => (
-            <div
-              key={p.tag}
-              className={`rounded-[32px] p-8 md:p-10 lg:p-12 flex flex-col gap-7 min-h-[520px] relative overflow-hidden border ${
-                p.dark ? 'bg-slm-dark text-slm-light border-slm-brand-dark/40' : 'bg-slm-light text-slm-dark border-slm-dark/8'
-              }`}
+        <div className="grid md:grid-cols-3 gap-4">
+          {cards.map((c) => (
+            <a
+              key={c.tag}
+              href={c.href}
+              className="group rounded-[28px] p-8 md:p-9 flex flex-col gap-5 min-h-[320px] bg-slm-light border border-slm-dark/8 hover:border-slm-brand/40 transition-colors"
             >
-              {p.dark && (
-                <div
-                  className="absolute inset-0 opacity-50 pointer-events-none"
-                  style={{ background: 'radial-gradient(600px 400px at 90% 0%, rgba(64,137,205,0.28), transparent 70%)' }}
-                />
-              )}
-              <div className="relative flex flex-col gap-7 flex-1">
-                <span className={`text-xs uppercase tracking-[0.18em] ${p.dark ? 'text-slm-brand-light' : 'text-slm-brand'}`}>{p.tag}</span>
-                <h3 className={`font-helvetica-neue text-3xl md:text-4xl font-medium leading-[1.1] tracking-[-0.02em] ${p.dark ? 'text-white' : 'text-slm-dark'}`}>{p.h}</h3>
-                <p className={`font-helvetica-neue text-base md:text-lg leading-relaxed ${p.dark ? 'text-slm-light/85' : 'text-slm-gray'}`}>{p.d}</p>
-                <ul className="flex flex-col gap-3 mt-auto">
-                  {p.bullets.map((b, i) => (
-                    <li key={i} className={`flex gap-3 text-sm md:text-base font-helvetica-neue leading-snug ${p.dark ? 'text-slm-light/90' : 'text-slm-dark/80'}`}>
-                      <span className={`mt-1.5 inline-block w-1.5 h-1.5 rounded-full flex-none ${p.dark ? 'bg-slm-brand-light' : 'bg-slm-brand'}`} />{b}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#contacto"
-                  className={`relative inline-flex w-fit items-center gap-2 px-6 py-3 rounded-full font-medium text-sm md:text-base transition-opacity hover:opacity-90 ${
-                    p.dark ? 'bg-slm-brand-light text-slm-dark' : 'bg-slm-dark text-slm-light'
-                  }`}
-                >
-                  {p.cta}
-                  <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
+              <span className="text-xs uppercase tracking-[0.16em] text-slm-brand">{c.tag}</span>
+              <h3 className="font-helvetica-neue text-2xl md:text-[28px] font-medium text-slm-dark tracking-[-0.02em] leading-tight">{c.h}</h3>
+              <p className="font-helvetica-neue text-base text-slm-gray leading-relaxed flex-1">{c.d}</p>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-slm-dark group-hover:gap-3 transition-all">
+                {c.cta}<span aria-hidden="true">→</span>
+              </span>
+            </a>
           ))}
         </div>
       </div>
@@ -412,23 +291,23 @@ function TwoPathsSection() {
 }
 
 /* ------------------------------------------------------------------ */
-/* ProblemSolutionSection                                               */
+/* ProblemSolutionSection — "el RAG se rompe a escala" + tabla          */
 /* ------------------------------------------------------------------ */
 function ProblemSolutionSection() {
   const t = useTranslations()
   const sin = [0, 1, 2, 3, 4].map((i) => t(`problema.sin${i}` as Parameters<typeof t>[0]))
   const con = [0, 1, 2, 3, 4].map((i) => t(`problema.con${i}` as Parameters<typeof t>[0]))
   return (
-    <section id="producto" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-dark text-slm-light relative overflow-hidden">
+    <section id="problema" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-dark text-slm-light relative overflow-hidden">
       <div className="absolute inset-0 opacity-30 pointer-events-none"
         style={{ background: 'radial-gradient(800px 500px at 80% 20%, rgba(64,137,205,0.35), transparent 60%), radial-gradient(700px 500px at 10% 90%, rgba(122,180,221,0.18), transparent 70%)' }} />
       <div className="relative max-w-[1200px] mx-auto flex flex-col gap-16">
-        <div className="max-w-[640px] flex flex-col gap-6">
+        <div className="max-w-[680px] flex flex-col gap-6">
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand-light">{t('problema.eyebrow')}</span>
           <BlurIn as="h2" className="text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('problema.titulo1')} <span className="text-slm-brand-light">{t('problema.tituloAccent')}</span>
           </BlurIn>
-          <p className="text-base md:text-lg text-slm-gray-light font-helvetica-neue max-w-[520px] leading-relaxed">
+          <p className="text-base md:text-lg text-slm-gray-light font-helvetica-neue max-w-[600px] leading-relaxed">
             {t('problema.descripcion')}
           </p>
         </div>
@@ -466,128 +345,380 @@ function ProblemSolutionSection() {
 }
 
 /* ------------------------------------------------------------------ */
-/* CapabilitiesSection                                                  */
+/* WhatIsSection — "Qué es RAGfly" (reusa el visual de carpetas)        */
 /* ------------------------------------------------------------------ */
-function CapabilitiesSection() {
+function WhatIsSection() {
   const t = useTranslations()
-  const caps = [0, 1, 2, 3, 4, 5].map((i) => ({
-    titulo: t(`capacidades.item${i}Titulo` as Parameters<typeof t>[0]),
-    desc: t(`capacidades.item${i}Desc` as Parameters<typeof t>[0]),
+  const bullets = [0, 1, 2].map((i) => t(`queEs.bullet${i}` as Parameters<typeof t>[0]))
+  const folders = [
+    { name: 'Contratos 2025', count: '128 archivos' },
+    { name: 'Auditorías Q4', count: '47 archivos' },
+    { name: 'Procedimientos RRHH', count: '312 archivos' },
+    { name: 'Minutas Directorio', count: '89 archivos' },
+  ]
+  return (
+    <section id="que-es" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+      <div className="max-w-[1280px] mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
+        <div className="flex flex-col gap-7">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('queEs.eyebrow')}</span>
+          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('queEs.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('queEs.tituloAccent')}</span>
+          </BlurIn>
+          <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed max-w-[520px]">
+            {t('queEs.descripcion')}
+          </p>
+          <ul className="flex flex-col gap-3 mt-2">
+            {bullets.map((s, i) => (
+              <li key={i} className="flex gap-3 text-slm-dark/85 font-helvetica-neue text-base leading-snug">
+                <span className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-slm-brand flex-none" />{s}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="relative">
+          <div className="rounded-[28px] bg-gradient-to-br from-slm-light via-white to-slm-light border border-slm-dark/8 p-6 md:p-8 relative overflow-hidden">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block" aria-hidden="true">
+              <svg width="80" height="200" viewBox="0 0 80 200" fill="none">
+                <path d="M 0 100 C 30 100, 50 100, 80 100" stroke="url(#beam)" strokeWidth="1.5" strokeDasharray="3 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite" />
+                </path>
+                <defs>
+                  <linearGradient id="beam" x1="0" y1="0" x2="80" y2="0">
+                    <stop offset="0%" stopColor="#4089CD" stopOpacity="0.1" />
+                    <stop offset="100%" stopColor="#4089CD" stopOpacity="0.8" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div className="text-xs uppercase tracking-[0.18em] text-slm-dark/40 mb-4">{t('queEs.eyebrow')}</div>
+
+            <ul className="flex flex-col gap-2.5">
+              {folders.map((f, i) => (
+                <li
+                  key={i}
+                  className="group flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slm-dark/8"
+                  style={{ animation: 'folderScan 6s ease-in-out infinite', animationDelay: `${i * 0.6}s` }}
+                >
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-slm-light border border-slm-dark/8 flex-none">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4A82" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+                    </svg>
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-medium text-sm text-slm-dark truncate">{f.name}</div>
+                    <div className="text-xs text-slm-dark/50">{f.count}</div>
+                  </div>
+                  <span className="text-[10px] uppercase tracking-[0.18em] flex-none zs-status">✓</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-5 flex items-center justify-between rounded-xl bg-slm-dark text-slm-light px-4 py-3">
+              <span className="text-xs uppercase tracking-[0.18em] text-slm-brand-light">Pipeline</span>
+              <span className="text-sm flex items-center gap-2">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-slm-brand-light animate-pulse" />
+                Indexado · listo para tu agente
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* CombinaSection — "Lo que casi nadie combina" · 3 temas + tabla       */
+/* ------------------------------------------------------------------ */
+function CombinaSection() {
+  const t = useTranslations()
+  const temas = [0, 1, 2].map((i) => ({
+    num: t(`combina.item${i}Num` as Parameters<typeof t>[0]),
+    titulo: t(`combina.item${i}Titulo` as Parameters<typeof t>[0]),
+    desc: t(`combina.item${i}Desc` as Parameters<typeof t>[0]),
+  }))
+  const rows = [0, 1, 2, 3, 4].map((i) => ({
+    sin: t(`combina.tablaSin${i}` as Parameters<typeof t>[0]),
+    con: t(`combina.tablaCon${i}` as Parameters<typeof t>[0]),
   }))
   return (
-    <section id="capacidades" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-light">
+    <section id="diferencia" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-light">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-16">
-        <div className="max-w-[680px] flex flex-col gap-6">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('capacidades.eyebrow')}</span>
+        <div className="max-w-[720px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('combina.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('capacidades.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">
-              {t('capacidades.tituloAccent')}
-            </span>
-            {t('capacidades.titulo2')}
+            {t('combina.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('combina.tituloAccent')}</span>
           </BlurIn>
         </div>
+
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid md:grid-cols-3 gap-4"
           initial="h" whileInView="s" viewport={{ once: true, amount: 0.2 }}
-          variants={{ h: {}, s: { transition: { staggerChildren: 0.08 } } }}
+          variants={{ h: {}, s: { transition: { staggerChildren: 0.1 } } }}
         >
-          {caps.map((c, i) => (
+          {temas.map((c) => (
             <motion.div
-              key={c.titulo}
+              key={c.num}
               variants={{ h: { opacity: 0, y: 20 }, s: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } } }}
-              className="rounded-[24px] bg-white p-8 border border-slm-dark/5 hover:border-slm-brand/40 transition-colors flex flex-col gap-4 min-h-[220px]"
+              className="rounded-[24px] bg-white p-8 border border-slm-dark/5 flex flex-col gap-4 min-h-[280px]"
             >
-              <div className="flex items-baseline justify-between">
-                <h3 className="text-2xl md:text-3xl font-helvetica-neue font-medium text-slm-dark tracking-[-0.02em]">{c.titulo}</h3>
-                <span className="text-xs text-slm-gray-light">0{i + 1}</span>
-              </div>
-              <p className="text-slm-gray font-helvetica-neue text-base md:text-[17px] leading-relaxed">{c.desc}</p>
+              <span className="font-helvetica-neue text-5xl font-medium bg-gradient-to-br from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent leading-none">{c.num}</span>
+              <h3 className="text-xl md:text-2xl font-helvetica-neue font-medium text-slm-dark tracking-[-0.02em] leading-tight">{c.titulo}</h3>
+              <p className="text-slm-gray font-helvetica-neue text-base leading-relaxed">{c.desc}</p>
             </motion.div>
           ))}
         </motion.div>
+
+        <div className="rounded-[24px] bg-white border border-slm-dark/8 p-8 md:p-10 flex flex-col gap-3">
+          <h3 className="font-helvetica-neue text-xl md:text-2xl font-medium text-slm-dark tracking-[-0.02em]">{t('combina.capaTitulo')}</h3>
+          <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed max-w-[900px]">{t('combina.capaDesc')}</p>
+        </div>
+
+        <div className="overflow-hidden rounded-[24px] border border-slm-dark/8 bg-white">
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr className="border-b border-slm-dark/8">
+                <th scope="col" className="px-6 py-4 text-xs uppercase tracking-[0.16em] text-slm-gray-light font-medium w-1/2">{t('combina.tablaCol0')}</th>
+                <th scope="col" className="px-6 py-4 text-xs uppercase tracking-[0.16em] text-slm-brand font-medium w-1/2 bg-slm-light/50">{t('combina.tablaCol1')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, i) => (
+                <tr key={i} className="border-b border-slm-dark/5 last:border-0">
+                  <td className="px-6 py-4 align-top font-helvetica-neue text-base text-slm-gray leading-snug">{r.sin}</td>
+                  <td className="px-6 py-4 align-top font-helvetica-neue text-base text-slm-dark leading-snug bg-slm-light/30">{r.con}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   )
 }
 
 /* ------------------------------------------------------------------ */
-/* HowItWorksSection                                                    */
+/* ChatSection — "Pruébalo hablándole" · chat como demo de DX           */
 /* ------------------------------------------------------------------ */
-function HowItWorksSection() {
+function ChatSection() {
   const t = useTranslations()
-  const steps = [0, 1, 2, 3].map((i) => ({
-    n: t(`comoFunciona.paso${i}N` as Parameters<typeof t>[0]),
-    titulo: t(`comoFunciona.paso${i}Titulo` as Parameters<typeof t>[0]),
-    desc: t(`comoFunciona.paso${i}Desc` as Parameters<typeof t>[0]),
+  const turns = [0, 1, 2].map((i) => ({
+    q: t(`chat.demo${i}` as Parameters<typeof t>[0]),
+    r: t(`chat.demo${i}r` as Parameters<typeof t>[0]),
   }))
   return (
-    <section id="como-funciona" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-16">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-          <div className="max-w-[640px] flex flex-col gap-6">
-            <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('comoFunciona.eyebrow')}</span>
-            <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-              {t('comoFunciona.titulo')}
-            </BlurIn>
-          </div>
-          <p className="max-w-[360px] text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">
-            {t('comoFunciona.subtitulo')}
-          </p>
+    <section id="pruebalo" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('chat.eyebrow')}</span>
+          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('chat.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('chat.tituloAccent')}</span>
+          </BlurIn>
+          <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('chat.descripcion')}</p>
+          <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('chat.descripcion2')}</p>
+          <p className="text-sm text-slm-dark/60 font-helvetica-neue italic border-l-2 border-slm-brand/40 pl-4">{t('chat.nota')}</p>
         </div>
-        <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-slm-dark/8 rounded-[24px] overflow-hidden border border-slm-dark/8">
-          {steps.map((s) => (
-            <li key={s.n} className="bg-white p-8 md:p-10 flex flex-col gap-5 min-h-[260px] relative">
-              <span className="font-helvetica-neue text-5xl md:text-6xl font-medium bg-gradient-to-br from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent leading-none">
-                {s.n}
-              </span>
-              <h3 className="font-helvetica-neue text-xl md:text-2xl font-medium text-slm-dark tracking-[-0.02em]">{s.titulo}</h3>
-              <p className="text-slm-gray font-helvetica-neue text-base leading-relaxed">{s.desc}</p>
-            </li>
+
+        <div className="rounded-[28px] bg-slm-dark text-slm-light p-6 md:p-8 flex flex-col gap-4 border border-slm-brand-dark/40">
+          {turns.map((turn, i) => (
+            <div key={i} className="flex flex-col gap-2">
+              <div className="self-end max-w-[85%] rounded-2xl rounded-br-sm bg-slm-brand text-white px-4 py-2.5 font-mono text-sm leading-snug">
+                {turn.q}
+              </div>
+              <div className="self-start max-w-[90%] rounded-2xl rounded-bl-sm bg-white/8 text-slm-light/90 px-4 py-2.5 font-helvetica-neue text-sm leading-snug">
+                {turn.r}
+              </div>
+            </div>
           ))}
-        </ol>
+          <div className="mt-2 flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-slm-brand-light animate-pulse" />
+            <span className="text-sm text-slm-gray-light font-helvetica-neue">RAGfly · escribe lo que necesites…</span>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
 /* ------------------------------------------------------------------ */
-/* TextFillSection                                                      */
+/* IdentitiesSection — "Le das un perfil, no acceso"                    */
 /* ------------------------------------------------------------------ */
-function TextFillSection() {
+function IdentitiesSection() {
   const t = useTranslations()
-  const ref = useRef<HTMLElement>(null)
-  const [fill, setFill] = useState(0)
-  const text = t('textFill')
-
-  useEffect(() => {
-    const onScroll = () => {
-      const el = ref.current
-      if (!el) return
-      const top = el.getBoundingClientRect().top
-      const wh = window.innerHeight
-      const start = wh * 0.8, end = wh * 0.2
-      let pct = top >= start ? 0 : top <= end ? 100 : ((start - top) / (start - end)) * 100
-      setFill(Math.max(0, Math.min(100, pct)))
-    }
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
-    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll) }
-  }, [])
-
+  const tags = [0, 1, 2].map((i) => t(`identidades.tag${i}` as Parameters<typeof t>[0]))
   return (
-    <section ref={ref} className="flex justify-center items-center px-6 md:px-16 py-24 md:py-32 bg-white mb-[30vh]">
-      <div className="max-w-2xl w-full text-center relative">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-tight relative tracking-[-0.03em]">
-          <span className="block text-slm-gray-light">{text}</span>
-          <span
-            className="absolute inset-0 bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent"
-            style={{ clipPath: `inset(0 ${100 - fill}% 0 0)`, transition: 'clip-path 0.1s linear' }}
-          >
-            {text}
-          </span>
-        </h2>
+    <section id="identidades" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-light">
+      <div className="max-w-[1100px] mx-auto flex flex-col gap-12">
+        <div className="max-w-[820px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('identidades.eyebrow')}</span>
+          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('identidades.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('identidades.tituloAccent')}</span>
+          </BlurIn>
+          <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('identidades.descripcion')}</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          <p className="rounded-[24px] bg-white border border-slm-dark/8 p-8 text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('identidades.p0')}</p>
+          <p className="rounded-[24px] bg-white border border-slm-dark/8 p-8 text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('identidades.p1')}</p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          {tags.map((tag) => (
+            <span key={tag} className="inline-flex items-center gap-2 rounded-full bg-white border border-slm-dark/8 px-4 py-2 text-sm text-slm-dark font-helvetica-neue">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-slm-brand" />{tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* ModesSection — "Cloud o Desktop"                                     */
+/* ------------------------------------------------------------------ */
+function ModesSection() {
+  const t = useTranslations()
+  const cloud = [0, 1, 2].map((i) => t(`modos.cloud${i}` as Parameters<typeof t>[0]))
+  const desktop = [0, 1, 2].map((i) => t(`modos.desktop${i}` as Parameters<typeof t>[0]))
+  return (
+    <section id="modos" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-16">
+        <div className="max-w-[680px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('modos.eyebrow')}</span>
+          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('modos.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('modos.tituloAccent')}</span>
+          </BlurIn>
+          <p className="text-base md:text-lg text-slm-gray font-helvetica-neue max-w-[560px] leading-relaxed">{t('modos.descripcion')}</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          <div className="rounded-[28px] bg-slm-light border border-slm-dark/8 p-8 md:p-10 flex flex-col gap-5">
+            <span className="text-xs uppercase tracking-[0.16em] text-slm-brand">{t('modos.cloudTitulo')}</span>
+            <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('modos.cloudDesc')}</p>
+            <ul className="flex flex-col gap-3 mt-auto">
+              {cloud.map((s, i) => (
+                <li key={i} className="flex gap-3 text-slm-dark/85 font-helvetica-neue text-base leading-snug">
+                  <span className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-slm-brand flex-none" />{s}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-[28px] bg-slm-dark text-slm-light p-8 md:p-10 flex flex-col gap-5 relative overflow-hidden border border-slm-brand-dark/40">
+            <div className="absolute inset-0 opacity-50 pointer-events-none"
+              style={{ background: 'radial-gradient(600px 400px at 90% 0%, rgba(64,137,205,0.28), transparent 70%)' }} />
+            <div className="relative flex flex-col gap-5">
+              <span className="text-xs uppercase tracking-[0.16em] text-slm-brand-light">{t('modos.desktopTitulo')}</span>
+              <p className="text-slm-light/85 font-helvetica-neue text-base md:text-lg leading-relaxed">{t('modos.desktopDesc')}</p>
+              <ul className="flex flex-col gap-3">
+                {desktop.map((s, i) => (
+                  <li key={i} className="flex gap-3 text-slm-light/90 font-helvetica-neue text-base leading-snug">
+                    <span className="mt-2 inline-block w-1.5 h-1.5 rounded-full bg-slm-brand-light flex-none" />{s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p className="max-w-[760px] text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('modos.nota')}</p>
+      </div>
+    </section>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* SurfacesSection — "MCP, REST o CLI" + snippet                        */
+/* ------------------------------------------------------------------ */
+function SurfacesSection() {
+  const t = useTranslations()
+  const surfaces = [
+    { h: t('superficies.mcpTitulo'), d: t('superficies.mcpDesc'), feat: true },
+    { h: t('superficies.restTitulo'), d: t('superficies.restDesc'), feat: false },
+    { h: t('superficies.cliTitulo'), d: t('superficies.cliDesc'), feat: false },
+  ]
+  const snippet = `{
+  "mcpServers": {
+    "ragfly": {
+      "url": "https://mcp.ragfly.ai/sse",
+      "headers": { "Authorization": "Bearer rag_tu_token" }
+    }
+  }
+}`
+  return (
+    <section id="como-se-usa" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-light">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <div className="max-w-[720px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('superficies.eyebrow')}</span>
+          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('superficies.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('superficies.tituloAccent')}</span>
+          </BlurIn>
+          <p className="text-base md:text-lg text-slm-gray font-helvetica-neue max-w-[560px] leading-relaxed">{t('superficies.descripcion')}</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {surfaces.map((s) => (
+            <div
+              key={s.h}
+              className={`rounded-[24px] p-8 flex flex-col gap-3 border ${s.feat ? 'bg-white border-slm-brand/40' : 'bg-white border-slm-dark/8'}`}
+            >
+              <div className="flex items-center gap-2">
+                <h3 className="font-mono text-xl font-medium text-slm-dark">{s.h}</h3>
+                {s.feat && <span className="text-[10px] uppercase tracking-[0.15em] bg-slm-brand/10 text-slm-brand px-2 py-0.5 rounded-full">abrimos aquí</span>}
+              </div>
+              <p className="text-slm-gray font-helvetica-neue text-base leading-relaxed">{s.d}</p>
+            </div>
+          ))}
+        </div>
+        <div className="rounded-[24px] bg-slm-dark text-slm-light p-6 md:p-8 flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <span className="text-xs uppercase tracking-[0.18em] text-slm-brand-light">{t('superficies.snippetTitulo')}</span>
+            <span className="text-xs text-slm-gray-light font-helvetica-neue">{t('superficies.snippetSub')}</span>
+          </div>
+          <pre className="overflow-x-auto font-mono text-sm leading-relaxed text-slm-light/90 bg-black/20 rounded-xl p-4"><code>{snippet}</code></pre>
+          <div className="flex flex-wrap gap-3">
+            <a href="/agents.json" className="bg-slm-brand-light text-slm-dark px-5 py-2.5 rounded-full font-medium text-sm hover:opacity-90 transition-opacity">agents.json</a>
+            <a href="/llms-full.txt" className="border border-white/30 text-slm-light px-5 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 transition-colors">Catálogo (Markdown)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* BuiltSection — "Cómo está construido"                                */
+/* ------------------------------------------------------------------ */
+function BuiltSection() {
+  const t = useTranslations()
+  const items = [0, 1, 2, 3].map((i) => ({
+    titulo: t(`construido.item${i}Titulo` as Parameters<typeof t>[0]),
+    desc: t(`construido.item${i}Desc` as Parameters<typeof t>[0]),
+  }))
+  return (
+    <section id="construido" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-16">
+        <div className="max-w-[680px] flex flex-col gap-6">
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('construido.eyebrow')}</span>
+          <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
+            {t('construido.titulo1')}{' '}
+            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('construido.tituloAccent')}</span>
+          </BlurIn>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          {items.map((c, i) => (
+            <div key={c.titulo} className="rounded-[24px] bg-slm-light p-8 border border-slm-dark/5 flex flex-col gap-3">
+              <div className="flex items-baseline justify-between">
+                <h3 className="text-xl md:text-2xl font-helvetica-neue font-medium text-slm-dark tracking-[-0.02em]">{c.titulo}</h3>
+                <span className="text-xs text-slm-gray-light">0{i + 1}</span>
+              </div>
+              <p className="text-slm-gray font-helvetica-neue text-base leading-relaxed">{c.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -631,12 +762,11 @@ function SecuritySection() {
 /* ------------------------------------------------------------------ */
 function PricingSection() {
   const t = useTranslations()
-  // Fuente: content/planes.mjs → build:planes → planes-meta.json (no hardcodear)
   const plans = planesMeta.plans
   return (
     <section id="planes" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-slm-light">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-16">
-        <div className="max-w-[680px] flex flex-col gap-6">
+        <div className="max-w-[760px] flex flex-col gap-6">
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('planes.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('planes.titulo')}
@@ -672,7 +802,7 @@ function PricingSection() {
                   ))}
                 </ul>
                 <a
-                  href="mailto:rufinocabreragaillard@gmail.com"
+                  href="https://app.ragfly.ai"
                   className={`text-center font-medium text-sm px-5 py-3 rounded-full transition-opacity hover:opacity-90 ${featured ? 'bg-slm-brand-light text-slm-dark' : 'bg-slm-dark text-slm-light'}`}
                 >
                   {cta}
@@ -681,27 +811,28 @@ function PricingSection() {
             )
           })}
         </div>
+        <p className="max-w-[900px] text-slm-gray font-helvetica-neue text-base leading-relaxed">{t('planes.nota')}</p>
       </div>
     </section>
   )
 }
 
 /* ------------------------------------------------------------------ */
-/* WhyUsSection                                                         */
+/* WhyUsSection — "Por qué RAGfly" · 6 razones                          */
 /* ------------------------------------------------------------------ */
 function WhyUsSection() {
   const t = useTranslations()
-  const items = [0, 1, 2, 3].map((i) => ({
-    titulo: t(`porQueNosotros.item${i}Titulo` as Parameters<typeof t>[0]),
-    desc: t(`porQueNosotros.item${i}Desc` as Parameters<typeof t>[0]),
+  const items = [0, 1, 2, 3, 4, 5].map((i) => ({
+    titulo: t(`porQue.item${i}Titulo` as Parameters<typeof t>[0]),
+    desc: t(`porQue.item${i}Desc` as Parameters<typeof t>[0]),
   }))
   return (
-    <section className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
+    <section id="por-que" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-16">
         <div className="max-w-[680px] flex flex-col gap-6">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('porQueNosotros.eyebrow')}</span>
+          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('porQue.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('porQueNosotros.titulo')}
+            {t('porQue.titulo')}
           </BlurIn>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -746,7 +877,7 @@ function FinalCTASection() {
             <a href="https://app.ragfly.ai" className="bg-white text-slm-dark px-7 py-3.5 rounded-full font-medium text-base hover:opacity-90 transition-opacity">
               {t('cta.ctaPrimario')}
             </a>
-            <a href="mailto:rufinocabreragaillard@gmail.com" className="border border-white/40 text-white px-7 py-3.5 rounded-full font-medium text-base hover:bg-white/10 transition-colors">
+            <a href="#pruebalo" className="border border-white/40 text-white px-7 py-3.5 rounded-full font-medium text-base hover:bg-white/10 transition-colors">
               {t('cta.ctaSecundario')}
             </a>
           </div>
@@ -775,9 +906,9 @@ function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
           <div className="flex flex-col gap-3">
             <span className="text-xs uppercase tracking-[0.18em] text-white/60">{t('footer.producto' as Parameters<typeof t>[0])}</span>
-            <a href="#capacidades" className="font-helvetica-neue text-sm hover:text-white">{t('footer.capacidades')}</a>
-            <a href="#como-funciona" className="font-helvetica-neue text-sm hover:text-white">{t('footer.comoFunciona')}</a>
-            <a href="#para-agentes" className="font-helvetica-neue text-sm hover:text-white">{t('footer.paraAgentes')}</a>
+            <a href="#que-es" className="font-helvetica-neue text-sm hover:text-white">{t('footer.capacidades')}</a>
+            <a href="#como-se-usa" className="font-helvetica-neue text-sm hover:text-white">{t('footer.comoFunciona')}</a>
+            <a href="#como-se-usa" className="font-helvetica-neue text-sm hover:text-white">{t('footer.paraAgentes')}</a>
             <a href="#planes" className="font-helvetica-neue text-sm hover:text-white">{t('footer.planesLink')}</a>
           </div>
           <div className="flex flex-col gap-3">
@@ -801,125 +932,6 @@ function Footer() {
 }
 
 /* ------------------------------------------------------------------ */
-/* KeyFactsSection — "En breve": tabla semántica de las 4 preguntas    */
-/* ------------------------------------------------------------------ */
-function KeyFactsSection() {
-  const t = useTranslations()
-  const rows = [0, 1, 2, 3].map((i) => ({
-    q: t(`enBreve.q${i}` as Parameters<typeof t>[0]),
-    a: t(`enBreve.a${i}` as Parameters<typeof t>[0]),
-  }))
-  return (
-    <section id="en-breve" aria-labelledby="en-breve-h" className="px-6 md:px-12 lg:px-[60px] py-20 md:py-28 bg-slm-light">
-      <div className="max-w-[1000px] mx-auto flex flex-col gap-10">
-        <div className="flex flex-col gap-4">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('enBreve.eyebrow')}</span>
-          <BlurIn as="h2" id="en-breve-h" className="text-slm-dark text-3xl md:text-4xl lg:text-5xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('enBreve.titulo')}
-          </BlurIn>
-        </div>
-        <div className="overflow-hidden rounded-[24px] border border-slm-dark/8 bg-white">
-          <table className="w-full border-collapse text-left">
-            <caption className="sr-only">{t('enBreve.titulo')}</caption>
-            <thead>
-              <tr className="border-b border-slm-dark/8">
-                <th scope="col" className="px-6 py-4 text-xs uppercase tracking-[0.18em] text-slm-gray-light font-medium w-[38%]">{t('enBreve.colPregunta')}</th>
-                <th scope="col" className="px-6 py-4 text-xs uppercase tracking-[0.18em] text-slm-gray-light font-medium">{t('enBreve.colRespuesta')}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((r, i) => (
-                <tr key={i} className="border-b border-slm-dark/5 last:border-0">
-                  <th scope="row" className="px-6 py-5 align-top font-helvetica-neue text-base md:text-lg font-medium text-slm-dark">{r.q}</th>
-                  <td className="px-6 py-5 align-top font-helvetica-neue text-base md:text-lg text-slm-gray leading-relaxed">{r.a}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ------------------------------------------------------------------ */
-/* ForAgentsSection — "Para Agentes": catálogo de operaciones MCP/CLI   */
-/* ------------------------------------------------------------------ */
-function ForAgentsSection() {
-  const t = useTranslations()
-  const ops = agentes.operaciones
-  return (
-    <section id="para-agentes" aria-labelledby="para-agentes-h" className="px-6 md:px-12 lg:px-[60px] py-24 md:py-32 bg-white">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
-        <div className="max-w-[760px] flex flex-col gap-6">
-          <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('paraAgentes.eyebrow')}</span>
-          <BlurIn as="h2" id="para-agentes-h" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
-            {t('paraAgentes.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('paraAgentes.tituloAccent')}</span>
-          </BlurIn>
-          <p className="text-base md:text-lg text-slm-gray font-helvetica-neue leading-relaxed">{t('paraAgentes.descripcion')}</p>
-        </div>
-
-        {/* Conexión MCP */}
-        <div className="rounded-[24px] bg-slm-dark text-slm-light p-6 md:p-8 flex flex-col gap-4">
-          <span className="text-xs uppercase tracking-[0.18em] text-slm-brand-light">{t('paraAgentes.conexionTitulo')}</span>
-          <dl className="grid sm:grid-cols-2 gap-x-8 gap-y-4 font-mono text-sm">
-            <div className="flex flex-col gap-1">
-              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">MCP · SSE</dt>
-              <dd className="break-all text-slm-light/90">{agentes.mcp.endpointSSE}</dd>
-            </div>
-            <div className="flex flex-col gap-1">
-              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">MCP · HTTP</dt>
-              <dd className="break-all text-slm-light/90">{agentes.mcp.endpointHTTP}</dd>
-            </div>
-            <div className="flex flex-col gap-1">
-              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">{t('paraAgentes.authLabel')}</dt>
-              <dd className="break-all text-slm-light/90">{agentes.mcp.auth}</dd>
-            </div>
-            <div className="flex flex-col gap-1">
-              <dt className="text-slm-gray-light text-xs uppercase tracking-wider">{t('paraAgentes.scopeLabel')}</dt>
-              <dd className="text-slm-light/90 font-sans">{agentes.mcp.scope}</dd>
-            </div>
-          </dl>
-          <div className="flex flex-wrap gap-3 mt-2">
-            <a href="/agents.json" className="bg-slm-brand-light text-slm-dark px-5 py-2.5 rounded-full font-medium text-sm hover:opacity-90 transition-opacity font-sans">{t('paraAgentes.ctaJson')}</a>
-            <a href="/llms-full.txt" className="border border-white/30 text-slm-light px-5 py-2.5 rounded-full font-medium text-sm hover:bg-white/10 transition-colors font-sans">{t('paraAgentes.ctaCatalogo')}</a>
-          </div>
-        </div>
-
-        {/* Catálogo de operaciones */}
-        <div className="flex flex-col gap-4">
-          <p className="text-sm text-slm-gray font-helvetica-neue">{t('paraAgentes.totalLabel', { total: ops.length })}</p>
-          <div className="overflow-x-auto rounded-[24px] border border-slm-dark/8">
-            <table className="w-full border-collapse text-left text-sm">
-              <caption className="sr-only">{t('paraAgentes.titulo1')} {t('paraAgentes.tituloAccent')}</caption>
-              <thead>
-                <tr className="border-b border-slm-dark/10 bg-slm-light">
-                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colTool')}</th>
-                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colCli')}</th>
-                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colDesc')}</th>
-                  <th scope="col" className="px-5 py-3 text-xs uppercase tracking-[0.14em] text-slm-gray-light font-medium">{t('paraAgentes.colAcceso')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ops.map((o) => (
-                  <tr key={o.id} className="border-b border-slm-dark/5 last:border-0 align-top">
-                    <td className="px-5 py-4"><code className="font-mono text-slm-dark font-medium">{o.id}</code></td>
-                    <td className="px-5 py-4"><code className="font-mono text-slm-brand-dark whitespace-nowrap">{o.cli}</code></td>
-                    <td className="px-5 py-4 text-slm-gray leading-relaxed min-w-[280px]">{o.descripcion}</td>
-                    <td className="px-5 py-4"><span className="inline-block text-[11px] uppercase tracking-wider text-slm-brand bg-slm-brand/10 px-2 py-1 rounded">{o.tipo_acceso}</span></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ------------------------------------------------------------------ */
 /* Page                                                                 */
 /* ------------------------------------------------------------------ */
 export default function Home() {
@@ -930,14 +942,15 @@ export default function Home() {
         <Header />
         <Hero />
       </div>
-      <ZeroSetupSection />
-      <TwoPathsSection />
-      <KeyFactsSection />
+      <BuildingSection />
       <ProblemSolutionSection />
-      <CapabilitiesSection />
-      <HowItWorksSection />
-      <ForAgentsSection />
-      <TextFillSection />
+      <WhatIsSection />
+      <CombinaSection />
+      <ChatSection />
+      <IdentitiesSection />
+      <ModesSection />
+      <SurfacesSection />
+      <BuiltSection />
       <SecuritySection />
       <PricingSection />
       <WhyUsSection />

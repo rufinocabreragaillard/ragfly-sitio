@@ -75,19 +75,20 @@ const jsonLd = {
       url: "https://ragfly.ai",
       publisher: { "@id": "https://ragfly.ai/#organization" },
       description:
-        "Infraestructura RAG multi-tenant: conversa con tus documentos en lenguaje natural y entrega a tus agentes de IA el contexto documental exacto, filtrado por RBAC, vía MCP, CLI y API REST.",
+        "Infraestructura RAG multi-tenant para agentes de IA: convierte cualquier corpus de documentos en una base de recuperación segura, aislada por cliente y lista para producción, apuntando a un directorio. El dato no sale de tu red. Vía MCP, REST y CLI.",
       featureList: [
-        "Búsqueda semántica vectorial con citas a la fuente",
-        "Indexación y vectorización automáticas del directorio de documentos",
-        "Servidor MCP remoto y CLI para agentes de IA",
-        "Multi-tenant con RBAC granular por grupo, entidad, rol y función",
-        "Configurable en lenguaje natural (prompts), sin programar",
+        "De cero a producción apuntando a un directorio (ingesta, vectorización e indexado automáticos)",
+        "Multi-tenant de fábrica: un corpus aislado por cliente (Grupos → Entidades → Áreas)",
+        "El documento nunca sale de la red: vectorización «en el aire», Client LM opcional",
+        "Recuperación con citas y permisos (RBAC para personas y para agentes vía perfiles)",
+        "DB-agnóstico y BYO: trae tu propia base vectorial y tu propio LLM",
+        "Superficies MCP, REST y CLI en todos los planes",
       ],
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "USD",
-        lowPrice: "7.99",
-        highPrice: "1990",
+        lowPrice: "0",
+        highPrice: "490",
         offerCount: "5",
       },
     },
@@ -96,11 +97,11 @@ const jsonLd = {
       "@id": "https://ragfly.ai/#planes",
       name: "Planes de RAGfly",
       itemListElement: [
-        { "@type": "Offer", name: "Professional", price: "7.99", priceCurrency: "USD", description: "Para profesionales independientes." },
-        { "@type": "Offer", name: "Team", price: "49.99", priceCurrency: "USD", description: "Para equipos colaborativos." },
-        { "@type": "Offer", name: "Business", price: "199", priceCurrency: "USD", description: "Control estricto y privacidad." },
-        { "@type": "Offer", name: "Enterprise", price: "1990", priceCurrency: "USD", description: "Gran volumen y máxima escala." },
-        { "@type": "Offer", name: "Corporate", description: "Corporaciones y holdings — a medida." },
+        { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", description: "Para probar — ~1.000 páginas procesadas, 1 entidad." },
+        { "@type": "Offer", name: "Starter", price: "19", priceCurrency: "USD", description: "Para un dev en solitario — ~4.000 páginas, 1 entidad." },
+        { "@type": "Offer", name: "Team", price: "95", priceCurrency: "USD", description: "Multi-tenant para consultoras — ~10.000 páginas, hasta 3 entidades aisladas." },
+        { "@type": "Offer", name: "Scale", price: "490", priceCurrency: "USD", description: "Producción a escala — ~60.000 páginas, hasta 15 entidades, Client LM/on-prem y BYO." },
+        { "@type": "Offer", name: "Enterprise", description: "Regulado, soberano o gran volumen — inbound; despliegue managed u on-prem/soberano." },
       ],
     },
     {
@@ -112,7 +113,7 @@ const jsonLd = {
           name: "¿Qué es RAGfly?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Infraestructura RAG multi-tenant lista para usar: permite conversar con tus documentos en lenguaje natural y entrega a cualquier agente de IA el contexto documental exacto que necesita, filtrado por RBAC.",
+            text: "La capa de contexto documental para agentes de IA: convierte cualquier corpus de documentos —miles o decenas de miles, incluidos escaneados— en una base de recuperación segura, multi-tenant y lista para producción, sin construir ni mantener un pipeline RAG.",
           },
         },
         {
@@ -120,7 +121,7 @@ const jsonLd = {
           name: "¿Para quién es?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Para profesionales, equipos, empresas y holdings que trabajan con grandes volúmenes de documentos; y para desarrolladores o integradores que construyen agentes de IA y necesitan contexto documental resuelto.",
+            text: "Para desarrolladores, consultoras e integradores que construyen agentes de IA sobre documentos privados —a veces de muchos clientes distintos— y no quieren ser dueños de la infraestructura RAG a escala.",
           },
         },
         {
@@ -128,7 +129,7 @@ const jsonLd = {
           name: "¿Cuánto cuesta?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Professional USD $7,99/mes, Team USD $49,99/mes, Business USD $199/mes, Enterprise USD $1.990/mes y Corporate a medida. Prueba gratis de 15 días sin método de pago.",
+            text: "Cobro por página procesada, en páginas y dólares: Free $0 (~1.000 páginas), Starter $19 (~4.000), Team $95 (~10.000, multi-tenant), Scale $490 (~60.000) y Enterprise inbound. Página adicional Fast $0,02 / Hi-res $0,05. Superficies MCP/REST/CLI en todos los planes.",
           },
         },
         {
@@ -136,7 +137,7 @@ const jsonLd = {
           name: "¿Cómo funciona?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Apuntas RAGfly al directorio de tus documentos; el sistema los escanea, vectoriza e indexa automáticamente. Luego consultas por significado en lenguaje natural y obtienes respuestas con citas a la fuente, en el chat o servidas a tus agentes.",
+            text: "Apuntas RAGfly al directorio de tus documentos; el sistema los escanea, vectoriza e indexa automáticamente. Luego tu agente recupera por significado y obtiene respuestas con citas a la fuente vía MCP, REST o CLI — aislado por cliente y dentro de tu red.",
           },
         },
         {
