@@ -60,13 +60,15 @@ function BlurIn({
 /* HeroBg — tiles de documentos flotantes                              */
 /* ------------------------------------------------------------------ */
 function HeroBg() {
+  // Valores deterministas derivados del índice (sin Math.random) para que
+  // el HTML del servidor y del cliente coincidan — evita hydration mismatch.
   const tiles = Array.from({ length: 14 }, (_, i) => ({
     id: i,
     left: ((i * 73 + 11) % 100),
-    delay: -(Math.random() * 18).toFixed(2),
-    dur: (14 + Math.random() * 14).toFixed(2),
-    rot: `${(Math.random() * 14 - 7).toFixed(1)}deg`,
-    scale: (0.6 + Math.random() * 0.7).toFixed(2),
+    delay: (-(((i * 37) % 18) + (i % 3) * 0.33)).toFixed(2),
+    dur: (14 + ((i * 53) % 14)).toFixed(2),
+    rot: `${(((i * 41) % 14) - 7).toFixed(1)}deg`,
+    scale: (0.6 + ((i * 29) % 70) / 100).toFixed(2),
   }))
 
   return (
@@ -213,10 +215,10 @@ function Hero() {
       <div className="flex-1 flex flex-col items-center justify-center z-10 gap-6">
         <BlurIn
           as="h1"
-          className="text-center font-helvetica-neue font-medium leading-[1.05] text-slm-dark max-w-4xl"
+          className="text-center font-helvetica-neue font-medium leading-[1.08] text-slm-dark max-w-4xl"
         >
           <span className="block text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em]">{t('hero.headlineLead')}</span>
-          <span className="block text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">
+          <span className="block text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] pb-[0.12em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">
             {t('hero.headlineAccent')}
           </span>
         </BlurIn>
@@ -262,7 +264,7 @@ function BuildingSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('construyendo.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('construyendo.titulo1')}{' '}
-            <em className="not-italic bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('construyendo.tituloEm')}</em>{' '}
+            <em className="not-italic inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('construyendo.tituloEm')}</em>{' '}
             {t('construyendo.titulo2')}
           </BlurIn>
           <p className="text-base md:text-lg text-slm-gray font-helvetica-neue max-w-[560px] leading-relaxed">
@@ -363,7 +365,7 @@ function WhatIsSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('queEs.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('queEs.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('queEs.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('queEs.tituloAccent')}</span>
           </BlurIn>
           <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed max-w-[520px]">
             {t('queEs.descripcion')}
@@ -451,7 +453,7 @@ function CombinaSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('combina.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('combina.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('combina.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('combina.tituloAccent')}</span>
           </BlurIn>
         </div>
 
@@ -517,7 +519,7 @@ function ChatSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('chat.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('chat.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('chat.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('chat.tituloAccent')}</span>
           </BlurIn>
           <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('chat.descripcion')}</p>
           <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('chat.descripcion2')}</p>
@@ -558,7 +560,7 @@ function IdentitiesSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('identidades.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('identidades.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('identidades.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('identidades.tituloAccent')}</span>
           </BlurIn>
           <p className="text-slm-gray font-helvetica-neue text-base md:text-lg leading-relaxed">{t('identidades.descripcion')}</p>
         </div>
@@ -592,7 +594,7 @@ function ModesSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('modos.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('modos.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('modos.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('modos.tituloAccent')}</span>
           </BlurIn>
           <p className="text-base md:text-lg text-slm-gray font-helvetica-neue max-w-[560px] leading-relaxed">{t('modos.descripcion')}</p>
         </div>
@@ -655,7 +657,7 @@ function SurfacesSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('superficies.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('superficies.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('superficies.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('superficies.tituloAccent')}</span>
           </BlurIn>
           <p className="text-base md:text-lg text-slm-gray font-helvetica-neue max-w-[560px] leading-relaxed">{t('superficies.descripcion')}</p>
         </div>
@@ -705,7 +707,7 @@ function BuiltSection() {
           <span className="text-sm uppercase tracking-[0.18em] text-slm-brand">{t('construido.eyebrow')}</span>
           <BlurIn as="h2" className="text-slm-dark text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1.05] tracking-[-0.03em]">
             {t('construido.titulo1')}{' '}
-            <span className="bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('construido.tituloAccent')}</span>
+            <span className="inline-block pb-[0.06em] bg-gradient-to-r from-slm-brand-dark via-slm-brand to-slm-brand-light bg-clip-text text-transparent">{t('construido.tituloAccent')}</span>
           </BlurIn>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
