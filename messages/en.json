@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "RAGfly — RAG infrastructure for your agents",
-    "description": "RAG at scale so any agent can converse with thousands of private documents — multi-tenant, isolated per client, and without the data ever leaving your network. Connect a directory via MCP, REST or CLI."
+    "description": "RAG at scale so any agent can converse with thousands of private documents — multi-tenant, isolated per client, without storing your documents. Connect a directory via MCP, REST or CLI."
   },
   "nav": {
     "producto": "What it is",
@@ -17,7 +17,7 @@
     "eyebrow": "RAG infrastructure for agents",
     "headlineLead": "The hard RAG, solved",
     "headlineAccent": "— for your agents.",
-    "tagline": "Any agent conversing with thousands of private documents: at scale, isolated per client, inside your network. Connect a directory and your agent answers with citations — without building or maintaining a RAG pipeline.",
+    "tagline": "Any agent conversing with thousands of private documents: at scale, isolated per client, without us storing your documents. Connect a directory and your agent answers with citations — without building or maintaining a RAG pipeline.",
     "ctaPrimario": "Start free",
     "ctaSecundario": "See the live demo"
   },
@@ -54,7 +54,7 @@
     "sin4": "Months of integration before the first result",
     "con0": "Point at a directory; ingestion, vectorization and indexing are automatic",
     "con1": "Multi-tenant out of the box: an isolated corpus per client, from the database up",
-    "con2": "The document never leaves your network; \"in-flight\" vectorization, optional Client LM",
+    "con2": "We don't store your document; and if you need it, we process it without it leaving your network",
     "con3": "DB-agnostic and BYO: bring your own vector database and your own model",
     "con4": "From zero to an agent answering with citations in under 30 minutes"
   },
@@ -75,8 +75,8 @@
     "item0Titulo": "Multi-tenant out of the box",
     "item0Desc": "An isolated corpus per client, governed from a single panel with a Groups → Entities → Areas structure. Serve 20 clients from one platform without a single piece of data crossing from one to another. It's what cloud-first context engines don't solve: there, you build that isolation yourself.",
     "item1Num": "2",
-    "item1Titulo": "The document never leaves your network",
-    "item1Desc": "\"In-flight\" vectorization, data encrypted at rest in the database and optional Client LM so indexing never leaves the internal network. Opens up the regulated clients — legal, healthcare, government — that others can't take. On the advanced plans, you also bring your own vector database and choose your models (BYO).",
+    "item1Titulo": "We don't store your document — and if you need it, it never leaves your network",
+    "item1Desc": "We never store the document: it's processed in-flight — parse, chunks, embeddings — and not persisted. And if you need it, we handle it without it leaving your network: the document stays put, only chunks encrypted with a per-group key travel out, and at retrieval your agent receives indexes and local URLs, never the file. Opens up the regulated clients — legal, healthcare, government — that others can't take. On advanced plans, you also bring your own vector database and choose your models (BYO).",
     "item2Num": "3",
     "item2Titulo": "From directory to production",
     "item2Desc": "No integration project. Ingestion, vectorization and indexing are automatic, at the scale of tens of thousands of files. Your only job is to point; the system handles the rest.",
@@ -89,7 +89,7 @@
     "tablaSin1": "Build multi-client isolation by hand",
     "tablaCon1": "Multi-tenant out of the box: an isolated corpus per client, from the database up",
     "tablaSin2": "Upload the documents to a third-party cloud",
-    "tablaCon2": "The document never leaves your network; \"in-flight\" vectorization, optional Client LM",
+    "tablaCon2": "We don't store your document; and if you need it, we process it without it leaving your network",
     "tablaSin3": "Lock yourself into a vector DB or LLM vendor",
     "tablaCon3": "DB-agnostic and BYO: bring your own vector database and your own model",
     "tablaSin4": "Months of integration before the first result",
@@ -169,7 +169,7 @@
     "titulo1": "Your data is yours.",
     "tituloAccent": "Always.",
     "descripcion": "Protection is a design pillar, not a premium plan. Confidential documents stay under your organization's control.",
-    "punto0": "Documents aren't uploaded to a third-party cloud; indexing and vectorization happen \"in-flight\"",
+    "punto0": "We don't store documents: they're processed in-flight (parse → chunks → embeddings) and not persisted",
     "punto1": "Document data encrypted at rest in the database",
     "punto2": "Structural filtering from the database up: every access goes through views that filter what each identity can see",
     "punto3": "Full isolation between organizations: no group sees another's data",
@@ -178,7 +178,7 @@
     "punto6": "Two-factor authentication and secure JWT tokens",
     "punto7": "Full audit trail: every action logged with identity, date and module",
     "punto8": "Encrypted communications (HTTPS) across every layer",
-    "punto9": "Optional Client LM: indexing of physical documents never leaves the internal network"
+    "punto9": "Optional Client LM: indexing never leaves the internal network; when you need it, retrieval returns indexes and local URLs — the relevant chunks — to your agent, never the document"
   },
   "planes": {
     "eyebrow": "Plans",
@@ -204,7 +204,7 @@
     "plan1F4": "Retrieval with citations",
     "plan1F5": "Community support",
     "plan2Nombre": "Team",
-    "plan2Sub": "For consultancies serving several clients",
+    "plan2Sub": "For those who serve multiple clients",
     "plan2Precio": "USD $95/mo",
     "plan2Cta": "Get started",
     "plan2F0": "~10,000 processed pages included",
@@ -242,8 +242,8 @@
     "item0Desc": "Ingestion, scale, multi-tenancy and security come solved. You build the agent logic, not the infrastructure.",
     "item1Titulo": "Multi-tenant for those who serve many",
     "item1Desc": "Isolated clients from a single panel — what cloud-first vendors don't offer.",
-    "item2Titulo": "The data never leaves your network",
-    "item2Desc": "Client LM, in-flight vectorization, BYO vector database and BYO LLM. Opens up the clients others can't take.",
+    "item2Titulo": "We don't store your document — and if you need it, it never leaves your network",
+    "item2Desc": "In-flight vectorization, optional Client LM, BYO vector database and BYO LLM. Opens up the regulated clients — legal, healthcare, government — that others can't take.",
     "item3Titulo": "No lock-in",
     "item3Desc": "DB-agnostic, compatible with Claude, GPT, Gemini and open-source models. Bring your DB and your model.",
     "item4Titulo": "From directory to production in minutes",
@@ -259,7 +259,7 @@
     "ctaSecundario": "See the live demo"
   },
   "footer": {
-    "tagline": "Multi-tenant RAG infrastructure for your AI agents. The data never leaves your network.",
+    "tagline": "Multi-tenant RAG infrastructure for your AI agents. We don't store your document; if you need it, we handle it without it leaving your network.",
     "producto": "Product",
     "empresa": "Resources",
     "legal": "Legal",

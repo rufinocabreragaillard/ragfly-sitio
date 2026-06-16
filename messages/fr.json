@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "RAGfly — Infrastructure RAG pour vos agents",
-    "description": "RAG à l'échelle pour que n'importe quel agent converse avec des milliers de documents privés — multi-tenant, isolé par client, sans que la donnée quitte votre réseau. Connectez un répertoire via MCP, REST ou CLI."
+    "description": "RAG à l'échelle pour que n'importe quel agent converse avec des milliers de documents privés — multi-tenant, isolé par client, sans stocker vos documents. Connectez un répertoire via MCP, REST ou CLI."
   },
   "nav": {
     "producto": "C'est quoi",
@@ -17,7 +17,7 @@
     "eyebrow": "Infrastructure RAG pour agents",
     "headlineLead": "Le RAG difficile, résolu",
     "headlineAccent": "— pour vos agents.",
-    "tagline": "N'importe quel agent conversant avec des milliers de documents privés : à l'échelle, isolés par client, au sein de votre réseau. Vous connectez un répertoire et votre agent répond avec des citations — sans construire ni maintenir un pipeline RAG.",
+    "tagline": "N'importe quel agent conversant avec des milliers de documents privés : à l'échelle, isolés par client, sans que nous stockions vos documents. Vous connectez un répertoire et votre agent répond avec des citations — sans construire ni maintenir un pipeline RAG.",
     "ctaPrimario": "Commencer gratuitement",
     "ctaSecundario": "Voir la démo en direct"
   },
@@ -54,7 +54,7 @@
     "sin4": "Des mois d'intégration avant le premier résultat",
     "con0": "Vous pointez vers un répertoire ; ingestion, vectorisation et indexation automatiques",
     "con1": "Multi-tenant nativement : un corpus isolé par client, dès la base de données",
-    "con2": "Le document ne quitte pas votre réseau ; vectorisation « en vol », Client LM en option",
+    "con2": "Nous ne stockons pas votre document ; et si vous en avez besoin, nous le traitons sans qu'il quitte votre réseau",
     "con3": "Agnostique à la base de données et BYO : apportez votre propre base vectorielle et votre propre modèle",
     "con4": "De zéro à un agent répondant avec des citations en moins de 30 minutes"
   },
@@ -75,8 +75,8 @@
     "item0Titulo": "Multi-tenant nativement",
     "item0Desc": "Un corpus isolé par client, gouverné depuis un seul panneau avec une structure Groupes → Entités → Domaines. Vous servez 20 clients depuis une seule plateforme sans qu'une donnée passe de l'un à l'autre. C'est ce que les context engines cloud-first ne résolvent pas : là, cet isolement, c'est vous qui le construisez.",
     "item1Num": "2",
-    "item1Titulo": "Le document ne quitte jamais votre réseau",
-    "item1Desc": "Vectorisation « en vol », données chiffrées dans la base et Client LM en option pour que l'indexation ne sorte pas du réseau interne. Cela ouvre les clients régulés — juridique, santé, secteur public — que les autres ne peuvent pas prendre. Dans les forfaits avancés, vous apportez en plus votre propre base vectorielle et choisissez vos modèles (BYO).",
+    "item1Titulo": "Nous ne stockons pas votre document — et si vous en avez besoin, il ne quitte pas votre réseau",
+    "item1Desc": "Nous ne stockons jamais le document : il est traité « en vol » —parsing, chunks, embeddings— et n'est pas conservé. Et si vous en avez besoin, nous le traitons sans qu'il quitte votre réseau : le document ne sort pas, seuls des chunks chiffrés avec une clé par groupe sortent, et lors de la récupération votre agent reçoit des index et des URL locales, jamais le fichier. Cela ouvre les clients régulés —juridique, santé, secteur public— que les autres ne peuvent pas prendre. Dans les forfaits avancés, vous apportez en plus votre propre base vectorielle et choisissez vos modèles (BYO).",
     "item2Num": "3",
     "item2Titulo": "Du répertoire à la production",
     "item2Desc": "Sans projet d'intégration. Ingestion, vectorisation et indexation automatiques à l'échelle de dizaines de milliers de fichiers. Votre seule tâche est de pointer ; le système se charge du reste.",
@@ -89,7 +89,7 @@
     "tablaSin1": "Construire l'isolement multi-client à la main",
     "tablaCon1": "Multi-tenant nativement : un corpus isolé par client, dès la base de données",
     "tablaSin2": "Téléverser les documents vers un cloud tiers",
-    "tablaCon2": "Le document ne quitte pas votre réseau ; vectorisation « en vol », Client LM en option",
+    "tablaCon2": "Nous ne stockons pas votre document ; et si vous en avez besoin, nous le traitons sans qu'il quitte votre réseau",
     "tablaSin3": "Vous lier à un fournisseur de base vectorielle ou de LLM",
     "tablaCon3": "Agnostique à la base de données et BYO : apportez votre propre base vectorielle et votre propre modèle",
     "tablaSin4": "Des mois d'intégration avant le premier résultat",
@@ -169,7 +169,7 @@
     "titulo1": "Vos données sont les vôtres.",
     "tituloAccent": "Toujours.",
     "descripcion": "La protection est un pilier de conception, pas un forfait premium. Les documents confidentiels restent sous le contrôle de votre organisation.",
-    "punto0": "Les documents ne sont pas chargés vers un cloud tiers ; indexation et vectorisation « en vol »",
+    "punto0": "Nous ne stockons pas les documents : ils sont traités « en vol » (parsing → chunks → embeddings) et ne sont pas conservés",
     "punto1": "Données des documents chiffrées dans la base de données",
     "punto2": "Filtrage structurel depuis la base : tout accès passe par des vues qui filtrent ce que chaque identité peut voir",
     "punto3": "Isolement total entre organisations : aucun groupe ne voit les données d'un autre",
@@ -178,7 +178,7 @@
     "punto6": "Authentification à double facteur et tokens JWT sécurisés",
     "punto7": "Audit complet : chaque action enregistrée avec identité, date et module",
     "punto8": "Communications chiffrées (HTTPS) à toutes les couches",
-    "punto9": "Client LM en option : l'indexation des documents physiques ne sort pas du réseau interne"
+    "punto9": "Client LM en option : l'indexation ne sort pas du réseau interne ; quand vous en avez besoin, la récupération renvoie à votre agent des index et des URL locales —les chunks pertinents—, jamais le document"
   },
   "planes": {
     "eyebrow": "Forfaits",
@@ -204,7 +204,7 @@
     "plan1F4": "Récupération avec citations",
     "plan1F5": "Support par la communauté",
     "plan2Nombre": "Team",
-    "plan2Sub": "Pour les cabinets qui servent plusieurs clients",
+    "plan2Sub": "Pour ceux qui servent plusieurs clients",
     "plan2Precio": "USD $95/mois",
     "plan2Cta": "Commencer",
     "plan2F0": "~10 000 pages traitées incluses",
@@ -242,8 +242,8 @@
     "item0Desc": "Ingestion, mise à l'échelle, multi-tenancy et sécurité arrivent résolus. Vous construisez la logique de l'agent, pas l'infrastructure.",
     "item1Titulo": "Multi-tenant pour qui sert beaucoup de clients",
     "item1Desc": "Des clients isolés depuis un seul panneau — ce que les cloud-first n'offrent pas.",
-    "item2Titulo": "La donnée ne quitte pas votre réseau",
-    "item2Desc": "Client LM, vectorisation en vol, BYO base vectorielle et BYO LLM. Ouvre les clients que les autres ne peuvent pas prendre.",
+    "item2Titulo": "Nous ne stockons pas votre document — et si vous en avez besoin, il ne quitte pas votre réseau",
+    "item2Desc": "Vectorisation en vol, Client LM optionnel, BYO base vectorielle et BYO LLM. Ouvre les clients régulés — juridique, santé, gouvernement — que les autres ne peuvent pas prendre.",
     "item3Titulo": "Sans lock-in",
     "item3Desc": "Agnostique à la base de données, compatible avec Claude, GPT, Gemini et les modèles open source. Apportez votre DB et votre modèle.",
     "item4Titulo": "Du répertoire à la production en quelques minutes",
@@ -259,7 +259,7 @@
     "ctaSecundario": "Voir la démo en direct"
   },
   "footer": {
-    "tagline": "Infrastructure RAG multi-tenant pour vos agents d'IA. La donnée ne quitte pas votre réseau.",
+    "tagline": "Infrastructure RAG multi-tenant pour vos agents d'IA. Nous ne stockons pas votre document ; si vous en avez besoin, nous le traitons sans qu'il quitte votre réseau.",
     "producto": "Produit",
     "empresa": "Ressources",
     "legal": "Légal",

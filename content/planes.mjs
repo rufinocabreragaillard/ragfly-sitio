@@ -60,7 +60,7 @@ export const planes = [
   },
   {
     nombre: 'Team',
-    sub: 'Para consultoras que sirven a varios clientes',
+    sub: 'Para quienes sirven a varios clientes',
     precio: 'USD $95/mes',
     resaltado: true,
     cta: 'Empezar',

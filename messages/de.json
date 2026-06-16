@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "RAGfly — RAG-Infrastruktur für deine Agenten",
-    "description": "RAG im großen Maßstab, damit jeder Agent mit Tausenden privaten Dokumenten sprechen kann — multi-tenant, pro Kunde isoliert, ohne dass die Daten dein Netzwerk verlassen. Verbinde ein Verzeichnis per MCP, REST oder CLI."
+    "description": "RAG im großen Maßstab, damit jeder Agent mit Tausenden privaten Dokumenten sprechen kann — multi-tenant, pro Kunde isoliert, ohne deine Dokumente zu speichern. Verbinde ein Verzeichnis per MCP, REST oder CLI."
   },
   "nav": {
     "producto": "Was es ist",
@@ -17,7 +17,7 @@
     "eyebrow": "RAG-Infrastruktur für Agenten",
     "headlineLead": "Das schwierige RAG, gelöst",
     "headlineAccent": "— für deine Agenten.",
-    "tagline": "Jeder Agent im Gespräch mit Tausenden privaten Dokumenten: im großen Maßstab, pro Kunde isoliert, innerhalb deines Netzwerks. Du verbindest ein Verzeichnis und dein Agent antwortet mit Quellenangaben — ohne eine RAG-Pipeline zu bauen oder zu warten.",
+    "tagline": "Jeder Agent im Gespräch mit Tausenden privaten Dokumenten: im großen Maßstab, pro Kunde isoliert, ohne dass wir deine Dokumente speichern. Du verbindest ein Verzeichnis und dein Agent antwortet mit Quellenangaben — ohne eine RAG-Pipeline zu bauen oder zu warten.",
     "ctaPrimario": "Kostenlos starten",
     "ctaSecundario": "Live-Demo ansehen"
   },
@@ -54,7 +54,7 @@
     "sin4": "Monate der Integration vor dem ersten Ergebnis",
     "con0": "Du zeigst auf ein Verzeichnis; Ingestion, Vektorisierung und Indexierung automatisch",
     "con1": "Multi-tenant ab Werk: ein pro Kunde isolierter Korpus, von der Datenbank an",
-    "con2": "Das Dokument verlässt dein Netzwerk nicht; Vektorisierung „in der Luft“, Client LM optional",
+    "con2": "Wir speichern dein Dokument nicht; und wenn du es brauchst, verarbeiten wir es, ohne dass es dein Netzwerk verlässt",
     "con3": "DB-agnostisch und BYO: bring deine eigene Vektorbasis und dein eigenes Modell",
     "con4": "Von null zu einem Agenten, der in unter 30 Minuten mit Quellenangaben antwortet"
   },
@@ -75,8 +75,8 @@
     "item0Titulo": "Multi-tenant ab Werk",
     "item0Desc": "Ein pro Kunde isolierter Korpus, von einem einzigen Panel aus gesteuert mit einer Struktur aus Gruppen → Entitäten → Bereichen. Du bedienst 20 Kunden über eine einzige Plattform, ohne dass ein Datum von einem zum anderen wandert. Genau das lösen cloud-first Context-Engines nicht: dort baust du diese Isolation selbst.",
     "item1Num": "2",
-    "item1Titulo": "Das Dokument verlässt nie dein Netzwerk",
-    "item1Desc": "Vektorisierung „in der Luft“, in der Datenbank verschlüsselte Daten und optionaler Client LM, damit die Indexierung das interne Netzwerk nicht verlässt. Das öffnet die regulierten Kunden —Recht, Gesundheit, Behörden—, die der Rest nicht annehmen kann. In den fortgeschrittenen Plänen bringst du zudem deine eigene Vektorbasis und wählst deine Modelle (BYO).",
+    "item1Titulo": "Wir speichern dein Dokument nicht — und wenn du es brauchst, verlässt es dein Netzwerk nicht",
+    "item1Desc": "Wir speichern das Dokument in keinem Fall: es wird „in der Luft“ verarbeitet —Parsing, Chunks, Embeddings— und nicht persistiert. Und wenn du es brauchst, verarbeiten wir es, ohne dass es dein Netzwerk verlässt: das Dokument bleibt, nur mit einem Schlüssel pro Gruppe verschlüsselte Chunks verlassen es, und beim Abruf erhält dein Agent Indizes und lokale URLs, nie die Datei. Das öffnet die regulierten Kunden —Recht, Gesundheit, Behörden—, die der Rest nicht annehmen kann. In den fortgeschrittenen Plänen bringst du zudem deine eigene Vektorbasis und wählst deine Modelle (BYO).",
     "item2Num": "3",
     "item2Titulo": "Vom Verzeichnis zur Produktion",
     "item2Desc": "Ohne Integrationsprojekt. Ingestion, Vektorisierung und Indexierung automatisch im Maßstab von Zehntausenden Dateien. Deine einzige Aufgabe ist das Zeigen; um den Rest kümmert sich das System.",
@@ -89,7 +89,7 @@
     "tablaSin1": "Die Multi-Kunden-Isolation von Hand bauen",
     "tablaCon1": "Multi-tenant ab Werk: ein pro Kunde isolierter Korpus, von der Datenbank an",
     "tablaSin2": "Die Dokumente in eine Drittanbieter-Cloud hochladen",
-    "tablaCon2": "Das Dokument verlässt dein Netzwerk nicht; Vektorisierung „in der Luft“, Client LM optional",
+    "tablaCon2": "Wir speichern dein Dokument nicht; und wenn du es brauchst, verarbeiten wir es, ohne dass es dein Netzwerk verlässt",
     "tablaSin3": "Dich an einen Vektor-DB- oder LLM-Anbieter binden",
     "tablaCon3": "DB-agnostisch und BYO: bring deine eigene Vektorbasis und dein eigenes Modell",
     "tablaSin4": "Monate der Integration vor dem ersten Ergebnis",
@@ -169,7 +169,7 @@
     "titulo1": "Deine Daten gehören dir.",
     "tituloAccent": "Immer.",
     "descripcion": "Der Schutz ist eine Design-Säule, kein Premium-Plan. Vertrauliche Dokumente bleiben unter der Kontrolle deiner Organisation.",
-    "punto0": "Die Dokumente werden nicht in eine Drittanbieter-Cloud geladen; Indexierung und Vektorisierung „in der Luft“",
+    "punto0": "Wir speichern die Dokumente nicht: sie werden „in der Luft“ verarbeitet (Parsing → Chunks → Embeddings) und nicht persistiert",
     "punto1": "Dokumentdaten in der Datenbank verschlüsselt",
     "punto2": "Strukturelle Filterung von der Basis an: jeder Zugriff läuft über Views, die filtern, was jede Identität sehen darf",
     "punto3": "Vollständige Isolation zwischen Organisationen: keine Gruppe sieht Daten einer anderen",
@@ -178,7 +178,7 @@
     "punto6": "Authentifizierung mit Zwei-Faktor und sicheren JWT-Tokens",
     "punto7": "Vollständige Auditierung: jede Aktion mit Identität, Datum und Modul protokolliert",
     "punto8": "Verschlüsselte Kommunikation (HTTPS) auf allen Schichten",
-    "punto9": "Optionaler Client LM: die Indexierung der physischen Dokumente verlässt das interne Netzwerk nicht"
+    "punto9": "Optionaler Client LM: die Indexierung verlässt das interne Netzwerk nicht; wenn du es brauchst, liefert der Abruf deinem Agenten Indizes und lokale URLs —die relevanten Chunks—, nie das Dokument"
   },
   "planes": {
     "eyebrow": "Pläne",
@@ -204,7 +204,7 @@
     "plan1F4": "Retrieval mit Quellenangaben",
     "plan1F5": "Community-Support",
     "plan2Nombre": "Team",
-    "plan2Sub": "Für Beratungen, die mehrere Kunden bedienen",
+    "plan2Sub": "Für alle, die mehrere Kunden bedienen",
     "plan2Precio": "USD $95/Monat",
     "plan2Cta": "Starten",
     "plan2F0": "~10.000 verarbeitete Seiten inklusive",
@@ -242,8 +242,8 @@
     "item0Desc": "Ingestion, Skalierung, Multi-tenancy und Sicherheit kommen gelöst. Du baust die Logik des Agenten, nicht die Infrastruktur.",
     "item1Titulo": "Multi-tenant für die, die viele bedienen",
     "item1Desc": "Isolierte Kunden von einem einzigen Panel aus — was die Cloud-first-Anbieter nicht bieten.",
-    "item2Titulo": "Die Daten verlassen dein Netzwerk nicht",
-    "item2Desc": "Client LM, Vektorisierung in der Luft, BYO Vektorbasis und BYO LLM. Öffnet die Kunden, die der Rest nicht annehmen kann.",
+    "item2Titulo": "Wir speichern Ihr Dokument nicht — und wenn Sie es brauchen, verlässt es Ihr Netzwerk nicht",
+    "item2Desc": "In-flight-Vektorisierung, optionales Client LM, BYO Vektordatenbank und BYO LLM. Erschließt regulierte Kunden — Recht, Gesundheit, Behörden — die andere nicht bedienen können.",
     "item3Titulo": "Ohne Lock-in",
     "item3Desc": "DB-agnostisch, kompatibel mit Claude, GPT, Gemini und Open-Source-Modellen. Bring deine DB und dein Modell mit.",
     "item4Titulo": "Vom Verzeichnis zur Produktion in Minuten",
@@ -259,7 +259,7 @@
     "ctaSecundario": "Live-Demo ansehen"
   },
   "footer": {
-    "tagline": "Multi-tenant-RAG-Infrastruktur für deine KI-Agenten. Die Daten verlassen dein Netzwerk nicht.",
+    "tagline": "Multi-tenant-RAG-Infrastruktur für deine KI-Agenten. Wir speichern dein Dokument nicht; wenn du es brauchst, verarbeiten wir es, ohne dass es dein Netzwerk verlässt.",
     "producto": "Produkt",
     "empresa": "Ressourcen",
     "legal": "Rechtliches",

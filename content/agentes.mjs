@@ -22,14 +22,14 @@
 //   - Mantener sincronizado con mcp_server.py al agregar/quitar tools.
 // ─────────────────────────────────────────────────────────────────────────
 
-const BACKEND = 'https://seguridad-backend-production-6250.up.railway.app'
+const BACKEND = 'https://api.ragfly.ai'
 
 export const mcp = {
   nombre: 'ragfly',
   // Transportes remotos: SSE y Streamable HTTP. Sin instalar nada local.
-  endpointSSE: `${BACKEND}/mcp`,
-  endpointHTTP: `${BACKEND}/mcp-http`,
-  auth: 'Authorization: Bearer <JWT | API_KEY>',
+  endpointSSE: `${BACKEND}/mcp/sse`,
+  endpointHTTP: `${BACKEND}/mcp-http/`,
+  auth: 'Authorization: Bearer slm_live_xxxxxxxxxx  (API Key) o Bearer <JWT>',
   scope: 'Todas las operaciones quedan acotadas al grupo y entidad activos del usuario autenticado (RBAC).',
 }
 

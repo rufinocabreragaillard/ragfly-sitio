@@ -1,22 +1,29 @@
 # RAGfly
 
-> Infraestructura RAG multi-tenant, lista para usar. Cumple un doble propósito: (1) permitir a personas y organizaciones conversar con sus documentos en lenguaje natural, y (2) entregar a cualquier agente de IA el contexto documental exacto que necesita, filtrado por RBAC, vía MCP, CLI y API REST.
+> Infraestructura RAG multi-tenant para agentes de IA. Convierte cualquier corpus de documentos en una base de recuperación segura, aislada por cliente y lista para producción — sin construir ni mantener un pipeline RAG. Vía MCP, REST y CLI.
 
-RAGfly convierte el sistema de archivos de una organización en conocimiento consultable. El cliente apunta RAGfly al directorio de sus documentos y el sistema los escanea, vectoriza e indexa automáticamente —sin instalación ni configuración previa— hasta dejar lista una base de datos semántica.
+RAGfly es la capa de contexto documental para agentes: apuntas a un directorio de documentos y el sistema los escanea, vectoriza e indexa automáticamente. Tu agente obtiene respuestas con citas a la fuente — a escala, aislado por cliente, sin que almacenemos tus documentos.
 
-- Qué ofrece: chat con RAG sobre tus documentos + contexto para agentes de IA.
-- Para quién: profesionales, equipos, empresas y holdings; y desarrolladores o integradores que construyen agentes.
-- Cómo funciona: apunta a tus carpetas → indexación y vectorización automáticas → consulta por significado, con citas a la fuente.
-- Precios: Professional USD $7,99/mes · Team USD $49,99/mes · Business USD $199/mes · Enterprise USD $1.990/mes · Corporate a medida.
-- Privacidad: los documentos no se cargan a la nube; indexación «en el aire», datos encriptados, RBAC granular, multi-tenant aislado.
+- Qué ofrece: retrieval semántico con citas + capa de acción (habilidades LLM sobre documentos) + multi-tenant de fábrica.
+- Para quién: desarrolladores, consultoras e integradores que construyen agentes sobre documentos privados de uno o varios clientes.
+- Cómo funciona: apunta a un directorio → ingesta, vectorización e indexado automáticos → tu agente consulta por significado vía MCP, REST o CLI con citas a la fuente.
+- Precios (por página procesada, en USD): Free $0 (~1.000 páginas) · Starter $19 (~4.000 páginas) · Team $95 (~10.000 páginas, multi-tenant hasta 3 entidades) · Scale $490 (~60.000 páginas, hasta 15 entidades, Client LM / BYO) · Enterprise inbound (managed u on-prem/soberano).
+- Privacidad: no almacenamos los documentos — se procesan en el aire (parse → chunks → embeddings) y no se persisten. Con Desktop (Client LM), la indexación no sale de la red interna del cliente.
 
 ## Para agentes
 
-- [Catálogo de operaciones (Markdown)](https://ragfly.ai/llms-full.txt): las operaciones MCP/CLI que un agente puede invocar.
+- [Catálogo de operaciones (Markdown)](https://ragfly.ai/llms-full.txt): las 12 operaciones MCP/CLI que un agente puede invocar.
 - [Catálogo de operaciones (JSON)](https://ragfly.ai/agents.json): el mismo catálogo, máquina-legible, con endpoint MCP y autenticación.
-- Conexión MCP (SSE): https://seguridad-backend-production-6250.up.railway.app/mcp
-- Conexión MCP (HTTP streamable): https://seguridad-backend-production-6250.up.railway.app/mcp-http
-- Autenticación: `Authorization: Bearer <JWT | API_KEY>`. Alcance acotado al grupo y entidad del usuario.
+- Conexión MCP (SSE): https://api.ragfly.ai/mcp/sse
+- Conexión MCP (HTTP streamable): https://api.ragfly.ai/mcp-http/
+- Autenticación: `Authorization: Bearer slm_live_xxxxxxxxxx` (API Key, larga duración) o `Bearer <JWT>` (sesión interactiva, 1 h).
+- Alcance: cada credencial está anclada a un usuario, un grupo y un rol — los datos de otros grupos son invisibles por construcción.
+- Swagger interactivo: https://api.ragfly.ai/docs
+
+## Tipos de identidad
+
+- `MAIL`: persona real con email. Puede emitir su propia API Key.
+- `PERFIL`: handle funcional ("bot-finanzas", "agente-noche") sin email, creado por el admin. Permite entregar credenciales a integraciones sin exponer cuentas personales.
 
 ## Enlaces
 

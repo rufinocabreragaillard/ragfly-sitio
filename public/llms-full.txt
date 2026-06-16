@@ -2,13 +2,13 @@
 
 > Infraestructura RAG multi-tenant. Entrega a un agente de IA el contexto documental exacto que necesita, filtrado por RBAC, vía MCP, CLI o API REST.
 
-Actualizado: 2026-05-29
+Actualizado: 2026-06-16
 
 ## Conexión MCP
 
-- Endpoint SSE: https://seguridad-backend-production-6250.up.railway.app/mcp
-- Endpoint HTTP (streamable): https://seguridad-backend-production-6250.up.railway.app/mcp-http
-- Autenticación: Authorization: Bearer <JWT | API_KEY>
+- Endpoint SSE: https://api.ragfly.ai/mcp/sse
+- Endpoint HTTP (streamable): https://api.ragfly.ai/mcp-http/
+- Autenticación: Authorization: Bearer slm_live_xxxxxxxxxx  (API Key) o Bearer <JWT>
 - Alcance: Todas las operaciones quedan acotadas al grupo y entidad activos del usuario autenticado (RBAC).
 
 También disponible vía la CLI de RAGfly Desktop: `ragfly cloud ...`

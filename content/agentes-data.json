@@ -1,9 +1,9 @@
 {
   "mcp": {
     "nombre": "ragfly",
-    "endpointSSE": "https://seguridad-backend-production-6250.up.railway.app/mcp",
-    "endpointHTTP": "https://seguridad-backend-production-6250.up.railway.app/mcp-http",
-    "auth": "Authorization: Bearer <JWT | API_KEY>",
+    "endpointSSE": "https://api.ragfly.ai/mcp/sse",
+    "endpointHTTP": "https://api.ragfly.ai/mcp-http/",
+    "auth": "Authorization: Bearer slm_live_xxxxxxxxxx  (API Key) o Bearer <JWT>",
     "scope": "Todas las operaciones quedan acotadas al grupo y entidad activos del usuario autenticado (RBAC)."
   },
   "familias": [
@@ -283,5 +283,5 @@
       ]
     }
   ],
-  "actualizado": "2026-05-29"
+  "actualizado": "2026-06-16"
 }

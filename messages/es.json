@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "RAGfly — Infraestructura RAG para tus agentes",
-    "description": "RAG a escala para que cualquier agente converse con miles de documentos privados — multi-tenant, aislado por cliente, y sin que el dato salga de tu red. Conecta un directorio vía MCP, REST o CLI."
+    "description": "RAG a escala para que cualquier agente converse con miles de documentos privados — multi-tenant, aislado por cliente, sin almacenar tus documentos. Conecta un directorio vía MCP, REST o CLI."
   },
   "nav": {
     "producto": "Qué es",
@@ -17,7 +17,7 @@
     "eyebrow": "Infraestructura RAG para agentes",
     "headlineLead": "El RAG difícil, resuelto",
     "headlineAccent": "— para tus agentes.",
-    "tagline": "Cualquier agente conversando con miles de documentos privados: a escala, aislados por cliente, dentro de tu red. Conectas un directorio y tu agente responde con citas — sin construir ni mantener un pipeline RAG.",
+    "tagline": "Cualquier agente conversando con miles de documentos privados: a escala, aislados por cliente, sin que almacenemos tus documentos. Conectas un directorio y tu agente responde con citas — sin construir ni mantener un pipeline RAG.",
     "ctaPrimario": "Empieza gratis",
     "ctaSecundario": "Ver la demo viva"
   },
@@ -54,7 +54,7 @@
     "sin4": "Meses de integración antes del primer resultado",
     "con0": "Apuntas a un directorio; ingesta, vectorización e indexado automáticos",
     "con1": "Multi-tenant de fábrica: un corpus aislado por cliente, desde la base de datos",
-    "con2": "El documento no sale de tu red; vectorización «en el aire», Client LM opcional",
+    "con2": "No almacenamos tu documento; y si lo necesitas, lo procesamos sin que salga de tu red",
     "con3": "DB-agnóstico y BYO: trae tu propia base vectorial y tu propio modelo",
     "con4": "De cero a un agente respondiendo con citas en menos de 30 minutos"
   },
@@ -75,8 +75,8 @@
     "item0Titulo": "Multi-tenant de fábrica",
     "item0Desc": "Un corpus aislado por cliente, gobernado desde un solo panel con una estructura de Grupos → Entidades → Áreas. Sirves a 20 clientes desde una sola plataforma sin que un dato cruce de uno a otro. Es lo que los context engines cloud-first no resuelven: ahí ese aislamiento lo construyes tú.",
     "item1Num": "2",
-    "item1Titulo": "El documento nunca sale de tu red",
-    "item1Desc": "Vectorización «en el aire», datos cifrados en la base y Client LM opcional para que la indexación no salga de la red interna. Abre los clientes regulados —legal, salud, gobierno— que el resto no puede tomar. En los planes avanzados, además, traes tu propia base vectorial y eliges tus modelos (BYO).",
+    "item1Titulo": "No almacenamos tu documento — y si lo necesitas, no sale de tu red",
+    "item1Desc": "No almacenamos el documento en ningún caso: se procesa en el aire —parse, chunks, embeddings— y no se persiste. Y si lo necesitas, lo trabajamos sin que salga de tu red: el documento no sale, solo viajan chunks cifrados con clave por grupo, y en la recuperación tu agente recibe índices y URLs locales, nunca el archivo. Abre los clientes regulados —legal, salud, gobierno— que el resto no puede tomar. En planes avanzados, además, traes tu propia base vectorial y eliges tus modelos (BYO).",
     "item2Num": "3",
     "item2Titulo": "De directorio a producción",
     "item2Desc": "Sin proyecto de integración. Ingesta, vectorización e indexado automáticos a escala de decenas de miles de archivos. Tu única tarea es apuntar; el sistema se encarga del resto.",
@@ -89,7 +89,7 @@
     "tablaSin1": "Construir el aislamiento multi-cliente a mano",
     "tablaCon1": "Multi-tenant de fábrica: un corpus aislado por cliente, desde la base de datos",
     "tablaSin2": "Subir los documentos a una nube de terceros",
-    "tablaCon2": "El documento no sale de tu red; vectorización «en el aire», Client LM opcional",
+    "tablaCon2": "No almacenamos tu documento; y si lo necesitas, lo procesamos sin que salga de tu red",
     "tablaSin3": "Atarte a un proveedor de vector DB o de LLM",
     "tablaCon3": "DB-agnóstico y BYO: trae tu propia base vectorial y tu propio modelo",
     "tablaSin4": "Meses de integración antes del primer resultado",
@@ -169,7 +169,7 @@
     "titulo1": "Tus datos son tuyos.",
     "tituloAccent": "Siempre.",
     "descripcion": "La protección es un pilar de diseño, no un plan premium. Los documentos confidenciales permanecen bajo el control de tu organización.",
-    "punto0": "Los documentos no se cargan a una nube de terceros; indexación y vectorización «en el aire»",
+    "punto0": "No almacenamos los documentos: se procesan en el aire (parse → chunks → embeddings) y no se persisten",
     "punto1": "Datos de los documentos cifrados en la base de datos",
     "punto2": "Filtrado estructural desde la base: todo acceso pasa por vistas que filtran lo que cada identidad puede ver",
     "punto3": "Aislamiento total entre organizaciones: ningún grupo ve datos de otro",
@@ -178,7 +178,7 @@
     "punto6": "Autenticación con doble factor y tokens JWT seguros",
     "punto7": "Auditoría completa: cada acción registrada con identidad, fecha y módulo",
     "punto8": "Comunicaciones cifradas (HTTPS) en todas las capas",
-    "punto9": "Client LM opcional: la indexación de los documentos físicos no sale de la red interna"
+    "punto9": "Client LM opcional: la indexación no sale de la red interna; cuando lo necesitas, la recuperación devuelve a tu agente índices y URLs locales —los chunks relevantes—, nunca el documento"
   },
   "planes": {
     "eyebrow": "Planes",
@@ -204,7 +204,7 @@
     "plan1F4": "Recuperación con citas",
     "plan1F5": "Soporte por comunidad",
     "plan2Nombre": "Team",
-    "plan2Sub": "Para consultoras que sirven a varios clientes",
+    "plan2Sub": "Para quienes sirven a varios clientes",
     "plan2Precio": "USD $95/mes",
     "plan2Cta": "Empezar",
     "plan2F0": "~10.000 páginas procesadas incluidas",
@@ -232,8 +232,7 @@
     "plan4F2": "Todo lo de Scale",
     "plan4F3": "Client LM / on-prem garantizado",
     "plan4F4": "Seguridad, compliance y DPA",
-    "plan4F5": "SLA y soporte dedicado",
-    "nota": "Storage a costo con un multiplicador acotado que recupera la administración de infra — no es centro de ganancia. El margen vive en la recuperación (el valor), no en el almacenamiento. Enterprise es una sola puerta inbound: el despliegue —managed grande u on-prem/soberano— se define en la llamada."
+    "plan4F5": "SLA y soporte dedicado"
   },
   "porQue": {
     "eyebrow": "Por qué RAGfly",
@@ -242,8 +241,8 @@
     "item0Desc": "Ingesta, escala, multi-tenancy y seguridad vienen resueltos. Tú construyes la lógica del agente, no la infraestructura.",
     "item1Titulo": "Multi-tenant para quien sirve a muchos",
     "item1Desc": "Clientes aislados desde un solo panel — lo que los cloud-first no ofrecen.",
-    "item2Titulo": "El dato no sale de tu red",
-    "item2Desc": "Client LM, vectorización en el aire, BYO base vectorial y BYO LLM. Abre los clientes que el resto no puede tomar.",
+    "item2Titulo": "No almacenamos tu documento — y si lo necesitas, no sale de tu red",
+    "item2Desc": "Vectorización en el aire, Client LM opcional, BYO base vectorial y BYO LLM. Abre los clientes regulados —legal, salud, gobierno— que el resto no puede tomar.",
     "item3Titulo": "Sin lock-in",
     "item3Desc": "DB-agnóstico, compatible con Claude, GPT, Gemini y modelos open source. Trae tu DB y tu modelo.",
     "item4Titulo": "De directorio a producción en minutos",
@@ -259,7 +258,7 @@
     "ctaSecundario": "Ver la demo viva"
   },
   "footer": {
-    "tagline": "Infraestructura RAG multi-tenant para tus agentes de IA. El dato no sale de tu red.",
+    "tagline": "Infraestructura RAG multi-tenant para tus agentes de IA. No almacenamos tu documento; si lo necesitas, lo trabajamos sin que salga de tu red.",
     "producto": "Producto",
     "empresa": "Recursos",
     "legal": "Legal",
