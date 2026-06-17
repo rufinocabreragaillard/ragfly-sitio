@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 /* ------------------------------------------------------------------ */
 /* Quickstart — ragfly.ai/quickstart                                   */
-/* Guía de integración para desarrolladores: MCP · REST · CLI         */
+/* Guía de integración para desarrolladores: MCP · REST · CLI · SDK   */
 /* Strings en messages/{es,en,pt,fr,de}.json → quickstart.*           */
 /* ------------------------------------------------------------------ */
 
@@ -150,6 +150,34 @@ slm_live_xxxxxxxxxxxxxxxxxxxxxxxx
 # Úsala en todos los métodos:
 Authorization: Bearer slm_live_xxxxxxxxxxxxxxxxxxxxxxxx`
 
+const SNIPPET_SDK_INSTALL = `pip install ragfly`
+
+const SNIPPET_SDK_ASK = `from ragfly import RAGfly
+
+client = RAGfly(api_key="slm_live_xxxxxxxxxx")
+
+# Pregunta simple
+resp = client.ask("¿Cuáles son las ventas del Q1?")
+print(resp.answer)
+
+# Streaming
+for chunk in client.ask("Resumí los contratos vigentes", stream=True):
+    print(chunk.delta, end="", flush=True)`
+
+const SNIPPET_SDK_SEARCH = `# Búsqueda semántica (solo retrieval, sin generación LLM)
+results = client.search("contratos de mantenimiento", limit=5)
+
+print(f"{results.total_documentos} documentos encontrados")
+for doc in results.documents:
+    print(f"· {doc.nombre} (score: {doc.rrf_score:.3f})")
+    for chunk in doc.chunks[:1]:
+        print(f'  "{chunk.texto[:120]}…"')`
+
+const SNIPPET_SDK_CONTEXT_MANAGER = `# Como context manager (cierre automático de conexión)
+with RAGfly(api_key="slm_live_xxxxxxxxxx") as client:
+    docs = client.list_documents(estado="VECTORIZADO", page_size=10)
+    resp = client.ask("¿Qué documentos tenemos de 2024?")`
+
 const MCP_TOOLS = ['estado_sesion', 'listar_documentos', 'ver_documento', 'buscar_chunks', 'preguntar', 'listar_espacios', 'ver_espacio', 'listar_habilidades', 'ver_habilidad', 'ejecutar_habilidad', 'ver_cola', 'ver_ejecuciones']
 
 const REST_ENDPOINTS: [string, string, string][] = [
@@ -179,6 +207,7 @@ export default function QuickstartPage() {
             <a href="#mcp" className="hover:text-slm-dark transition-colors">MCP</a>
             <a href="#rest" className="hover:text-slm-dark transition-colors">REST</a>
             <a href="#cli" className="hover:text-slm-dark transition-colors">CLI</a>
+            <a href="#sdk" className="hover:text-slm-dark transition-colors">SDK</a>
             <a href="https://api.ragfly.ai/docs" target="_blank" rel="noopener noreferrer" className="hover:text-slm-dark transition-colors">Swagger API</a>
             <a href="https://app.ragfly.ai" className="bg-slm-dark text-white px-4 py-1.5 rounded-full text-xs font-medium hover:opacity-80 transition-opacity">
               {t('navApp')}
@@ -200,11 +229,12 @@ export default function QuickstartPage() {
             {t('heroDesc')}
           </p>
 
-          <div className="grid grid-cols-3 gap-4 mt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             {([
               { id: 'mcp',  icon: '🤖', label: 'MCP',  descKey: 'pathMcpDesc',  badgeKey: 'pathMcpBadge' },
               { id: 'rest', icon: '🔌', label: 'REST', descKey: 'pathRestDesc', badgeKey: undefined },
               { id: 'cli',  icon: '⚡', label: 'CLI',  descKey: 'pathCliDesc',  badgeKey: undefined },
+              { id: 'sdk',  icon: '📦', label: 'SDK',  descKey: 'pathSdkDesc',  badgeKey: undefined },
             ] as const).map(c => (
               <a key={c.id} href={`#${c.id}`} className="border border-slm-light-gray rounded-2xl p-5 hover:border-slm-brand hover:shadow-sm transition-all group">
                 <div className="text-2xl mb-2">{c.icon}</div>
@@ -318,6 +348,25 @@ export default function QuickstartPage() {
           <div className="bg-slm-light rounded-xl p-4 text-sm">
             <p className="font-medium text-slm-dark mb-3">{t('cliBinaryTitle')}</p>
             <Code>{SNIPPET_CLI_BINARY}</Code>
+          </div>
+        </SectionCard>
+
+        {/* SDK */}
+        <SectionCard id="sdk" emoji="📦" title={t('sdkTitle')}>
+          <p className="text-slm-gray font-helvetica-neue mb-6 leading-relaxed">{t('sdkDesc')}</p>
+
+          <Step n={1} title={t('sdkStep1Title')}><Code>{SNIPPET_SDK_INSTALL}</Code></Step>
+          <Step n={2} title={t('sdkStep2Title')}><Code>{SNIPPET_SDK_ASK}</Code></Step>
+          <Step n={3} title={t('sdkStep3Title')}><Code>{SNIPPET_SDK_SEARCH}</Code></Step>
+          <Step n={4} title={t('sdkStep4Title')}><Code>{SNIPPET_SDK_CONTEXT_MANAGER}</Code></Step>
+
+          <div className="bg-slm-light rounded-xl p-4 text-sm">
+            <p className="font-medium text-slm-dark mb-2">{t('sdkMethodsTitle')}</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-xs text-slm-gray font-mono">
+              {['ask(question, *, stream=False)', 'search(query, *, limit=10)', 'list_documents(*, page, estado)', 'close() / context manager'].map(m => (
+                <span key={m}>· {m}</span>
+              ))}
+            </div>
           </div>
         </SectionCard>
 

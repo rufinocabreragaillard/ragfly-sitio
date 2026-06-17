@@ -292,7 +292,7 @@
     "eyebrow": "Quickstart",
     "heroTitle1": "From zero to your first result",
     "heroTitle2": "in less than 5 minutes.",
-    "heroDesc": "RAGfly exposes three integration surfaces. Choose the one that fits your workflow — the result is the same: your agent or application responding with citations from your documents.",
+    "heroDesc": "RAGfly exposes four integration surfaces. Pick the one that fits your workflow — the result is the same: your agent or application answering with citations from your documents.",
     "pathMcpDesc": "LLM agents (Claude, Cursor, Cline)",
     "pathMcpBadge": "We lead here",
     "pathRestDesc": "Your own code (Python, Node, curl)",
@@ -338,6 +338,14 @@
     "ctaDesc": "Start free — no card, no friction.",
     "ctaBtn": "Start free",
     "navApp": "Go to app →",
-    "footerBack": "← Back to site"
+    "footerBack": "← Back to site",
+    "pathSdkDesc": "Native Python, no MCP infrastructure needed",
+    "sdkTitle": "Integration via Python SDK",
+    "sdkDesc": "The official RAGfly Python SDK. Two main methods: ask() for full RAG and search() for pure retrieval. Supports streaming and context manager.",
+    "sdkStep1Title": "Install",
+    "sdkStep2Title": "Ask with RAG",
+    "sdkStep3Title": "Semantic search without LLM",
+    "sdkStep4Title": "Context manager (auto close)",
+    "sdkMethodsTitle": "Available methods"
   }
 }
