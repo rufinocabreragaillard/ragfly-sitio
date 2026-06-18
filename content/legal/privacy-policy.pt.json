@@ -1,0 +1,216 @@
+{
+  "title": "Política de Privacidade",
+  "subtitle": "Última atualização: 16/06/2026 · Versão 1.0",
+  "intro": [
+    {
+      "kind": "p",
+      "text": "Esta Política de Privacidade explica como a **RAGfly** (\"RAGfly\", \"nós\" ou \"nosso\") coleta, usa, divulga e protege informações pessoais em conexão com a plataforma RAGfly, os sites, aplicações, APIs e serviços relacionados (o \"Serviço\"). Aplica-se a visitantes, titulares de conta e usuários finais que entram no Serviço, inclusive por meio de provedores de identidade terceiros como Microsoft (Microsoft Entra ID / Azure Active Directory), Google, GitHub e Supabase."
+    },
+    {
+      "kind": "p",
+      "text": "Esta política funciona em conjunto com os nossos Termos de Serviço."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-1",
+      "heading": "1. Funções: quem controla os dados",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Estão envolvidos dois tipos diferentes de dados, e o nosso papel difere para cada um:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "**Dados de conta e autenticação** (descritos na Seção 2). Para esses dados atuamos como **controlador**: decidimos como e por que são tratados para operar o Serviço.",
+            "**Dados do Cliente** — os documentos e conteúdos que você carrega, conecta ou processa por meio do Serviço. Para esses dados atuamos como **operador** em seu nome. Você (ou a sua organização) é o controlador. Tratamos os Dados do Cliente apenas conforme as suas instruções e os Termos de Serviço, e **você é o proprietário deles a todo momento**. Não usamos os Dados do Cliente para treinar modelos de IA nem para qualquer finalidade que não seja prestar o Serviço a você."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "heading": "2. Informações que coletamos",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**Informações de conta e perfil.** Quando você cria uma conta ou entra por meio de um provedor de identidade, coletamos identificadores como seu nome, endereço de e-mail e um identificador único de usuário. Quando você entra com Microsoft, Google, GitHub ou Supabase, recebemos essas informações de perfil limitadas desse provedor para criar e proteger sua conta. Não recebemos nem armazenamos a senha do seu provedor de identidade."
+        },
+        {
+          "kind": "p",
+          "text": "**Informações de uso e dispositivo.** Coletamos dados técnicos como endereço IP, tipo de navegador/dispositivo, dados de registro, marcações de data/hora e ações realizadas dentro do Serviço (registros de auditoria), para operar, proteger e melhorar o Serviço."
+        },
+        {
+          "kind": "p",
+          "text": "**Dados do Cliente.** Os documentos e conteúdos que você processa por meio do Serviço. Tratamo-los como operador em seu nome (ver Seção 1). Podem conter incidentalmente informações pessoais que você escolha incluir; você é responsável pela licitude desse conteúdo."
+        },
+        {
+          "kind": "p",
+          "text": "**Informações de faturamento.** Se você adquirir um plano pago, o pagamento é processado pela Paddle; recebemos dados limitados da transação, não os números completos do cartão."
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "heading": "3. Como usamos as informações",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Usamos informações pessoais para:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Criar, autenticar e proteger sua conta.",
+            "Prestar, manter e melhorar o Serviço.",
+            "Comunicar-nos com você sobre o Serviço, incluindo avisos de segurança e de serviço.",
+            "Processar pagamentos e gerenciar assinaturas.",
+            "Detectar, prevenir e tratar fraude, abuso e incidentes de segurança.",
+            "Cumprir obrigações legais."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "**Não** vendemos informações pessoais e **não** usamos os Dados do Cliente para treinar modelos de IA ou para publicidade."
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "heading": "4. Bases legais",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Quando exigido pela legislação de proteção de dados aplicável, baseamo-nos nas seguintes bases legais: execução de um contrato (para prestar o Serviço), nossos interesses legítimos (para proteger e melhorar o Serviço), seu consentimento (quando solicitado, p. ex., certos cookies) e o cumprimento de obrigações legais."
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "heading": "5. Compartilhamento e divulgação",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Compartilhamos informações pessoais apenas na medida necessária para operar o Serviço:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "**Suboperadores e prestadores de serviços** — como provedores de hospedagem em nuvem, banco de dados e infraestrutura — vinculados por obrigações de confidencialidade e proteção de dados.",
+            "**Provedores de modelos de IA** — quando você seleciona um modelo de terceiros (por exemplo, Anthropic, OpenAI, Google), o conteúdo pertinente é processado por esse provedor sujeito aos seus termos; nos planos compatíveis você pode escolher o modelo ou manter o processamento local via RAGfly Desktop.",
+            "**Provedores de identidade** — para autenticar o seu login (por exemplo, Microsoft Entra ID).",
+            "**Aspectos legais e de segurança** — quando exigido por lei ou para proteger direitos, a segurança e a integridade do Serviço.",
+            "**Transferências empresariais** — em conexão com uma fusão, aquisição ou reorganização, preservando as proteções desta política."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Uma lista atualizada de suboperadores está disponível mediante solicitação em admin@ragfly.ai."
+        }
+      ]
+    },
+    {
+      "id": "sec-6",
+      "heading": "6. Transferências internacionais",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O Serviço pode tratar dados em países diferentes do seu. Quando a lei aplicável exige, usamos salvaguardas apropriadas (como cláusulas contratuais padrão) para as transferências internacionais. Nos planos compatíveis, você pode restringir o processamento à sua própria infraestrutura via RAGfly Desktop."
+        }
+      ]
+    },
+    {
+      "id": "sec-7",
+      "heading": "7. Retenção de dados",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Retemos dados de conta e de uso enquanto sua conta estiver ativa e conforme necessário para prestar o Serviço, e depois pelo período exigido por lei ou por interesses comerciais legítimos. Os Dados do Cliente são retidos conforme as suas instruções e os Termos de Serviço: após o encerramento, você dispõe de um período de carência para exportá-los, após o qual os excluímos, sujeito às obrigações legais de retenção."
+        }
+      ]
+    },
+    {
+      "id": "sec-8",
+      "heading": "8. Segurança",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Aplicamos medidas técnicas e organizacionais razoáveis, incluindo criptografia dos dados documentais em repouso, comunicações criptografadas (HTTPS), controle de acesso baseado em funções (RBAC) com permissões granulares, autenticação multifator, isolamento estrutural entre organizações e registro de auditoria. Nenhum sistema é completamente seguro, mas notificaremos você sem demora indevida sobre qualquer violação que afete suas informações pessoais ou seus Dados do Cliente, conforme exigido por lei."
+        }
+      ]
+    },
+    {
+      "id": "sec-9",
+      "heading": "9. Seus direitos",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Dependendo da sua jurisdição, você pode ter direitos de acesso, correção, exclusão, portabilidade ou restrição do tratamento das suas informações pessoais, bem como de opor-se a certos tratamentos ou retirar o consentimento. Para exercer esses direitos, entre em contato em admin@ragfly.ai. Se as suas informações pessoais estiverem contidas em Dados do Cliente controlados por uma organização, dirija a sua solicitação a essa organização; nós a auxiliaremos na qualidade de operador."
+        }
+      ]
+    },
+    {
+      "id": "sec-10",
+      "heading": "10. Cookies",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O Serviço usa cookies e tecnologias semelhantes necessários para autenticação e segurança e, quando aplicável, cookies analíticos opcionais sujeitos ao seu consentimento. Você pode gerenciar os cookies por meio das configurações do seu navegador."
+        }
+      ]
+    },
+    {
+      "id": "sec-11",
+      "heading": "11. Crianças",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O Serviço não se destina a crianças menores de 18 anos (ou da maioridade na sua jurisdição), e não coletamos conscientemente as suas informações pessoais."
+        }
+      ]
+    },
+    {
+      "id": "sec-12",
+      "heading": "12. Alterações nesta Política",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Podemos atualizar esta Política de Privacidade. Publicaremos a versão atualizada com uma nova data de \"Última atualização\" e, para mudanças relevantes, daremos aviso razoável."
+        }
+      ]
+    },
+    {
+      "id": "sec-13",
+      "heading": "13. Idioma",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "A RAGfly publica esta Política de Privacidade em vários idiomas. A versão em inglês é a versão autêntica; as traduções são fornecidas apenas por conveniência e, em caso de divergência, prevalece a versão em inglês."
+        }
+      ]
+    },
+    {
+      "id": "sec-14",
+      "heading": "14. Contato",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Para questões de privacidade ou para exercer os seus direitos:"
+        },
+        {
+          "kind": "p",
+          "text": "**RAGfly**"
+        },
+        {
+          "kind": "p",
+          "text": "Site: ragfly.ai"
+        },
+        {
+          "kind": "p",
+          "text": "E-mail: admin@ragfly.ai"
+        }
+      ]
+    }
+  ]
+}

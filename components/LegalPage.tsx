@@ -2,78 +2,129 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLocale } from 'next-intl'
+import { SelectorIdioma } from './SelectorIdioma'
 
 /* ------------------------------------------------------------------ */
-/* Tipos de contenido legal                                            */
+/* Tipos de contenido legal (data-driven, generado desde los maestros) */
 /* ------------------------------------------------------------------ */
-export type LegalBlock =
-  | { kind: 'p'; text: React.ReactNode }
-  | { kind: 'list'; items: React.ReactNode[] }
-  | { kind: 'olist'; items: React.ReactNode[] }
-  | { kind: 'note'; text: React.ReactNode }
+export type LegalBlock = {
+  kind: 'p' | 'list' | 'olist'
+  text?: string
+  items?: string[]
+}
 
 export type LegalSection = {
-  id?: string
+  id: string
   heading: string
   blocks: LegalBlock[]
 }
 
 export type LegalContent = {
   title: string
-  updated: string
-  version: string
+  subtitle: string
   intro: LegalBlock[]
   sections: LegalSection[]
-  disclaimer: string
+}
+
+/* Etiqueta "volver al inicio" por idioma */
+const BACK_LABEL: Record<string, string> = {
+  es: '← Volver al inicio',
+  en: '← Back to home',
+  pt: '← Voltar ao início',
+  fr: "← Retour à l'accueil",
+  de: '← Zurück zur Startseite',
+}
+
+/* ------------------------------------------------------------------ */
+/* Render inline: **negrita** + enlaces de email                       */
+/* ------------------------------------------------------------------ */
+function linkifyEmail(text: string, keyBase: string): React.ReactNode[] {
+  const out: React.ReactNode[] = []
+  const re = /[\w.+-]+@[\w-]+\.[\w.-]+/g
+  let last = 0
+  let m: RegExpExecArray | null
+  let i = 0
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) out.push(text.slice(last, m.index))
+    out.push(
+      <a
+        key={`${keyBase}-mail-${i++}`}
+        href={`mailto:${m[0]}`}
+        className="text-slm-brand-dark underline underline-offset-2 hover:text-slm-brand"
+      >
+        {m[0]}
+      </a>,
+    )
+    last = m.index + m[0].length
+  }
+  if (last < text.length) out.push(text.slice(last))
+  return out
+}
+
+function renderInline(text: string, keyBase: string): React.ReactNode[] {
+  const out: React.ReactNode[] = []
+  const re = /\*\*(.+?)\*\*/g
+  let last = 0
+  let m: RegExpExecArray | null
+  let i = 0
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) out.push(...linkifyEmail(text.slice(last, m.index), `${keyBase}-t${i}`))
+    out.push(
+      <strong key={`${keyBase}-b-${i++}`} className="font-semibold text-slm-dark">
+        {m[1]}
+      </strong>,
+    )
+    last = m.index + m[0].length
+  }
+  if (last < text.length) out.push(...linkifyEmail(text.slice(last), `${keyBase}-t-end`))
+  return out
 }
 
 /* ------------------------------------------------------------------ */
 /* Render de bloques                                                   */
 /* ------------------------------------------------------------------ */
-function Block({ block }: { block: LegalBlock }) {
-  switch (block.kind) {
-    case 'p':
-      return <p className="text-slm-dark/80 leading-[1.75] text-[15px]">{block.text}</p>
-    case 'list':
-      return (
-        <ul className="flex flex-col gap-2 pl-1">
-          {block.items.map((it, i) => (
-            <li key={i} className="flex gap-3 text-slm-dark/80 leading-[1.7] text-[15px]">
-              <span aria-hidden className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-slm-brand" />
-              <span>{it}</span>
-            </li>
-          ))}
-        </ul>
-      )
-    case 'olist':
-      return (
-        <ol className="flex flex-col gap-3">
-          {block.items.map((it, i) => (
-            <li key={i} className="flex gap-3 text-slm-dark/80 leading-[1.7] text-[15px]">
-              <span
-                aria-hidden
-                className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slm-light text-[12px] font-semibold text-slm-brand-dark"
-              >
-                {i + 1}
-              </span>
-              <span>{it}</span>
-            </li>
-          ))}
-        </ol>
-      )
-    case 'note':
-      return (
-        <p className="rounded-lg border border-slm-brand/15 bg-slm-light px-4 py-3 text-[13px] leading-relaxed text-slm-dark/70">
-          {block.text}
-        </p>
-      )
+function Block({ block, k }: { block: LegalBlock; k: string }) {
+  if (block.kind === 'p') {
+    return <p className="text-slm-dark/80 leading-[1.75] text-[15px]">{renderInline(block.text ?? '', k)}</p>
   }
+  if (block.kind === 'list') {
+    return (
+      <ul className="flex flex-col gap-2 pl-1">
+        {(block.items ?? []).map((it, i) => (
+          <li key={i} className="flex gap-3 text-slm-dark/80 leading-[1.7] text-[15px]">
+            <span aria-hidden className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-slm-brand" />
+            <span>{renderInline(it, `${k}-${i}`)}</span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  // olist
+  return (
+    <ol className="flex flex-col gap-3">
+      {(block.items ?? []).map((it, i) => (
+        <li key={i} className="flex gap-3 text-slm-dark/80 leading-[1.7] text-[15px]">
+          <span
+            aria-hidden
+            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slm-light text-[12px] font-semibold text-slm-brand-dark"
+          >
+            {i + 1}
+          </span>
+          <span>{renderInline(it, `${k}-${i}`)}</span>
+        </li>
+      ))}
+    </ol>
+  )
 }
 
 /* ------------------------------------------------------------------ */
 /* Página legal                                                        */
 /* ------------------------------------------------------------------ */
 export default function LegalPage({ content }: { content: LegalContent }) {
+  const locale = useLocale()
+  const back = BACK_LABEL[locale] ?? BACK_LABEL.en
+
   return (
     <main className="min-h-screen bg-white text-slm-dark">
       {/* Header sobrio */}
@@ -83,12 +134,15 @@ export default function LegalPage({ content }: { content: LegalContent }) {
             <Image src="/ragfly_isotipo.png" alt="" width={26} height={26} className="h-6 w-auto" />
             RAGfly
           </Link>
-          <Link
-            href="/"
-            className="font-helvetica-neue text-sm text-slm-gray transition-colors hover:text-slm-brand-dark"
-          >
-            ← Volver al inicio
-          </Link>
+          <div className="flex items-center gap-4">
+            <SelectorIdioma />
+            <Link
+              href="/"
+              className="font-helvetica-neue text-sm text-slm-gray transition-colors hover:text-slm-brand-dark"
+            >
+              {back}
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -99,9 +153,7 @@ export default function LegalPage({ content }: { content: LegalContent }) {
           <h1 className="font-helvetica-neue text-3xl font-medium leading-[1.1] tracking-[-0.02em] text-slm-dark md:text-[42px]">
             {content.title}
           </h1>
-          <p className="mt-4 font-helvetica-neue text-sm text-slm-gray">
-            Última actualización: {content.updated} · Versión {content.version}
-          </p>
+          <p className="mt-4 font-helvetica-neue text-sm text-slm-gray">{content.subtitle}</p>
         </div>
       </div>
 
@@ -109,28 +161,24 @@ export default function LegalPage({ content }: { content: LegalContent }) {
       <article className="mx-auto max-w-[760px] px-6 py-12 md:px-8 md:py-16">
         <div className="flex flex-col gap-4">
           {content.intro.map((b, i) => (
-            <Block key={i} block={b} />
+            <Block key={`intro-${i}`} block={b} k={`intro-${i}`} />
           ))}
         </div>
 
         <div className="mt-12 flex flex-col gap-12">
           {content.sections.map((s, i) => (
-            <section key={i} id={s.id} className="scroll-mt-24">
+            <section key={s.id || i} id={s.id} className="scroll-mt-24">
               <h2 className="mb-4 font-helvetica-neue text-xl font-semibold tracking-[-0.01em] text-slm-brand-dark md:text-[22px]">
                 {s.heading}
               </h2>
               <div className="flex flex-col gap-4">
                 {s.blocks.map((b, j) => (
-                  <Block key={j} block={b} />
+                  <Block key={`${s.id}-${j}`} block={b} k={`${s.id}-${j}`} />
                 ))}
               </div>
             </section>
           ))}
         </div>
-
-        <p className="mt-14 border-t border-slm-dark/10 pt-6 text-[13px] italic leading-relaxed text-slm-gray">
-          {content.disclaimer}
-        </p>
       </article>
 
       {/* Footer mínimo */}
@@ -138,8 +186,8 @@ export default function LegalPage({ content }: { content: LegalContent }) {
         <div className="mx-auto flex max-w-[1100px] flex-col gap-3 text-xs font-helvetica-neue md:flex-row md:items-center md:justify-between">
           <span>© {new Date().getFullYear()} RAGfly — Todos los derechos reservados.</span>
           <div className="flex gap-6">
-            <Link href="/terminos" className="hover:text-white">Términos</Link>
-            <Link href="/privacidad" className="hover:text-white">Privacidad</Link>
+            <Link href="/legal/terms" className="hover:text-white">Términos</Link>
+            <Link href="/legal/privacy" className="hover:text-white">Privacidad</Link>
             <Link href="/" className="hover:text-white">Inicio</Link>
           </div>
         </div>

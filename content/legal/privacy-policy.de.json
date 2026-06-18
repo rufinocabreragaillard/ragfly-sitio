@@ -1,0 +1,216 @@
+{
+  "title": "Datenschutzrichtlinie",
+  "subtitle": "Zuletzt aktualisiert: 16/06/2026 · Version 1.0",
+  "intro": [
+    {
+      "kind": "p",
+      "text": "Diese Datenschutzrichtlinie erläutert, wie **RAGfly** („RAGfly\", „wir\", „uns\" oder „unser\") personenbezogene Daten im Zusammenhang mit der RAGfly-Plattform, den Websites, Anwendungen, APIs und damit verbundenen Diensten (dem „Dienst\") erhebt, nutzt, offenlegt und schützt. Sie gilt für Besucher, Kontoinhaber und Endnutzer, die sich beim Dienst anmelden, auch über Drittanbieter-Identitätsdienste wie Microsoft (Microsoft Entra ID / Azure Active Directory), Google, GitHub und Supabase."
+    },
+    {
+      "kind": "p",
+      "text": "Diese Richtlinie gilt zusammen mit unseren Nutzungsbedingungen."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-1",
+      "heading": "1. Rollen: Wer kontrolliert die Daten",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Es sind zwei verschiedene Arten von Daten betroffen, und unsere Rolle ist für jede unterschiedlich:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "**Konto- und Authentifizierungsdaten** (beschrieben in Abschnitt 2). Für diese Daten handeln wir als **Verantwortlicher**: Wir entscheiden, wie und warum sie zum Betrieb des Dienstes verarbeitet werden.",
+            "**Kundendaten** — die Dokumente und Inhalte, die Sie über den Dienst hochladen, verbinden oder verarbeiten. Für diese Daten handeln wir als **Auftragsverarbeiter** in Ihrem Auftrag. Sie (oder Ihre Organisation) sind der Verantwortliche. Wir verarbeiten Kundendaten nur nach Ihren Weisungen und gemäß den Nutzungsbedingungen, und **Sie sind jederzeit deren Eigentümer**. Wir verwenden Kundendaten nicht, um KI-Modelle zu trainieren, oder zu einem anderen Zweck als der Bereitstellung des Dienstes für Sie."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "heading": "2. Informationen, die wir erheben",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**Konto- und Profilinformationen.** Wenn Sie ein Konto erstellen oder sich über einen Identitätsanbieter anmelden, erheben wir Kennungen wie Ihren Namen, Ihre E-Mail-Adresse und eine eindeutige Nutzerkennung. Wenn Sie sich mit Microsoft, Google, GitHub oder Supabase anmelden, erhalten wir diese begrenzten Profilinformationen von diesem Anbieter, um Ihr Konto zu erstellen und zu sichern. Wir erhalten oder speichern Ihr Passwort des Identitätsanbieters nicht."
+        },
+        {
+          "kind": "p",
+          "text": "**Nutzungs- und Geräteinformationen.** Wir erheben technische Daten wie IP-Adresse, Browser-/Gerätetyp, Protokolldaten, Zeitstempel und innerhalb des Dienstes durchgeführte Aktionen (Audit-Protokolle), um den Dienst zu betreiben, zu sichern und zu verbessern."
+        },
+        {
+          "kind": "p",
+          "text": "**Kundendaten.** Die Dokumente und Inhalte, die Sie über den Dienst verarbeiten. Wir behandeln diese als Auftragsverarbeiter in Ihrem Auftrag (siehe Abschnitt 1). Sie können nebenbei personenbezogene Daten enthalten, die Sie aufzunehmen wählen; Sie sind für die Rechtmäßigkeit dieser Inhalte verantwortlich."
+        },
+        {
+          "kind": "p",
+          "text": "**Abrechnungsinformationen.** Wenn Sie einen kostenpflichtigen Tarif erwerben, wird die Zahlung von Paddle abgewickelt; wir erhalten begrenzte Transaktionsdaten, nicht die vollständigen Kartennummern."
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "heading": "3. Wie wir Informationen nutzen",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir nutzen personenbezogene Daten, um:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Ihr Konto zu erstellen, zu authentifizieren und zu sichern.",
+            "Den Dienst bereitzustellen, zu warten und zu verbessern.",
+            "Mit Ihnen über den Dienst zu kommunizieren, einschließlich Sicherheits- und Dienstmitteilungen.",
+            "Zahlungen zu verarbeiten und Abonnements zu verwalten.",
+            "Betrug, Missbrauch und Sicherheitsvorfälle zu erkennen, zu verhindern und zu beheben.",
+            "Gesetzliche Pflichten zu erfüllen."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Wir verkaufen **keine** personenbezogenen Daten und verwenden Kundendaten **nicht**, um KI-Modelle zu trainieren oder für Werbung."
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "heading": "4. Rechtsgrundlagen",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Soweit nach geltendem Datenschutzrecht erforderlich, stützen wir uns auf die folgenden Rechtsgrundlagen: Erfüllung eines Vertrags (zur Bereitstellung des Dienstes), unsere berechtigten Interessen (zur Sicherung und Verbesserung des Dienstes), Ihre Einwilligung (sofern angefordert, z. B. bestimmte Cookies) und die Erfüllung gesetzlicher Pflichten."
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "heading": "5. Weitergabe und Offenlegung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir geben personenbezogene Daten nur weiter, soweit dies zum Betrieb des Dienstes erforderlich ist:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "**Unterauftragsverarbeiter und Dienstleister** — wie Anbieter von Cloud-Hosting, Datenbanken und Infrastruktur — gebunden durch Vertraulichkeits- und Datenschutzpflichten.",
+            "**KI-Modellanbieter** — wenn Sie ein Modell eines Dritten auswählen (zum Beispiel Anthropic, OpenAI, Google), werden die relevanten Inhalte von diesem Anbieter gemäß dessen Bedingungen verarbeitet; bei unterstützten Tarifen können Sie das Modell wählen oder die Verarbeitung über RAGfly Desktop lokal halten.",
+            "**Identitätsanbieter** — zur Authentifizierung Ihrer Anmeldung (zum Beispiel Microsoft Entra ID).",
+            "**Recht und Sicherheit** — wenn gesetzlich vorgeschrieben oder zum Schutz von Rechten, Sicherheit und Integrität des Dienstes.",
+            "**Unternehmensübertragungen** — im Zusammenhang mit einer Fusion, Übernahme oder Umstrukturierung, wobei der Schutz dieser Richtlinie gewahrt bleibt."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Eine aktuelle Liste der Unterauftragsverarbeiter ist auf Anfrage unter admin@ragfly.ai erhältlich."
+        }
+      ]
+    },
+    {
+      "id": "sec-6",
+      "heading": "6. Internationale Übermittlungen",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Dienst kann Daten in anderen Ländern als Ihrem verarbeiten. Soweit das geltende Recht es verlangt, verwenden wir geeignete Garantien (wie Standardvertragsklauseln) für grenzüberschreitende Übermittlungen. Bei unterstützten Tarifen können Sie die Verarbeitung über RAGfly Desktop auf Ihre eigene Infrastruktur beschränken."
+        }
+      ]
+    },
+    {
+      "id": "sec-7",
+      "heading": "7. Datenspeicherung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir speichern Konto- und Nutzungsdaten, solange Ihr Konto aktiv ist und soweit dies zur Bereitstellung des Dienstes erforderlich ist, danach für den gesetzlich vorgeschriebenen Zeitraum oder für berechtigte geschäftliche Zwecke. Kundendaten werden gemäß Ihren Weisungen und den Nutzungsbedingungen gespeichert: Nach der Kündigung haben Sie eine Nachfrist, um sie zu exportieren, danach löschen wir sie, vorbehaltlich gesetzlicher Aufbewahrungspflichten."
+        }
+      ]
+    },
+    {
+      "id": "sec-8",
+      "heading": "8. Sicherheit",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir wenden angemessene technische und organisatorische Maßnahmen an, einschließlich Verschlüsselung der Dokumentendaten im Ruhezustand, verschlüsselter Kommunikation (HTTPS), rollenbasierter Zugriffskontrolle (RBAC) mit granularen Berechtigungen, Mehr-Faktor-Authentifizierung, struktureller Isolierung zwischen Organisationen und Audit-Protokollierung. Kein System ist vollständig sicher, aber wir werden Sie unverzüglich über jede Verletzung informieren, die Ihre personenbezogenen Daten oder Kundendaten betrifft, soweit gesetzlich vorgeschrieben."
+        }
+      ]
+    },
+    {
+      "id": "sec-9",
+      "heading": "9. Ihre Rechte",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Je nach Ihrer Rechtsordnung haben Sie möglicherweise Rechte auf Auskunft, Berichtigung, Löschung, Übertragbarkeit oder Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht, bestimmten Verarbeitungen zu widersprechen oder Ihre Einwilligung zu widerrufen. Um diese Rechte auszuüben, kontaktieren Sie uns unter admin@ragfly.ai. Wenn Ihre personenbezogenen Daten in Kundendaten enthalten sind, die von einer Organisation kontrolliert werden, richten Sie Ihre Anfrage bitte an diese Organisation; wir unterstützen sie in unserer Eigenschaft als Auftragsverarbeiter."
+        }
+      ]
+    },
+    {
+      "id": "sec-10",
+      "heading": "10. Cookies",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Dienst verwendet Cookies und ähnliche Technologien, die für Authentifizierung und Sicherheit erforderlich sind, sowie gegebenenfalls optionale Analyse-Cookies, die Ihrer Einwilligung unterliegen. Sie können Cookies über die Einstellungen Ihres Browsers verwalten."
+        }
+      ]
+    },
+    {
+      "id": "sec-11",
+      "heading": "11. Kinder",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Dienst richtet sich nicht an Kinder unter 18 Jahren (oder unter dem Volljährigkeitsalter in Ihrer Rechtsordnung), und wir erheben wissentlich keine personenbezogenen Daten von ihnen."
+        }
+      ]
+    },
+    {
+      "id": "sec-12",
+      "heading": "12. Änderungen dieser Richtlinie",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir können diese Datenschutzrichtlinie aktualisieren. Wir veröffentlichen die aktualisierte Fassung mit einem neuen Datum „Zuletzt aktualisiert\" und geben bei wesentlichen Änderungen eine angemessene Mitteilung."
+        }
+      ]
+    },
+    {
+      "id": "sec-13",
+      "heading": "13. Sprache",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "RAGfly veröffentlicht diese Datenschutzrichtlinie in mehreren Sprachen. Die englische Fassung ist die maßgebliche Fassung; Übersetzungen werden nur der Einfachheit halber bereitgestellt, und im Falle von Widersprüchen hat die englische Fassung Vorrang."
+        }
+      ]
+    },
+    {
+      "id": "sec-14",
+      "heading": "14. Kontakt",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Für Datenschutzfragen oder zur Ausübung Ihrer Rechte:"
+        },
+        {
+          "kind": "p",
+          "text": "**RAGfly**"
+        },
+        {
+          "kind": "p",
+          "text": "Website: ragfly.ai"
+        },
+        {
+          "kind": "p",
+          "text": "E-Mail: admin@ragfly.ai"
+        }
+      ]
+    }
+  ]
+}

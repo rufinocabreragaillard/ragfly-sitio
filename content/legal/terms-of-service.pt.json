@@ -1,0 +1,253 @@
+{
+  "title": "Termos de Serviço",
+  "subtitle": "Última atualização: 16/06/2026 · Versão 1.0",
+  "intro": [
+    {
+      "kind": "p",
+      "text": "Estes Termos de Serviço (este **\"Contrato\"**) constituem um contrato vinculativo entre você (**\"Cliente\", \"você\" ou \"seu\"**) e a **RAGfly** (**\"RAGfly\", \"nós\" ou \"nosso\"**). Este Contrato rege o seu acesso e uso da plataforma RAGfly, dos sites, aplicações, APIs e serviços relacionados (coletivamente, o **\"Serviço\"**)."
+    },
+    {
+      "kind": "p",
+      "text": "**Ao entrar, criar uma conta, acessar ou usar o Serviço — inclusive ao entrar com a Microsoft ou outro provedor de identidade terceiro — você reconhece que leu, entendeu e concorda em ficar vinculado a este Contrato.** Se não concordar, não acesse nem use o Serviço. Se você aceitar este Contrato em nome de uma empresa ou outra organização, declara ter autoridade para vincular essa entidade, e \"você\" passa a referir-se a essa entidade."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-1",
+      "heading": "1. O Serviço",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "A RAGfly é uma infraestrutura de geração aumentada por recuperação (RAG) que permite a indivíduos e organizações conversar com seus próprios documentos em linguagem natural e fornecer contexto documental preciso a agentes de IA. O Serviço inclui, conforme o plano escolhido, processamento de documentos, vetorização e indexação, busca semântica, controle de acesso baseado em funções, administração multiorganização e funcionalidades relacionadas descritas em nossa documentação. Podemos modificar, melhorar ou descontinuar funcionalidades do Serviço, e daremos aviso razoável de mudanças relevantes."
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "heading": "2. Elegibilidade e contas",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Você deve ter pelo menos 18 anos (ou a maioridade na sua jurisdição) e capacidade para celebrar um contrato vinculativo para usar o Serviço. Para usar a maioria das funcionalidades, você deve criar uma conta ou autenticar-se por meio de um provedor de identidade compatível. Você concorda em fornecer informações exatas, completas e atuais, e em mantê-las atualizadas."
+        },
+        {
+          "kind": "p",
+          "text": "Você é responsável por proteger suas credenciais e por toda atividade que ocorra sob sua conta. Notifique-nos prontamente sobre qualquer uso não autorizado ou suspeita de violação de segurança. Podemos suspender ou encerrar contas que violem este Contrato ou que apresentem riscos de fraude ou de segurança."
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "heading": "3. Autenticação e provedores de identidade terceiros",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O Serviço admite o login por meio de provedores de identidade terceiros, incluindo Microsoft (Microsoft Entra ID / Azure Active Directory), Google, GitHub e Supabase. Quando você se autentica dessa forma, recebemos um conjunto limitado de informações de perfil (como seu nome, endereço de e-mail e um identificador único) unicamente para criar e proteger sua conta e prestar o Serviço. Não recebemos sua senha. Seu uso do provedor de identidade permanece sujeito aos termos e à política de privacidade desse provedor. Você pode revogar a conexão a qualquer momento por meio do seu provedor de identidade ou das configurações da sua conta."
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "heading": "4. Planos, taxas e pagamento",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O acesso é oferecido sob diferentes planos cujas funcionalidades e preços são publicados por nós ou acordados em um contrato específico. Salvo acordo em contrário:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "As taxas são cobradas antecipadamente conforme o ciclo de faturamento do plano (mensal ou anual).",
+            "Os preços podem mudar; daremos aviso prévio razoável, e as alterações entram em vigor no ciclo de faturamento seguinte.",
+            "O pagamento atrasado ou malsucedido pode resultar na suspensão do Serviço após aviso.",
+            "Salvo quando exigido pela lei aplicável, as taxas não são reembolsáveis por períodos já iniciados."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "heading": "5. Dados do Cliente e propriedade",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**Você possui e mantém todos os direitos, títulos e interesses sobre seus Dados do Cliente, a todo momento.** Por \"Dados do Cliente\" entendem-se todos os documentos, arquivos, textos, metadados, configurações, índices, vetores, prompts e demais conteúdos que você carrega, conecta, processa ou gera por meio do Serviço. Este é um princípio fundamental do Serviço e prevalece sobre qualquer interpretação em contrário."
+        },
+        {
+          "kind": "p",
+          "text": "Em particular:"
+        },
+        {
+          "kind": "olist",
+          "items": [
+            "**Propriedade.** Você mantém a propriedade dos seus Dados do Cliente, incluindo os documentos originais e os índices, vetores e conteúdos derivados gerados a partir deles. Não adquirimos quaisquer direitos de propriedade sobre seus Dados do Cliente.",
+            "**Licença limitada a nosso favor.** Você nos concede uma licença limitada, não exclusiva e revogável para hospedar, processar, transmitir, indexar e exibir seus Dados do Cliente unicamente para prestar e manter o Serviço para você. Esta licença não autoriza nenhum outro uso.",
+            "**Sem uso para treinamento ou fins secundários.** Não vendemos, alugamos nem divulgamos seus Dados do Cliente, e não os usamos para treinar nossos modelos de inteligência artificial ou de terceiros, nem para publicidade ou qualquer finalidade que não seja prestar o Serviço a você.",
+            "**Isolamento.** Os Dados do Cliente são estruturalmente isolados dos de outros clientes. Nenhum grupo, entidade ou cliente pode acessar os dados de outro.",
+            "**Portabilidade e devolução.** Você pode exportar ou solicitar a devolução dos seus Dados do Cliente a qualquer momento durante a vigência e durante o período de carência posterior ao encerramento descrito na Seção 12.",
+            "**Exclusão.** A seu pedido, ou após o encerramento e o período de carência aplicável, excluiremos seus Dados do Cliente dos nossos sistemas, exceto quando a retenção for exigida por lei.",
+            "**Processamento local opcional.** Nos planos compatíveis, o RAGfly Desktop permite manter a indexação de documentos dentro da sua própria rede, de modo que os documentos não saiam da sua infraestrutura."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Você é o único responsável pela licitude dos seus Dados do Cliente e por deter os direitos necessários para processá-los por meio do Serviço."
+        }
+      ]
+    },
+    {
+      "id": "sec-6",
+      "heading": "6. Uso aceitável",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Você concorda em não usar o Serviço para:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Carregar ou processar conteúdo ilícito, infrator ou que você não tenha o direito de processar.",
+            "Comprometer a segurança ou integridade do Serviço, ou tentar acessar os dados de outro cliente.",
+            "Fazer engenharia reversa, descompilar ou extrair o código-fonte do Serviço, salvo na medida permitida por lei.",
+            "Revender ou sublicenciar o Serviço sem autorização além dos usos previstos no seu plano.",
+            "Sobrecarregar a infraestrutura por meio de uso automatizado abusivo ou não autorizado.",
+            "Violar qualquer lei aplicável ou os direitos de terceiros."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-7",
+      "heading": "7. Provedores de IA e resultados gerados por IA",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O Serviço pode integrar-se a modelos de IA de terceiros (por exemplo, Anthropic, OpenAI, Google) ou a modelos proprietários, conforme seu plano e configuração. Quando você seleciona um modelo de terceiros, o processamento correspondente também fica sujeito aos termos desse provedor. As respostas geradas por IA podem conter imprecisões; você é responsável por verificar as informações antes de confiar nelas. O Serviço não constitui aconselhamento jurídico, financeiro, médico ou outro aconselhamento profissional."
+        }
+      ]
+    },
+    {
+      "id": "sec-8",
+      "heading": "8. Propriedade intelectual do Serviço",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O Serviço, incluindo seu software, código, design, marcas (entre elas \"RAGfly\" e \"RAGfly Desktop\"), logotipos e documentação, é de nossa propriedade ou de nossos licenciadores e está protegido pelas leis de propriedade intelectual. Este Contrato não lhe concede quaisquer direitos sobre esses elementos além do direito limitado de usar o Serviço conforme acordado. As configurações, prompts e regras de negócio que você cria dentro do Serviço são Dados do Cliente e pertencem a você, sem prejuízo dos nossos direitos sobre a plataforma subjacente."
+        }
+      ]
+    },
+    {
+      "id": "sec-9",
+      "heading": "9. Privacidade e segurança",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Nossa coleta e uso de informações pessoais estão descritos em nossa Política de Privacidade. Aplicamos medidas técnicas e organizacionais razoáveis para proteger os Dados do Cliente, incluindo criptografia dos dados documentais em repouso, comunicações criptografadas (HTTPS), controle de acesso baseado em funções (RBAC), autenticação multifator, isolamento estrutural dos dados e registro de auditoria. Nenhum sistema é completamente seguro; não garantimos segurança absoluta, mas notificaremos você sem demora indevida sobre qualquer violação de segurança que afete seus Dados do Cliente."
+        }
+      ]
+    },
+    {
+      "id": "sec-10",
+      "heading": "10. Disponibilidade do Serviço",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Empregaremos esforços comercialmente razoáveis para manter o Serviço disponível, mas não garantimos operação ininterrupta ou livre de erros. Podem ocorrer interrupções por manutenção programada, falhas de terceiros ou força maior. Compromissos específicos de disponibilidade (SLA) e suporte, quando oferecidos, são estabelecidos em anexo ou acordo separado."
+        }
+      ]
+    },
+    {
+      "id": "sec-11",
+      "heading": "11. Isenções e limitação de responsabilidade",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "O SERVIÇO É FORNECIDO \"NO ESTADO EM QUE SE ENCONTRA\" E \"CONFORME DISPONIBILIDADE\". NA MÁXIMA MEDIDA PERMITIDA PELA LEI APLICÁVEL, ISENTAMO-NOS DE TODAS AS GARANTIAS IMPLÍCITAS, INCLUINDO COMERCIABILIDADE, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO."
+        },
+        {
+          "kind": "p",
+          "text": "NA MÁXIMA MEDIDA PERMITIDA POR LEI, NOSSA RESPONSABILIDADE TOTAL DECORRENTE OU RELACIONADA AO SERVIÇO NÃO EXCEDERÁ OS VALORES QUE VOCÊ EFETIVAMENTE PAGOU PELO SERVIÇO NOS DOZE (12) MESES ANTERIORES AO FATO QUE DEU ORIGEM À RECLAMAÇÃO. NÃO SEREMOS RESPONSÁVEIS POR DANOS INDIRETOS, INCIDENTAIS, ESPECIAIS, CONSEQUENTES OU PUNITIVOS, NEM POR LUCROS CESSANTES OU PERDA DE DADOS."
+        },
+        {
+          "kind": "p",
+          "text": "Nada neste Contrato exclui ou limita a responsabilidade que não possa ser excluída ou limitada conforme a lei aplicável."
+        }
+      ]
+    },
+    {
+      "id": "sec-12",
+      "heading": "12. Vigência, encerramento e devolução de dados",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Este Contrato aplica-se enquanto você mantiver uma conta ou usar o Serviço. Qualquer das partes pode encerrá-lo: você, encerrando sua conta ou não renovando seu plano; nós, por violação material não sanada após aviso. Após o encerramento, você terá um período de carência razoável (não inferior a trinta (30) dias, salvo impedimento legal) para exportar seus Dados do Cliente, após o qual poderemos excluí-los, sujeito às obrigações legais de retenção. As seções que por sua natureza devam subsistir (incluindo propriedade dos dados, confidencialidade, isenções, limitação de responsabilidade e lei aplicável) sobrevivem ao encerramento."
+        }
+      ]
+    },
+    {
+      "id": "sec-13",
+      "heading": "13. Indenização",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Você nos defenderá e indenizará contra reclamações de terceiros decorrentes do seu uso indevido do Serviço, da sua violação deste Contrato ou da ilicitude dos seus Dados do Cliente."
+        }
+      ]
+    },
+    {
+      "id": "sec-14",
+      "heading": "14. Alterações neste Contrato",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Podemos atualizar este Contrato. Daremos aviso prévio razoável de mudanças relevantes. O uso continuado do Serviço após as alterações entrarem em vigor constitui aceitação. Se você não aceitar as alterações, poderá encerrar seu uso do Serviço conforme a Seção 12."
+        }
+      ]
+    },
+    {
+      "id": "sec-15",
+      "heading": "15. Lei aplicável e controvérsias",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Este Contrato é regido pelas leis da jurisdição em que a RAGfly está estabelecida, sem considerar as regras de conflito de leis. As partes tentarão primeiro resolver qualquer controvérsia de boa-fé. Nada nesta seção limita os direitos imperativos que lhe são conferidos como consumidor conforme as leis do seu país de residência, incluindo o direito de apresentar reclamações perante os tribunais da sua própria jurisdição quando a lei aplicável assim o dispuser."
+        }
+      ]
+    },
+    {
+      "id": "sec-16",
+      "heading": "16. Disposições gerais",
+      "blocks": [
+        {
+          "kind": "list",
+          "items": [
+            "**Cessão.** Você não pode ceder este Contrato sem o nosso consentimento. Podemos cedê-lo em conexão com uma reorganização ou transferência do nosso negócio, preservando as proteções aqui acordadas.",
+            "**Divisibilidade.** Se qualquer disposição for considerada inválida, as demais disposições permanecem em vigor.",
+            "**Acordo integral.** Este Contrato, juntamente com a Política de Privacidade e os anexos aplicáveis, constitui o acordo integral entre as partes em relação ao Serviço.",
+            "**Notificações.** As comunicações serão enviadas aos endereços de contato registrados.",
+            "**Não renúncia.** A falta de exercício de um direito não constitui renúncia a ele.",
+            "**Idioma.** A RAGfly publica este Contrato em vários idiomas. A versão em inglês é a versão autêntica; as traduções são fornecidas apenas por conveniência e, em caso de divergência, prevalece a versão em inglês."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-17",
+      "heading": "17. Contato",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**RAGfly**"
+        },
+        {
+          "kind": "p",
+          "text": "Site: ragfly.ai"
+        },
+        {
+          "kind": "p",
+          "text": "E-mail: admin@ragfly.ai"
+        }
+      ]
+    }
+  ]
+}

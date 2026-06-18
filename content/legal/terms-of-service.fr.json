@@ -1,0 +1,253 @@
+{
+  "title": "Conditions d'utilisation",
+  "subtitle": "Dernière mise à jour : 16/06/2026 · Version 1.0",
+  "intro": [
+    {
+      "kind": "p",
+      "text": "Les présentes Conditions d'utilisation (le **« Contrat »**) constituent un contrat contraignant entre vous (**« Client », « vous » ou « votre »**) et **RAGfly** (**« RAGfly », « nous » ou « notre »**). Ce Contrat régit votre accès et votre utilisation de la plateforme RAGfly, des sites web, des applications, des API et des services connexes (collectivement, le **« Service »**)."
+    },
+    {
+      "kind": "p",
+      "text": "**En vous connectant, en créant un compte, en accédant au Service ou en l'utilisant — y compris en vous connectant via Microsoft ou un autre fournisseur d'identité tiers — vous reconnaissez avoir lu, compris et accepté d'être lié par ce Contrat.** Si vous n'êtes pas d'accord, n'accédez pas au Service et ne l'utilisez pas. Si vous acceptez ce Contrat au nom d'une entreprise ou d'une autre organisation, vous déclarez avoir le pouvoir d'engager cette entité, et « vous » désigne cette entité."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-1",
+      "heading": "1. Le Service",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "RAGfly est une infrastructure de génération augmentée par récupération (RAG) qui permet aux particuliers et aux organisations de dialoguer avec leurs propres documents en langage naturel et de fournir un contexte documentaire précis aux agents d'IA. Le Service comprend, selon le forfait que vous choisissez, le traitement de documents, la vectorisation et l'indexation, la recherche sémantique, le contrôle d'accès basé sur les rôles, l'administration multi-organisation et les fonctionnalités connexes décrites dans notre documentation. Nous pouvons modifier, améliorer ou interrompre des fonctionnalités du Service, et nous donnerons un préavis raisonnable des changements importants."
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "heading": "2. Admissibilité et comptes",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Vous devez avoir au moins 18 ans (ou l'âge de la majorité dans votre juridiction) et être capable de conclure un contrat contraignant pour utiliser le Service. Pour utiliser la plupart des fonctionnalités, vous devez créer un compte ou vous authentifier via un fournisseur d'identité pris en charge. Vous vous engagez à fournir des informations exactes, complètes et à jour, et à les tenir à jour."
+        },
+        {
+          "kind": "p",
+          "text": "Vous êtes responsable de la protection de vos identifiants et de toute activité effectuée sous votre compte. Informez-nous sans délai de toute utilisation non autorisée ou de toute violation de sécurité présumée. Nous pouvons suspendre ou résilier les comptes qui enfreignent ce Contrat ou qui présentent des risques de fraude ou de sécurité."
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "heading": "3. Authentification et fournisseurs d'identité tiers",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Le Service prend en charge la connexion via des fournisseurs d'identité tiers, notamment Microsoft (Microsoft Entra ID / Azure Active Directory), Google, GitHub et Supabase. Lorsque vous vous authentifiez de cette manière, nous recevons un ensemble limité d'informations de profil (telles que votre nom, votre adresse e-mail et un identifiant unique) uniquement pour créer et sécuriser votre compte et fournir le Service. Nous ne recevons pas votre mot de passe. Votre utilisation du fournisseur d'identité reste soumise aux conditions et à la politique de confidentialité de ce fournisseur. Vous pouvez révoquer la connexion à tout moment via votre fournisseur d'identité ou les paramètres de votre compte."
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "heading": "4. Forfaits, frais et paiement",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "L'accès est proposé selon différents forfaits dont les fonctionnalités et les prix sont publiés par nous ou convenus dans un contrat spécifique. Sauf accord contraire :"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Les frais sont facturés à l'avance selon le cycle de facturation du forfait (mensuel ou annuel).",
+            "Les prix peuvent changer ; nous donnerons un préavis raisonnable, et les changements prennent effet au cycle de facturation suivant.",
+            "Un paiement tardif ou en échec peut entraîner la suspension du Service après préavis.",
+            "Sauf disposition contraire de la loi applicable, les frais ne sont pas remboursables pour les périodes déjà commencées."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "heading": "5. Données du Client et propriété",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**Vous détenez et conservez à tout moment l'ensemble des droits, titres et intérêts relatifs à vos Données du Client.** On entend par « Données du Client » tous les documents, fichiers, textes, métadonnées, configurations, index, vecteurs, prompts et autres contenus que vous téléversez, connectez, traitez ou générez via le Service. Il s'agit d'un principe fondamental du Service qui prévaut sur toute interprétation contraire."
+        },
+        {
+          "kind": "p",
+          "text": "En particulier :"
+        },
+        {
+          "kind": "olist",
+          "items": [
+            "**Propriété.** Vous conservez la propriété de vos Données du Client, y compris les documents originaux et les index, vecteurs et contenus dérivés générés à partir de ceux-ci. Nous n'acquérons aucun droit de propriété sur vos Données du Client.",
+            "**Licence limitée en notre faveur.** Vous nous accordez une licence limitée, non exclusive et révocable pour héberger, traiter, transmettre, indexer et afficher vos Données du Client uniquement afin de vous fournir et de maintenir le Service. Cette licence n'autorise aucun autre usage.",
+            "**Aucune utilisation pour l'entraînement ou à des fins secondaires.** Nous ne vendons, ne louons ni ne divulguons vos Données du Client, et nous ne les utilisons pas pour entraîner nos modèles d'intelligence artificielle ou ceux de tiers, ni à des fins publicitaires ou à toute autre fin que la fourniture du Service.",
+            "**Isolement.** Les Données du Client sont structurellement isolées de celles des autres clients. Aucun groupe, entité ou client ne peut accéder aux données d'un autre.",
+            "**Portabilité et restitution.** Vous pouvez exporter ou demander la restitution de vos Données du Client à tout moment pendant la durée du Contrat et pendant le délai de grâce postérieur à la résiliation décrit à la Section 12.",
+            "**Suppression.** À votre demande, ou après la résiliation et le délai de grâce applicable, nous supprimerons vos Données du Client de nos systèmes, sauf lorsque la loi en impose la conservation.",
+            "**Traitement local optionnel.** Sur les forfaits qui le permettent, RAGfly Desktop vous permet de conserver l'indexation des documents au sein de votre propre réseau, de sorte que les documents ne quittent pas votre infrastructure."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Vous êtes seul responsable de la licéité de vos Données du Client et de la détention des droits nécessaires pour les traiter via le Service."
+        }
+      ]
+    },
+    {
+      "id": "sec-6",
+      "heading": "6. Utilisation acceptable",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Vous vous engagez à ne pas utiliser le Service pour :"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Téléverser ou traiter des contenus illégaux, contrefaisants ou que vous n'avez pas le droit de traiter.",
+            "Compromettre la sécurité ou l'intégrité du Service, ou tenter d'accéder aux données d'un autre client.",
+            "Effectuer de l'ingénierie inverse, décompiler ou extraire le code source du Service, sauf dans la mesure permise par la loi.",
+            "Revendre ou sous-licencier le Service sans autorisation au-delà des usages prévus par votre forfait.",
+            "Surcharger l'infrastructure par une utilisation automatisée abusive ou non autorisée.",
+            "Enfreindre toute loi applicable ou les droits de tiers."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-7",
+      "heading": "7. Fournisseurs d'IA et résultats générés par IA",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Le Service peut s'intégrer à des modèles d'IA tiers (par exemple Anthropic, OpenAI, Google) ou à des modèles propriétaires, selon votre forfait et votre configuration. Lorsque vous sélectionnez un modèle tiers, le traitement correspondant est également soumis aux conditions de ce fournisseur. Les réponses générées par IA peuvent contenir des inexactitudes ; il vous incombe de vérifier les informations avant de vous y fier. Le Service ne constitue pas un conseil juridique, financier, médical ou autre conseil professionnel."
+        }
+      ]
+    },
+    {
+      "id": "sec-8",
+      "heading": "8. Propriété intellectuelle du Service",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Le Service, y compris ses logiciels, son code, sa conception, ses marques (dont « RAGfly » et « RAGfly Desktop »), ses logos et sa documentation, nous appartient ou appartient à nos concédants et est protégé par les lois sur la propriété intellectuelle. Ce Contrat ne vous confère aucun droit sur ces éléments autre que le droit limité d'utiliser le Service comme convenu. Les configurations, prompts et règles métier que vous créez au sein du Service sont des Données du Client et vous appartiennent, sans préjudice de nos droits sur la plateforme sous-jacente."
+        }
+      ]
+    },
+    {
+      "id": "sec-9",
+      "heading": "9. Confidentialité et sécurité",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Notre collecte et notre utilisation des informations personnelles sont décrites dans notre Politique de confidentialité. Nous appliquons des mesures techniques et organisationnelles raisonnables pour protéger les Données du Client, notamment le chiffrement des données documentaires au repos, les communications chiffrées (HTTPS), le contrôle d'accès basé sur les rôles (RBAC), l'authentification multifacteur, l'isolement structurel des données et la journalisation d'audit. Aucun système n'est totalement sécurisé ; nous ne garantissons pas une sécurité absolue, mais nous vous informerons sans retard injustifié de toute violation de sécurité affectant vos Données du Client."
+        }
+      ]
+    },
+    {
+      "id": "sec-10",
+      "heading": "10. Disponibilité du Service",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Nous déploierons des efforts commercialement raisonnables pour maintenir le Service disponible, mais nous ne garantissons pas un fonctionnement ininterrompu ou sans erreur. Des interruptions peuvent survenir en raison d'une maintenance planifiée, de défaillances de tiers ou de cas de force majeure. Les engagements spécifiques de disponibilité (SLA) et le support, lorsqu'ils sont proposés, sont définis dans une annexe ou un accord distinct."
+        }
+      ]
+    },
+    {
+      "id": "sec-11",
+      "heading": "11. Exclusions et limitation de responsabilité",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "LE SERVICE EST FOURNI « EN L'ÉTAT » ET « SELON DISPONIBILITÉ ». DANS TOUTE LA MESURE PERMISE PAR LA LOI APPLICABLE, NOUS DÉCLINONS TOUTE GARANTIE IMPLICITE, Y COMPRIS LA QUALITÉ MARCHANDE, L'ADÉQUATION À UN USAGE PARTICULIER ET L'ABSENCE DE CONTREFAÇON."
+        },
+        {
+          "kind": "p",
+          "text": "DANS TOUTE LA MESURE PERMISE PAR LA LOI, NOTRE RESPONSABILITÉ TOTALE DÉCOULANT DU SERVICE OU S'Y RAPPORTANT N'EXCÉDERA PAS LES MONTANTS QUE VOUS AVEZ EFFECTIVEMENT PAYÉS POUR LE SERVICE AU COURS DES DOUZE (12) MOIS PRÉCÉDANT LE FAIT GÉNÉRATEUR DE LA RÉCLAMATION. NOUS NE SERONS PAS RESPONSABLES DES DOMMAGES INDIRECTS, ACCESSOIRES, SPÉCIAUX, CONSÉCUTIFS OU PUNITIFS, NI DE LA PERTE DE BÉNÉFICES OU DE DONNÉES."
+        },
+        {
+          "kind": "p",
+          "text": "Rien dans ce Contrat n'exclut ni ne limite la responsabilité qui ne peut être exclue ou limitée en vertu de la loi applicable."
+        }
+      ]
+    },
+    {
+      "id": "sec-12",
+      "heading": "12. Durée, résiliation et restitution des données",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Ce Contrat s'applique tant que vous maintenez un compte ou utilisez le Service. Chaque partie peut le résilier : vous, en fermant votre compte ou en ne renouvelant pas votre forfait ; nous, pour manquement substantiel non corrigé après préavis. Après la résiliation, vous disposerez d'un délai de grâce raisonnable (au moins trente (30) jours, sauf empêchement légal) pour exporter vos Données du Client, après quoi nous pourrons les supprimer, sous réserve des obligations légales de conservation. Les sections qui, par leur nature, doivent subsister (notamment la propriété des données, la confidentialité, les exclusions, la limitation de responsabilité et la loi applicable) survivent à la résiliation."
+        }
+      ]
+    },
+    {
+      "id": "sec-13",
+      "heading": "13. Indemnisation",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Vous nous défendrez et nous indemniserez contre les réclamations de tiers découlant de votre usage abusif du Service, de votre violation de ce Contrat ou de l'illicéité de vos Données du Client."
+        }
+      ]
+    },
+    {
+      "id": "sec-14",
+      "heading": "14. Modifications de ce Contrat",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Nous pouvons mettre à jour ce Contrat. Nous donnerons un préavis raisonnable des changements importants. La poursuite de l'utilisation du Service après l'entrée en vigueur des changements vaut acceptation. Si vous n'acceptez pas les changements, vous pouvez mettre fin à votre utilisation du Service conformément à la Section 12."
+        }
+      ]
+    },
+    {
+      "id": "sec-15",
+      "heading": "15. Loi applicable et litiges",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Ce Contrat est régi par les lois de la juridiction dans laquelle RAGfly est établie, sans égard aux règles de conflit de lois. Les parties tenteront d'abord de résoudre tout litige de bonne foi. Rien dans cette section ne limite les droits impératifs qui vous sont accordés en tant que consommateur en vertu des lois de votre pays de résidence, y compris le droit de porter des réclamations devant les tribunaux de votre propre juridiction lorsque la loi applicable le prévoit."
+        }
+      ]
+    },
+    {
+      "id": "sec-16",
+      "heading": "16. Dispositions générales",
+      "blocks": [
+        {
+          "kind": "list",
+          "items": [
+            "**Cession.** Vous ne pouvez pas céder ce Contrat sans notre consentement. Nous pouvons le céder dans le cadre d'une réorganisation ou d'un transfert de notre activité, en préservant les protections convenues ici.",
+            "**Divisibilité.** Si une disposition est jugée invalide, les autres dispositions demeurent en vigueur.",
+            "**Intégralité du Contrat.** Ce Contrat, avec la Politique de confidentialité et les annexes applicables, constitue l'intégralité de l'accord entre les parties concernant le Service.",
+            "**Notifications.** Les communications seront envoyées aux adresses de contact enregistrées.",
+            "**Absence de renonciation.** Le défaut d'exercice d'un droit ne vaut pas renonciation à celui-ci.",
+            "**Langue.** RAGfly publie ce Contrat en plusieurs langues. La version anglaise fait foi ; les traductions sont fournies uniquement par commodité et, en cas de divergence, la version anglaise prévaut."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-17",
+      "heading": "17. Contact",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**RAGfly**"
+        },
+        {
+          "kind": "p",
+          "text": "Site web : ragfly.ai"
+        },
+        {
+          "kind": "p",
+          "text": "E-mail : admin@ragfly.ai"
+        }
+      ]
+    }
+  ]
+}

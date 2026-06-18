@@ -29,4 +29,15 @@ RAGfly es la capa de contexto documental para agentes: apuntas a un directorio d
 
 - [Aplicación](https://app.ragfly.ai): iniciar sesión y operar.
 - [Sitio](https://ragfly.ai): producto, capacidades, planes y seguridad.
-- [Quickstart](https://ragfly.ai/quickstart): guía de integración paso a paso para MCP, REST y CLI.
+- [Build on RAGfly](https://ragfly.ai/build): hub de integración (las 5 interfaces + guías), sincronizado con el kit del producto.
+
+## Kit de integración (Markdown crudo, fetcheable)
+
+- [Guía de integración](https://ragfly.ai/integradores/INTEGRATION.md): credenciales, roles, identidad y contrato común.
+- [Quickstart](https://ragfly.ai/integradores/QUICKSTART.md): de cero a la primera consulta semántica.
+- [MCP](https://ragfly.ai/integradores/MCP.md): conexión de agentes LLM (Claude, Cursor, Codex).
+- [REST](https://ragfly.ai/integradores/REST.md): API HTTP + SSE para cualquier lenguaje o plataforma.
+- [CLI](https://ragfly.ai/integradores/CLI.md): terminal, scripts y CI/CD.
+- [Python SDK](https://ragfly.ai/integradores/SDK.md): `pip install ragfly`.
+- [Runtime hints](https://ragfly.ai/integradores/RUNTIME_HINTS.md): qué tool usar según el runtime.
+- [AGENTS.md](https://ragfly.ai/integradores/AGENTS.md): para soltar en la raíz del workspace del agente.

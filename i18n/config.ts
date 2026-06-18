@@ -1,6 +1,8 @@
 export const locales = ['es', 'en', 'pt', 'fr', 'de'] as const
 export type Locale = (typeof locales)[number]
-export const defaultLocale: Locale = 'es'
+// Mercado objetivo: global / inglés. El inglés es el fallback final;
+// el idioma del navegador del visitante igual se detecta en request.ts (accept-language).
+export const defaultLocale: Locale = 'en'
 
 export const localeNames: Record<Locale, string> = {
   es: 'Español',

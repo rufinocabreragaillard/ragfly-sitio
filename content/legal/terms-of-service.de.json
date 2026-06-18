@@ -1,0 +1,253 @@
+{
+  "title": "Nutzungsbedingungen",
+  "subtitle": "Zuletzt aktualisiert: 16/06/2026 · Version 1.0",
+  "intro": [
+    {
+      "kind": "p",
+      "text": "Diese Nutzungsbedingungen (diese **„Vereinbarung\"**) sind ein verbindlicher Vertrag zwischen Ihnen (**„Kunde\", „Sie\" oder „Ihr\"**) und **RAGfly** (**„RAGfly\", „wir\", „uns\" oder „unser\"**). Diese Vereinbarung regelt Ihren Zugang zu und Ihre Nutzung der RAGfly-Plattform, der Websites, Anwendungen, APIs und damit verbundenen Dienste (zusammen der **„Dienst\"**)."
+    },
+    {
+      "kind": "p",
+      "text": "**Indem Sie sich anmelden, ein Konto erstellen, auf den Dienst zugreifen oder ihn nutzen — einschließlich der Anmeldung über Microsoft oder einen anderen Drittanbieter-Identitätsdienst — bestätigen Sie, dass Sie diese Vereinbarung gelesen und verstanden haben und sich damit einverstanden erklären, an sie gebunden zu sein.** Wenn Sie nicht einverstanden sind, greifen Sie nicht auf den Dienst zu und nutzen Sie ihn nicht. Wenn Sie diese Vereinbarung im Namen eines Unternehmens oder einer anderen Organisation annehmen, versichern Sie, dass Sie befugt sind, diese Einheit zu binden, und „Sie\" bezieht sich auf diese Einheit."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-1",
+      "heading": "1. Der Dienst",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "RAGfly ist eine Infrastruktur für abrufgestützte Generierung (Retrieval-Augmented Generation, RAG), die es Einzelpersonen und Organisationen ermöglicht, in natürlicher Sprache mit ihren eigenen Dokumenten zu kommunizieren und KI-Agenten präzisen Dokumentenkontext bereitzustellen. Der Dienst umfasst je nach gewähltem Tarif Dokumentenverarbeitung, Vektorisierung und Indexierung, semantische Suche, rollenbasierte Zugriffskontrolle, Mehr-Organisationen-Verwaltung und verwandte Funktionen, die in unserer Dokumentation beschrieben sind. Wir können Funktionen des Dienstes ändern, verbessern oder einstellen und werden wesentliche Änderungen mit angemessener Frist ankündigen."
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "heading": "2. Zugangsberechtigung und Konten",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Sie müssen mindestens 18 Jahre alt sein (oder das in Ihrer Rechtsordnung geltende Volljährigkeitsalter) und in der Lage sein, einen verbindlichen Vertrag abzuschließen, um den Dienst zu nutzen. Für die meisten Funktionen müssen Sie ein Konto erstellen oder sich über einen unterstützten Identitätsanbieter authentifizieren. Sie verpflichten sich, genaue, vollständige und aktuelle Informationen bereitzustellen und diese aktuell zu halten."
+        },
+        {
+          "kind": "p",
+          "text": "Sie sind für den Schutz Ihrer Zugangsdaten und für alle unter Ihrem Konto erfolgenden Aktivitäten verantwortlich. Benachrichtigen Sie uns unverzüglich über jede unbefugte Nutzung oder jeden vermuteten Sicherheitsverstoß. Wir können Konten sperren oder kündigen, die gegen diese Vereinbarung verstoßen oder ein Betrugs- oder Sicherheitsrisiko darstellen."
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "heading": "3. Authentifizierung und Drittanbieter-Identitätsdienste",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Dienst unterstützt die Anmeldung über Drittanbieter-Identitätsdienste, darunter Microsoft (Microsoft Entra ID / Azure Active Directory), Google, GitHub und Supabase. Wenn Sie sich auf diese Weise authentifizieren, erhalten wir einen begrenzten Satz von Profilinformationen (wie Ihren Namen, Ihre E-Mail-Adresse und eine eindeutige Kennung) ausschließlich, um Ihr Konto zu erstellen und zu sichern und den Dienst bereitzustellen. Wir erhalten Ihr Passwort nicht. Ihre Nutzung des Identitätsanbieters unterliegt weiterhin dessen eigenen Bedingungen und Datenschutzrichtlinien. Sie können die Verbindung jederzeit über Ihren Identitätsanbieter oder Ihre Kontoeinstellungen widerrufen."
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "heading": "4. Tarife, Gebühren und Zahlung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Zugang wird in verschiedenen Tarifen angeboten, deren Funktionen und Preise von uns veröffentlicht oder in einem konkreten Vertrag vereinbart werden. Sofern nicht anders vereinbart:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Die Gebühren werden im Voraus gemäß dem Abrechnungszyklus des Tarifs (monatlich oder jährlich) berechnet.",
+            "Preise können sich ändern; wir kündigen dies mit angemessener Frist an, und Änderungen treten zum nächsten Abrechnungszyklus in Kraft.",
+            "Verspätete oder fehlgeschlagene Zahlungen können nach Ankündigung zur Sperrung des Dienstes führen.",
+            "Soweit nicht durch geltendes Recht vorgeschrieben, sind Gebühren für bereits begonnene Zeiträume nicht erstattungsfähig."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "heading": "5. Kundendaten und Eigentum",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**Sie besitzen und behalten jederzeit alle Rechte, Titel und Interessen an Ihren Kundendaten.** „Kundendaten\" bezeichnet alle Dokumente, Dateien, Texte, Metadaten, Konfigurationen, Indizes, Vektoren, Prompts und sonstigen Inhalte, die Sie über den Dienst hochladen, verbinden, verarbeiten oder erzeugen. Dies ist ein Grundprinzip des Dienstes und hat Vorrang vor jeder entgegenstehenden Auslegung."
+        },
+        {
+          "kind": "p",
+          "text": "Insbesondere:"
+        },
+        {
+          "kind": "olist",
+          "items": [
+            "**Eigentum.** Sie behalten das Eigentum an Ihren Kundendaten, einschließlich der Originaldokumente und der daraus erzeugten Indizes, Vektoren und abgeleiteten Inhalte. Wir erwerben keine Eigentumsrechte an Ihren Kundendaten.",
+            "**Begrenzte Lizenz an uns.** Sie gewähren uns eine begrenzte, nicht ausschließliche, widerrufliche Lizenz zum Hosten, Verarbeiten, Übertragen, Indexieren und Anzeigen Ihrer Kundendaten ausschließlich zur Bereitstellung und Aufrechterhaltung des Dienstes für Sie. Diese Lizenz berechtigt zu keiner anderen Nutzung.",
+            "**Keine Nutzung für Training oder Sekundärzwecke.** Wir verkaufen, vermieten oder offenbaren Ihre Kundendaten nicht und verwenden sie nicht, um unsere eigenen oder die Modelle Dritter für künstliche Intelligenz zu trainieren, noch für Werbung oder einen anderen Zweck als die Bereitstellung des Dienstes für Sie.",
+            "**Isolierung.** Kundendaten sind strukturell von denen anderer Kunden isoliert. Keine Gruppe, Einheit oder Kunde kann auf die Daten eines anderen zugreifen.",
+            "**Übertragbarkeit und Rückgabe.** Sie können Ihre Kundendaten jederzeit während der Laufzeit und während der in Abschnitt 12 beschriebenen Nachfrist nach Kündigung exportieren oder deren Rückgabe verlangen.",
+            "**Löschung.** Auf Ihre Anfrage oder nach Kündigung und Ablauf der geltenden Nachfrist löschen wir Ihre Kundendaten aus unseren Systemen, außer wenn eine Aufbewahrung gesetzlich vorgeschrieben ist.",
+            "**Optionale lokale Verarbeitung.** Bei Tarifen, die dies unterstützen, ermöglicht RAGfly Desktop, die Dokumentenindexierung innerhalb Ihres eigenen Netzwerks zu halten, sodass die Dokumente Ihre Infrastruktur nicht verlassen."
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Sie sind allein für die Rechtmäßigkeit Ihrer Kundendaten und dafür verantwortlich, die zur Verarbeitung über den Dienst erforderlichen Rechte zu besitzen."
+        }
+      ]
+    },
+    {
+      "id": "sec-6",
+      "heading": "6. Zulässige Nutzung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Sie verpflichten sich, den Dienst nicht zu nutzen, um:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "Inhalte hochzuladen oder zu verarbeiten, die rechtswidrig oder rechtsverletzend sind oder die Sie nicht verarbeiten dürfen.",
+            "Die Sicherheit oder Integrität des Dienstes zu beeinträchtigen oder zu versuchen, auf die Daten eines anderen Kunden zuzugreifen.",
+            "Den Quellcode des Dienstes zurückzuentwickeln, zu dekompilieren oder zu extrahieren, außer soweit gesetzlich zulässig.",
+            "Den Dienst ohne Genehmigung über die in Ihrem Tarif vorgesehenen Nutzungen hinaus weiterzuverkaufen oder unterzulizenzieren.",
+            "Die Infrastruktur durch missbräuchliche oder unbefugte automatisierte Nutzung zu überlasten.",
+            "Gegen geltendes Recht oder die Rechte Dritter zu verstoßen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-7",
+      "heading": "7. KI-Anbieter und KI-generierte Ausgaben",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Dienst kann je nach Ihrem Tarif und Ihrer Konfiguration mit KI-Modellen Dritter (zum Beispiel Anthropic, OpenAI, Google) oder mit proprietären Modellen integriert werden. Wenn Sie ein Modell eines Dritten auswählen, unterliegt die entsprechende Verarbeitung auch den Bedingungen dieses Anbieters. KI-generierte Antworten können Ungenauigkeiten enthalten; Sie sind dafür verantwortlich, Informationen zu überprüfen, bevor Sie sich darauf verlassen. Der Dienst stellt keine rechtliche, finanzielle, medizinische oder sonstige professionelle Beratung dar."
+        }
+      ]
+    },
+    {
+      "id": "sec-8",
+      "heading": "8. Geistiges Eigentum am Dienst",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Der Dienst, einschließlich seiner Software, seines Codes, seines Designs, seiner Marken (darunter „RAGfly\" und „RAGfly Desktop\"), Logos und Dokumentation, ist unser Eigentum oder das unserer Lizenzgeber und durch Gesetze zum geistigen Eigentum geschützt. Diese Vereinbarung gewährt Ihnen keine Rechte an diesen Elementen außer dem begrenzten Recht, den Dienst wie vereinbart zu nutzen. Konfigurationen, Prompts und Geschäftsregeln, die Sie innerhalb des Dienstes erstellen, sind Kundendaten und gehören Ihnen, unbeschadet unserer Rechte an der zugrunde liegenden Plattform."
+        }
+      ]
+    },
+    {
+      "id": "sec-9",
+      "heading": "9. Datenschutz und Sicherheit",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Unsere Erhebung und Nutzung personenbezogener Daten ist in unserer Datenschutzrichtlinie beschrieben. Wir wenden angemessene technische und organisatorische Maßnahmen zum Schutz der Kundendaten an, einschließlich Verschlüsselung der Dokumentendaten im Ruhezustand, verschlüsselter Kommunikation (HTTPS), rollenbasierter Zugriffskontrolle (RBAC), Mehr-Faktor-Authentifizierung, struktureller Datenisolierung und Audit-Protokollierung. Kein System ist vollständig sicher; wir garantieren keine absolute Sicherheit, werden Sie aber unverzüglich über jede Sicherheitsverletzung informieren, die Ihre Kundendaten betrifft."
+        }
+      ]
+    },
+    {
+      "id": "sec-10",
+      "heading": "10. Verfügbarkeit des Dienstes",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir werden wirtschaftlich angemessene Anstrengungen unternehmen, um den Dienst verfügbar zu halten, garantieren jedoch keinen ununterbrochenen oder fehlerfreien Betrieb. Unterbrechungen können aufgrund geplanter Wartung, Ausfällen Dritter oder höherer Gewalt auftreten. Konkrete Verfügbarkeitszusagen (SLA) und Support werden, sofern angeboten, in einem gesonderten Anhang oder einer gesonderten Vereinbarung festgelegt."
+        }
+      ]
+    },
+    {
+      "id": "sec-11",
+      "heading": "11. Haftungsausschlüsse und Haftungsbeschränkung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "DER DIENST WIRD „WIE BESEHEN\" UND „WIE VERFÜGBAR\" BEREITGESTELLT. SOWEIT NACH GELTENDEM RECHT ZULÄSSIG, SCHLIESSEN WIR ALLE STILLSCHWEIGENDEN GEWÄHRLEISTUNGEN AUS, EINSCHLIESSLICH DER MARKTGÄNGIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND DER NICHTVERLETZUNG VON RECHTEN."
+        },
+        {
+          "kind": "p",
+          "text": "SOWEIT NACH GELTENDEM RECHT ZULÄSSIG, ÜBERSTEIGT UNSERE GESAMTHAFTUNG AUS ODER IM ZUSAMMENHANG MIT DEM DIENST NICHT DIE BETRÄGE, DIE SIE IN DEN ZWÖLF (12) MONATEN VOR DEM SCHADENSAUSLÖSENDEN EREIGNIS TATSÄCHLICH FÜR DEN DIENST GEZAHLT HABEN. WIR HAFTEN NICHT FÜR INDIREKTE, BEILÄUFIGE, BESONDERE, FOLGE- ODER STRAFSCHÄDEN ODER FÜR ENTGANGENEN GEWINN ODER DATENVERLUST."
+        },
+        {
+          "kind": "p",
+          "text": "Nichts in dieser Vereinbarung schließt eine Haftung aus oder beschränkt sie, die nach geltendem Recht nicht ausgeschlossen oder beschränkt werden kann."
+        }
+      ]
+    },
+    {
+      "id": "sec-12",
+      "heading": "12. Laufzeit, Kündigung und Datenrückgabe",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Diese Vereinbarung gilt, solange Sie ein Konto unterhalten oder den Dienst nutzen. Jede Partei kann kündigen: Sie, indem Sie Ihr Konto schließen oder Ihren Tarif nicht verlängern; wir, wegen Ihrer nicht behobenen wesentlichen Vertragsverletzung nach Ankündigung. Nach der Kündigung haben Sie eine angemessene Nachfrist (nicht weniger als dreißig (30) Tage, sofern gesetzlich nicht verhindert), um Ihre Kundendaten zu exportieren, danach können wir sie löschen, vorbehaltlich gesetzlicher Aufbewahrungspflichten. Bestimmungen, die ihrer Natur nach fortbestehen sollen (einschließlich Dateneigentum, Vertraulichkeit, Haftungsausschlüsse, Haftungsbeschränkung und anwendbares Recht), überdauern die Kündigung."
+        }
+      ]
+    },
+    {
+      "id": "sec-13",
+      "heading": "13. Freistellung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Sie werden uns gegen Ansprüche Dritter verteidigen und freistellen, die aus Ihrer missbräuchlichen Nutzung des Dienstes, Ihrer Verletzung dieser Vereinbarung oder der Rechtswidrigkeit Ihrer Kundendaten entstehen."
+        }
+      ]
+    },
+    {
+      "id": "sec-14",
+      "heading": "14. Änderungen dieser Vereinbarung",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wir können diese Vereinbarung aktualisieren. Wir kündigen wesentliche Änderungen mit angemessener Frist an. Die fortgesetzte Nutzung des Dienstes nach Inkrafttreten der Änderungen gilt als Annahme. Wenn Sie die Änderungen nicht annehmen, können Sie Ihre Nutzung des Dienstes gemäß Abschnitt 12 beenden."
+        }
+      ]
+    },
+    {
+      "id": "sec-15",
+      "heading": "15. Anwendbares Recht und Streitigkeiten",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Diese Vereinbarung unterliegt den Gesetzen der Rechtsordnung, in der RAGfly ansässig ist, ohne Rücksicht auf Kollisionsnormen. Die Parteien werden zunächst versuchen, Streitigkeiten in gutem Glauben beizulegen. Nichts in diesem Abschnitt beschränkt zwingende Rechte, die Ihnen als Verbraucher nach den Gesetzen Ihres Wohnsitzlandes zustehen, einschließlich des Rechts, Ansprüche vor den Gerichten Ihrer eigenen Rechtsordnung geltend zu machen, soweit das geltende Recht dies vorsieht."
+        }
+      ]
+    },
+    {
+      "id": "sec-16",
+      "heading": "16. Allgemeine Bestimmungen",
+      "blocks": [
+        {
+          "kind": "list",
+          "items": [
+            "**Abtretung.** Sie dürfen diese Vereinbarung nicht ohne unsere Zustimmung abtreten. Wir können sie im Zusammenhang mit einer Umstrukturierung oder Übertragung unseres Geschäfts abtreten und dabei die hier vereinbarten Schutzmaßnahmen wahren.",
+            "**Salvatorische Klausel.** Wird eine Bestimmung für ungültig befunden, bleiben die übrigen Bestimmungen in Kraft.",
+            "**Gesamte Vereinbarung.** Diese Vereinbarung bildet zusammen mit der Datenschutzrichtlinie und den geltenden Anhängen die gesamte Vereinbarung zwischen den Parteien in Bezug auf den Dienst.",
+            "**Mitteilungen.** Mitteilungen werden an die hinterlegten Kontaktadressen gesendet.",
+            "**Kein Verzicht.** Die Nichtausübung eines Rechts stellt keinen Verzicht darauf dar.",
+            "**Sprache.** RAGfly veröffentlicht diese Vereinbarung in mehreren Sprachen. Die englische Fassung ist die maßgebliche Fassung; Übersetzungen werden nur der Einfachheit halber bereitgestellt, und im Falle von Widersprüchen hat die englische Fassung Vorrang."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-17",
+      "heading": "17. Kontakt",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "**RAGfly**"
+        },
+        {
+          "kind": "p",
+          "text": "Website: ragfly.ai"
+        },
+        {
+          "kind": "p",
+          "text": "E-Mail: admin@ragfly.ai"
+        }
+      ]
+    }
+  ]
+}

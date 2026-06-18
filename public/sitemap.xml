@@ -13,4 +13,19 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://ragfly.ai/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ragfly.ai/" />
   </url>
+  <url>
+    <loc>https://ragfly.ai/build</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://ragfly.ai/build/quickstart</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ragfly.ai/build/integration</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ragfly.ai/build/mcp</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ragfly.ai/build/rest</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ragfly.ai/build/cli</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ragfly.ai/build/sdk</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ragfly.ai/build/runtime-hints</loc><lastmod>2026-06-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ragfly.ai/build/agents-md</loc><lastmod>2026-06-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://ragfly.ai/build/evaluation-template</loc><lastmod>2026-06-18</lastmod><priority>0.6</priority></url>
 </urlset>
