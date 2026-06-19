@@ -1,0 +1,39 @@
+/* ============================================================
+   RAGfly — Tokens de marca · FUENTE ÚNICA DE VERDAD
+   Sistema de marca v1.0 · ragfly.ai
+   ------------------------------------------------------------
+   Este archivo es la fuente canónica de COLOR y TIPOGRAFÍA de
+   la marca RAGfly. Vive en comercial/marca/ y se COPIA (no se
+   edita por separado) hacia cada superficie:
+     · producto  → frontend/src/app/  (importado en globals.css)
+     · sitio web  → frontend/app/      (importado en globals.css)
+     · pptx       → theme de Office (mismos hex y fuentes)
+
+   REGLA DE DISEÑO:
+   - Colores y tipografías: IDÉNTICOS en todas las superficies.
+   - Espaciado y rol del color: lo decide cada superficie.
+       · Sitio/PPTX  → el azul de marca manda (comunicación).
+       · Producto    → el gris neutro es el color de ACCIÓN
+         (botones, sidebar, tabs); el azul de marca entra como
+         ACENTO (links, focus, estado activo, gráficos, badges).
+   ============================================================ */
+
+:root {
+  /* ── Paleta v1.0 (los 7 colores oficiales) ── */
+  --ragfly-azul-marca:  #008AD1; /* Color principal de marca · CMYK 54 43 53 0 */
+  --ragfly-azul-fondo:  #045B8E; /* Fondos / banda */
+  --ragfly-azul-oscuro: #133242; /* Titulares / tinta */
+  --ragfly-azul-claro:  #CCE8F6; /* Acento / fondo suave */
+  --ragfly-gris-oscuro: #646363; /* Texto secundario · CMYK 69 62 59 8 */
+  --ragfly-gris-claro:  #B4B3B3; /* Bordes / apoyo · CMYK 34 26 27 0 */
+  --ragfly-fondo-app:   #EBEBEB; /* Tema de interfaz */
+
+  /* ── Variantes derivadas (para hover/focus sin salir de la marca) ── */
+  --ragfly-azul-marca-hover: #0079B8; /* azul-marca ~8% más oscuro */
+  --ragfly-azul-marca-10:    rgba(0, 138, 209, 0.10); /* fondo suave del acento */
+
+  /* ── Tipografía v1.0 ── */
+  --ragfly-font-sans:  "Inter", sans-serif;     /* titulares y cuerpo */
+  --ragfly-font-serif: "Lora", serif;           /* lemas y citas (itálica) */
+  --ragfly-font-mono:  "Geist Mono", monospace; /* etiquetas, folios, datos */
+}

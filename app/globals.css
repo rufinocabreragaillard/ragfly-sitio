@@ -1,20 +1,28 @@
 @import "tailwindcss";
 
+/* Tokens de marca RAGfly — fuente única (copia de comercial/marca/ragfly-brand.css).
+   Define --ragfly-* (colores + fuentes v1.0). NO editar aquí: editar el original. */
+@import "./ragfly-brand.css";
+
 /* ============================================================
-   Paleta RAGfly — alineada con el diseño Claude Design
+   Paleta del sitio — ALINEADA al sistema de marca v1.0
+   ------------------------------------------------------------
+   Los nombres heredados --slm-* se conservan (los usan varios
+   componentes) pero ahora resuelven a los colores OFICIALES de
+   marca, no a los azules viejos de ServerLM. Una sola fuente.
    ============================================================ */
 :root {
   --background: #ffffff;
-  --foreground: #0F1729;
+  --foreground: var(--ragfly-azul-oscuro);   /* #133242 — tinta de marca */
 
-  /* RAGfly brand */
-  --slm-dark: #0F1729;
-  --slm-brand: #4089CD;
-  --slm-brand-dark: #1E4A82;
-  --slm-brand-light: #7AB4DD;
-  --slm-gray: #646363;
-  --slm-gray-light: #B4B3B3;
-  --slm-light: #EFF4FF;
+  /* RAGfly brand → tokens v1.0 */
+  --slm-dark:        var(--ragfly-azul-oscuro);  /* #133242 titulares/tinta */
+  --slm-brand:       var(--ragfly-azul-marca);   /* #008AD1 acción / CTA */
+  --slm-brand-dark:  var(--ragfly-azul-fondo);   /* #045B8E hover / banda */
+  --slm-brand-light: var(--ragfly-azul-claro);   /* #CCE8F6 acento suave */
+  --slm-gray:        var(--ragfly-gris-oscuro);  /* #646363 texto secundario */
+  --slm-gray-light:  var(--ragfly-gris-claro);   /* #B4B3B3 bordes/apoyo */
+  --slm-light:       #EAF4FB;                     /* fondo suave azulado de marca */
 }
 
 @theme inline {
@@ -28,7 +36,9 @@
   --color-slm-gray-light: var(--slm-gray-light);
   --color-slm-light: var(--slm-light);
   --font-sans: var(--font-sans);
-  --font-helvetica-neue: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Tipografía unificada a marca v1.0: Inter como sans. El alias heredado se
+     conserva pero ahora resuelve a Inter (no Helvetica Neue). */
+  --font-helvetica-neue: var(--font-sans), 'Inter', Arial, sans-serif;
 }
 
 /* ============================================================
@@ -39,12 +49,13 @@
 html, body { background: #ffffff; }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans), 'Inter', Arial, sans-serif;
   color: var(--slm-dark);
 }
 
-.font-manrope { font-family: var(--font-manrope), 'Manrope', var(--font-sans), sans-serif; }
-.font-helvetica-neue { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+/* Aliases heredados → todos resuelven a Inter (sans de marca v1.0). */
+.font-manrope { font-family: var(--font-sans), 'Inter', sans-serif; }
+.font-helvetica-neue { font-family: var(--font-sans), 'Inter', Arial, sans-serif; }
 
 /* ============================================================
    Hero canvas — fondo animado con gradientes
@@ -52,17 +63,17 @@ body {
 .hero-canvas {
   position: absolute; inset: 0; z-index: 0; overflow: hidden;
   background:
-    radial-gradient(1200px 800px at 80% 20%, rgba(122,180,221,0.35), transparent 60%),
-    radial-gradient(900px 700px at 15% 75%, rgba(30,74,130,0.20), transparent 65%),
-    radial-gradient(700px 500px at 50% 50%, rgba(64,137,205,0.18), transparent 70%),
+    radial-gradient(1200px 800px at 80% 20%, rgba(204,232,246,0.35), transparent 60%),
+    radial-gradient(900px 700px at 15% 75%, rgba(4,91,142,0.20), transparent 65%),
+    radial-gradient(700px 500px at 50% 50%, rgba(0,138,209,0.18), transparent 70%),
     linear-gradient(180deg, #f5f8fc 0%, #eaf1f9 60%, #ffffff 100%);
 }
 .hero-canvas::before, .hero-canvas::after {
   content: ""; position: absolute; inset: -10%;
   background-image:
-    radial-gradient(2px 2px at 20% 30%, rgba(30,74,130,0.20), transparent 60%),
-    radial-gradient(2px 2px at 70% 60%, rgba(64,137,205,0.18), transparent 60%),
-    radial-gradient(2px 2px at 40% 80%, rgba(122,180,221,0.30), transparent 60%);
+    radial-gradient(2px 2px at 20% 30%, rgba(4,91,142,0.20), transparent 60%),
+    radial-gradient(2px 2px at 70% 60%, rgba(0,138,209,0.18), transparent 60%),
+    radial-gradient(2px 2px at 40% 80%, rgba(204,232,246,0.30), transparent 60%);
   background-size: 220px 220px;
   animation: drift 22s linear infinite;
   opacity: 0.55;
@@ -85,9 +96,9 @@ body {
   width: clamp(70px, 8vw, 120px);
   aspect-ratio: 4/5;
   background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(30,74,130,0.10);
+  border: 1px solid rgba(4,91,142,0.10);
   border-radius: 10px;
-  box-shadow: 0 12px 30px -18px rgba(15,23,41,0.35), 0 2px 8px rgba(15,23,41,0.04);
+  box-shadow: 0 12px 30px -18px rgba(19,50,66,0.35), 0 2px 8px rgba(19,50,66,0.04);
   backdrop-filter: blur(6px);
   overflow: hidden;
   animation: floatUp 18s linear infinite;
@@ -96,7 +107,7 @@ body {
 .doc-tile::before {
   content: ""; position: absolute; left: 10%; right: 10%; top: 14%;
   height: 6px; border-radius: 3px;
-  background: linear-gradient(90deg, #1E4A82, #4089CD);
+  background: linear-gradient(90deg, #045B8E, #008AD1);
   opacity: 0.75;
 }
 .doc-tile::after {
@@ -120,22 +131,22 @@ body {
 /* Card 1 — Privacidad */
 .card1-bg {
   background:
-    radial-gradient(700px 400px at 50% 30%, rgba(64,137,205,0.32), transparent 70%),
+    radial-gradient(700px 400px at 50% 30%, rgba(0,138,209,0.32), transparent 70%),
     linear-gradient(160deg, #dceaf6 0%, #cfe0ef 60%, #b9d0e6 100%);
 }
 .card1-shield {
   position: absolute; left: 50%; top: 42%; width: 56%; aspect-ratio: 1/1.05;
   transform: translate(-50%,-50%);
   border-radius: 50% 50% 50% 50% / 36% 36% 64% 64%;
-  background: radial-gradient(circle at 50% 35%, rgba(30,74,130,0.12), rgba(30,74,130,0.04) 60%, transparent 75%);
-  border: 1px solid rgba(30,74,130,0.18);
+  background: radial-gradient(circle at 50% 35%, rgba(4,91,142,0.12), rgba(4,91,142,0.04) 60%, transparent 75%);
+  border: 1px solid rgba(4,91,142,0.18);
   overflow: hidden;
 }
 .card1-shield::before {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(rgba(30,74,130,0.16) 1px, transparent 1px) 0 0/100% 22px,
-    linear-gradient(90deg, rgba(30,74,130,0.16) 1px, transparent 1px) 0 0/22px 100%;
+    linear-gradient(rgba(4,91,142,0.16) 1px, transparent 1px) 0 0/100% 22px,
+    linear-gradient(90deg, rgba(4,91,142,0.16) 1px, transparent 1px) 0 0/22px 100%;
   mask: radial-gradient(closest-side at 50% 50%, #000 60%, transparent 78%);
   -webkit-mask: radial-gradient(closest-side at 50% 50%, #000 60%, transparent 78%);
   animation: pulseGrid 4.5s ease-in-out infinite;
@@ -144,7 +155,7 @@ body {
 .card1-ring {
   position: absolute; left: 50%; top: 42%; transform: translate(-50%,-50%);
   width: 78%; aspect-ratio: 1/1.05; border-radius: 50%;
-  border: 1px dashed rgba(30,74,130,0.35);
+  border: 1px dashed rgba(4,91,142,0.35);
   animation: spin 28s linear infinite;
 }
 .card1-ring.r2 { width: 96%; border-style: dotted; opacity: .6; animation-duration: 60s; animation-direction: reverse; }
@@ -158,7 +169,7 @@ body {
 }
 .card2-bg::before {
   content: ""; position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(15,23,41,0.10) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(19,50,66,0.10) 1px, transparent 1px);
   background-size: 18px 18px;
   mask: linear-gradient(180deg, rgba(0,0,0,.6), transparent 75%);
   -webkit-mask: linear-gradient(180deg, rgba(0,0,0,.6), transparent 75%);
@@ -167,9 +178,9 @@ body {
 .greeting-stack {
   position: absolute; top: 28px; right: 28px;
   height: 44px; overflow: hidden;
-  font-family: 'Helvetica Neue', sans-serif; font-weight: 500;
+  font-family: var(--font-sans), 'Inter', sans-serif; font-weight: 500;
   font-size: 28px; line-height: 44px; letter-spacing: -0.02em;
-  color: #0F1729; text-align: right;
+  color: #133242; text-align: right;
 }
 .greeting-stack ul { margin: 0; padding: 0; list-style: none; animation: rollGreet 12s steps(6) infinite; }
 .greeting-stack li { height: 44px; }
@@ -178,15 +189,15 @@ body {
   100% { transform: translateY(-264px); }
 }
 .flag-dots { position: absolute; bottom: 28px; left: 28px; display: flex; gap: 8px; }
-.flag-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(15,23,41,0.18); }
-.flag-dots span.on { background: #1E4A82; box-shadow: 0 0 0 4px rgba(30,74,130,0.12); animation: flagPulse 12s steps(6) infinite; }
+.flag-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(19,50,66,0.18); }
+.flag-dots span.on { background: #045B8E; box-shadow: 0 0 0 4px rgba(4,91,142,0.12); animation: flagPulse 12s steps(6) infinite; }
 @keyframes flagPulse {
-  0%, 100% { background: #1E4A82; }
-  16.6%    { background: #4089CD; }
-  33.2%    { background: #7AB4DD; }
-  49.8%    { background: #1E4A82; }
-  66.4%    { background: #4089CD; }
-  83%      { background: #7AB4DD; }
+  0%, 100% { background: #045B8E; }
+  16.6%    { background: #008AD1; }
+  33.2%    { background: #CCE8F6; }
+  49.8%    { background: #045B8E; }
+  66.4%    { background: #008AD1; }
+  83%      { background: #CCE8F6; }
 }
 
 /* Card 3 — Multi-org */
@@ -199,18 +210,18 @@ body {
 .org-card {
   flex: 1; aspect-ratio: 5/4; border-radius: 14px;
   background: rgba(255,255,255,0.85);
-  border: 1px solid rgba(15,23,41,0.08);
-  box-shadow: 0 16px 30px -22px rgba(15,23,41,0.35);
+  border: 1px solid rgba(19,50,66,0.08);
+  box-shadow: 0 16px 30px -22px rgba(19,50,66,0.35);
   position: relative; overflow: hidden;
 }
 .org-card .accent { position: absolute; top: 10px; left: 10px; width: 18px; height: 18px; border-radius: 6px; }
-.org-card .ln { position: absolute; left: 10px; right: 10px; height: 5px; border-radius: 3px; background: rgba(15,23,41,0.08); }
+.org-card .ln { position: absolute; left: 10px; right: 10px; height: 5px; border-radius: 3px; background: rgba(19,50,66,0.08); }
 .org-card .ln.a { top: 38px; right: 35%; }
 .org-card .ln.b { top: 50px; right: 50%; }
 .org-card .ln.c { top: 62px; right: 25%; }
-.org-card.c1 .accent { background: #1E4A82; animation: accentPulse 6s ease-in-out infinite; }
-.org-card.c2 .accent { background: #4089CD; animation: accentPulse 6s ease-in-out infinite; animation-delay: -2s; }
-.org-card.c3 .accent { background: #7AB4DD; animation: accentPulse 6s ease-in-out infinite; animation-delay: -4s; }
+.org-card.c1 .accent { background: #045B8E; animation: accentPulse 6s ease-in-out infinite; }
+.org-card.c2 .accent { background: #008AD1; animation: accentPulse 6s ease-in-out infinite; animation-delay: -2s; }
+.org-card.c3 .accent { background: #CCE8F6; animation: accentPulse 6s ease-in-out infinite; animation-delay: -4s; }
 @keyframes accentPulse { 0%,100% { transform: scale(1); opacity: 1 } 50% { transform: scale(1.15); opacity: .8 } }
 
 /* Grain overlay */
@@ -224,12 +235,12 @@ body {
    ZeroSetup — carpetas escaneándose
    ============================================================ */
 @keyframes folderScan {
-  0%, 70%, 100% { background: #ffffff; border-color: rgba(15,23,41,0.08); }
-  15%, 55%      { background: #EFF4FF; border-color: rgba(64,137,205,0.35); }
+  0%, 70%, 100% { background: #ffffff; border-color: rgba(19,50,66,0.08); }
+  15%, 55%      { background: #EFF4FF; border-color: rgba(0,138,209,0.35); }
 }
 .zs-status {
-  color: #1E4A82;
-  background: rgba(64,137,205,0.10);
+  color: #045B8E;
+  background: rgba(0,138,209,0.10);
   padding: 4px 8px;
   border-radius: 999px;
 }
@@ -239,7 +250,7 @@ body {
    ============================================================ */
 .doc-prose {
   color: var(--slm-dark);
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans), 'Inter', Arial, sans-serif;
   font-size: 15px;
   line-height: 1.7;
 }
