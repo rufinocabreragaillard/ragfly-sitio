@@ -36,6 +36,16 @@ const BACK_LABEL: Record<string, string> = {
   de: '← Zurück zur Startseite',
 }
 
+/* Etiquetas del chrome (footer) por idioma — mismo registro que el contenido */
+type ChromeLabels = { rights: string; terms: string; privacy: string; home: string }
+const CHROME: Record<string, ChromeLabels> = {
+  es: { rights: 'Todos los derechos reservados.', terms: 'Términos', privacy: 'Privacidad', home: 'Inicio' },
+  en: { rights: 'All rights reserved.', terms: 'Terms', privacy: 'Privacy', home: 'Home' },
+  pt: { rights: 'Todos os direitos reservados.', terms: 'Termos', privacy: 'Privacidade', home: 'Início' },
+  fr: { rights: 'Tous droits réservés.', terms: 'Conditions', privacy: 'Confidentialité', home: 'Accueil' },
+  de: { rights: 'Alle Rechte vorbehalten.', terms: 'Bedingungen', privacy: 'Datenschutz', home: 'Startseite' },
+}
+
 /* ------------------------------------------------------------------ */
 /* Render inline: **negrita** + enlaces de email, URL y dominio ragfly  */
 /* ------------------------------------------------------------------ */
@@ -128,6 +138,7 @@ function Block({ block, k }: { block: LegalBlock; k: string }) {
 export default function LegalPage({ content }: { content: LegalContent }) {
   const locale = useLocale()
   const back = BACK_LABEL[locale] ?? BACK_LABEL.en
+  const chrome = CHROME[locale] ?? CHROME.en
 
   return (
     <main className="min-h-screen bg-white text-slm-dark">
@@ -188,11 +199,11 @@ export default function LegalPage({ content }: { content: LegalContent }) {
       {/* Footer mínimo */}
       <footer className="border-t border-white/10 bg-slm-dark px-6 py-10 text-slm-gray-light md:px-10">
         <div className="mx-auto flex max-w-[1100px] flex-col gap-3 text-xs font-helvetica-neue md:flex-row md:items-center md:justify-between">
-          <span>© {new Date().getFullYear()} RAGfly — Todos los derechos reservados.</span>
+          <span>© {new Date().getFullYear()} RAGfly — {chrome.rights}</span>
           <div className="flex gap-6">
-            <Link href="/legal/terms" className="hover:text-white">Términos</Link>
-            <Link href="/legal/privacy" className="hover:text-white">Privacidad</Link>
-            <Link href="/" className="hover:text-white">Inicio</Link>
+            <Link href="/legal/terms" className="hover:text-white">{chrome.terms}</Link>
+            <Link href="/legal/privacy" className="hover:text-white">{chrome.privacy}</Link>
+            <Link href="/" className="hover:text-white">{chrome.home}</Link>
           </div>
         </div>
       </footer>
