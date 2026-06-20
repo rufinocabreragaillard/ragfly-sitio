@@ -3,6 +3,9 @@ import { Inter, Lora, Manrope } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import "./globals.css";
+// FAQ: fuente única en comercial/comercial-operativo/RAGfly_FAQ.md (bloque A).
+// Espejo sincronizado por la skill /ragfly-faq-sitio — no editar a mano.
+import faq from "../content/faq.json";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -113,104 +116,11 @@ const jsonLd = {
     {
       "@type": "FAQPage",
       "@id": "https://ragfly.ai/#faq",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "¿Qué es RAGfly?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "La capa de contexto documental para agentes de IA: convierte cualquier corpus de documentos —miles o decenas de miles, incluidos escaneados— en una base de recuperación segura, multi-tenant y lista para producción, sin construir ni mantener un pipeline RAG.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Para quién es?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Para desarrolladores, consultoras e integradores que construyen agentes de IA sobre documentos privados —a veces de muchos clientes distintos— y no quieren ser dueños de la infraestructura RAG a escala.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Cuánto cuesta?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Cobro por página procesada, en páginas y dólares: Free $0 (~1.000 páginas), Starter $19 (~4.000), Team $95 (~10.000, multi-tenant), Scale $490 (~60.000) y Enterprise inbound. Página adicional Fast $0,02 / Hi-res $0,05. Superficies MCP/REST/CLI en todos los planes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Cómo funciona?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Apuntas RAGfly al directorio de tus documentos; el sistema los escanea, vectoriza e indexa automáticamente. Luego tu agente recupera por significado y obtiene respuestas con citas a la fuente vía MCP, REST o CLI — aislado por cliente y dentro de tu red.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Cómo consume un agente de IA a RAGfly?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Vía un servidor MCP remoto (SSE o HTTP) o la CLI de RAGfly Desktop, autenticándose con JWT o API Key. El catálogo de operaciones está publicado en https://ragfly.ai/agents.json y https://ragfly.ai/llms-full.txt.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Mis documentos salen a la nube?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No almacenamos tu documento: la indexación y vectorización se realizan «en el aire» y los datos quedan encriptados. Con RAGfly Desktop la indexación tampoco sale de la red interna del cliente.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Cómo se aíslan los datos de un cliente respecto de otro?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Multi-tenant de fábrica: cada cliente vive en un corpus aislado desde la base de datos, con una estructura de Grupos → Entidades → Áreas. Una consultora o integrador puede servir a decenas de clientes desde una sola plataforma sin que un dato cruce de uno a otro.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Puedo usar mi propia base vectorial y mi propio modelo?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. RAGfly es DB-agnóstico: en los planes avanzados traes tu propia base vectorial (BYO) y eliges tus propios modelos de embeddings y LLM, sin quedar atado a un proveedor.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Con qué modelos de IA funciona — Claude, GPT, Gemini?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "RAGfly es agnóstico de modelo. Entrega la recuperación con citas y permisos; tu agente corre sobre el LLM que prefieras —Claude, GPT, Gemini u otro— y consume RAGfly vía MCP, REST o CLI.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Qué formatos soporta? ¿Funciona con PDFs escaneados (OCR)?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "PDF, Word, Excel y texto plano, incluidos documentos escaneados gracias a OCR de primer nivel y comprensión de tablas y layout. El foco es texto y documentos complejos, no audio ni video.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿Puedo desplegarlo on-premise para datos regulados (legal, salud, gobierno)?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sí. Con RAGfly Desktop / Client LM la indexación y vectorización ocurren dentro de la red del cliente, sin que el documento salga. Es lo que habilita clientes regulados de legal, salud, gobierno y finanzas.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "¿En cuánto tiempo paso de un directorio a un agente respondiendo con citas?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Apuntas RAGfly a un directorio y, con ingesta, vectorización e indexado automáticos, puedes tener un agente respondiendo con citas en menos de 30 minutos — sin construir ni mantener un pipeline RAG a escala.",
-          },
-        },
-      ],
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
     },
   ],
 };
