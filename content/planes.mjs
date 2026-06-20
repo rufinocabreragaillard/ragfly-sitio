@@ -110,3 +110,7 @@ export const planes = [
     ],
   },
 ]
+
+// Nota al pie de la tabla de planes (se traduce con /ragfly-idiomas-sitio).
+export const notaPlanes =
+  'El cobro es por página procesada más uso de recuperación, en dólares — sin créditos que caduquen. Las páginas extra se cobran por uso (Fast $0,02 / Hi-res $0,05).'

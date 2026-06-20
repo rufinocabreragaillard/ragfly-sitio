@@ -210,6 +210,7 @@
     "eyebrow": "Planes",
     "titulo": "Cobramos por página procesada. En páginas y dólares, no en créditos.",
     "recomendado": "Recomendado",
+    "nota": "El cobro es por página procesada más uso de recuperación, en dólares — sin créditos que caduquen. Las páginas extra se cobran por uso (Fast $0,02 / Hi-res $0,05).",
     "plan0Nombre": "Free",
     "plan0Sub": "Para probar",
     "plan0Precio": "USD $0/mes",
@@ -394,20 +395,56 @@
     "viewRaw": "Ver {archivo} crudo →",
     "docMetaSuffix": "Construye sobre RAGfly",
     "groups": {
-      "interfaces": { "titulo": "Las cinco interfaces", "desc": "Elige la que encaje con tu stack — todas comparten el mismo contrato de autenticación y el mismo RBAC." },
-      "guias": { "titulo": "Guías y referencia", "desc": "Cómo empezar, cómo se comporta cada runtime y cómo reportar tu evaluación." }
+      "interfaces": {
+        "titulo": "Las cinco interfaces",
+        "desc": "Elige la que encaje con tu stack — todas comparten el mismo contrato de autenticación y el mismo RBAC."
+      },
+      "guias": {
+        "titulo": "Guías y referencia",
+        "desc": "Cómo empezar, cómo se comporta cada runtime y cómo reportar tu evaluación."
+      }
     },
     "cards": {
-      "sdk": { "titulo": "Python SDK", "desc": "pip install ragfly. El camino más rápido desde Python: client.ask(\"…\")." },
-      "mcp": { "titulo": "MCP", "desc": "Agentes LLM (Claude Code, Cursor, Cline, Codex). El agente descubre los tools por sí mismo." },
-      "cli": { "titulo": "CLI", "desc": "Scripts, automatizaciones, pipelines CI/CD y diagnóstico desde terminal." },
-      "rest": { "titulo": "REST + SSE", "desc": "Cualquier lenguaje o plataforma: n8n, Make, Zapier, apps propias." },
-      "quickstart": { "titulo": "Quickstart", "desc": "De cero a la primera consulta semántica: registro → API Key → MCP → resultado." },
-      "integration": { "titulo": "Guía de integración", "desc": "Credenciales, roles, tipos de identidad y el contrato común a toda interfaz." },
-      "runtime-hints": { "titulo": "Runtime hints", "desc": "Qué tool usar según el runtime: agentes de contexto corto, razonadores, IDEs, REST." },
-      "agents-md": { "titulo": "AGENTS.md", "desc": "Déjalo en la raíz del workspace de tu agente (Codex/Claude)." },
-      "evaluation-template": { "titulo": "Plantilla de evaluación", "desc": "Reporta los hallazgos de tu prueba con un formato estándar." },
-      "readme": { "titulo": "Kit de integración", "desc": "Índice del kit." }
+      "sdk": {
+        "titulo": "Python SDK",
+        "desc": "pip install ragfly. El camino más rápido desde Python: client.ask(\"…\")."
+      },
+      "mcp": {
+        "titulo": "MCP",
+        "desc": "Agentes LLM (Claude Code, Cursor, Cline, Codex). El agente descubre los tools por sí mismo."
+      },
+      "cli": {
+        "titulo": "CLI",
+        "desc": "Scripts, automatizaciones, pipelines CI/CD y diagnóstico desde terminal."
+      },
+      "rest": {
+        "titulo": "REST + SSE",
+        "desc": "Cualquier lenguaje o plataforma: n8n, Make, Zapier, apps propias."
+      },
+      "quickstart": {
+        "titulo": "Quickstart",
+        "desc": "De cero a la primera consulta semántica: registro → API Key → MCP → resultado."
+      },
+      "integration": {
+        "titulo": "Guía de integración",
+        "desc": "Credenciales, roles, tipos de identidad y el contrato común a toda interfaz."
+      },
+      "runtime-hints": {
+        "titulo": "Runtime hints",
+        "desc": "Qué tool usar según el runtime: agentes de contexto corto, razonadores, IDEs, REST."
+      },
+      "agents-md": {
+        "titulo": "AGENTS.md",
+        "desc": "Déjalo en la raíz del workspace de tu agente (Codex/Claude)."
+      },
+      "evaluation-template": {
+        "titulo": "Plantilla de evaluación",
+        "desc": "Reporta los hallazgos de tu prueba con un formato estándar."
+      },
+      "readme": {
+        "titulo": "Kit de integración",
+        "desc": "Índice del kit."
+      }
     }
   }
 }

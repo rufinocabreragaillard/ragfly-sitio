@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
-import { planes } from '../content/planes.mjs'
+import { planes, notaPlanes } from '../content/planes.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const root = resolve(here, '..')
@@ -29,6 +29,7 @@ const bloque = {
   eyebrow: prev.eyebrow ?? 'Planes',
   titulo: prev.titulo ?? 'Un plan para cada tamaño de organización.',
   recomendado: prev.recomendado ?? 'Recomendado',
+  nota: notaPlanes,
 }
 
 const meta = { plans: [] }
