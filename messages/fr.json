@@ -1,7 +1,8 @@
 {
   "metadata": {
-    "title": "RAGfly — Infrastructure RAG pour vos agents",
-    "description": "RAG à l'échelle pour que n'importe quel agent converse avec des milliers de documents privés — multi-tenant, isolé par client, sans stocker vos documents. Connectez un répertoire via MCP, REST ou CLI."
+    "title": "RAGfly — Framework RAG multi-tenant pour agents IA",
+    "description": "Infrastructure de génération augmentée par récupération (RAG) à l'échelle pour que tout agent IA dialogue avec des milliers de documents privés — multi-tenant, isolé par client, sans stocker vos documents. Connectez un répertoire via MCP, REST ou CLI.",
+    "keywords": ["RAG framework", "infrastructure RAG", "RAG as a service", "RAG API", "RAG multi-tenant", "génération augmentée par récupération", "retrieval augmented generation", "RAG pour agents IA", "serveur MCP RAG", "RAG privé", "chat avec vos documents"]
   },
   "nav": {
     "producto": "C'est quoi",
