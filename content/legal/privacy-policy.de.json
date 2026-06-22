@@ -171,8 +171,26 @@
       ]
     },
     {
+      "id": "sec-google-drive",
+      "heading": "12. Google-Drive-Zugriff (Eingeschränkte Nutzung)",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Wenn Sie einen Google-Drive-Ordner verbinden, fordert RAGfly **Lesezugriff** (Berechtigungsbereich `drive.readonly`) an, um die Dokumente im ausgewählten Ordner zu lesen und sie in abrufbaren Kontext für Ihre eigenen KI-Agenten umzuwandeln. RAGfly ändert, erstellt oder löscht niemals etwas in Ihrem Google Drive."
+        },
+        {
+          "kind": "p",
+          "text": "Die Dateien werden in den Browser des Nutzers heruntergeladen, der Text wird lokal extrahiert, und nur der extrahierte (verschlüsselte) Text wird an unser Backend gesendet; die Originaldatei wird nicht auf den Servern von RAGfly gespeichert."
+        },
+        {
+          "kind": "p",
+          "text": "Die Nutzung von Informationen, die RAGfly über Google-APIs erhält, entspricht der **Google API Services User Data Policy**, einschließlich der Anforderungen an die **eingeschränkte Nutzung (Limited Use)**. Wir verkaufen diese Daten nicht und verwenden sie nicht zum Training allgemeiner KI-Modelle."
+        }
+      ]
+    },
+    {
       "id": "sec-12",
-      "heading": "12. Änderungen dieser Richtlinie",
+      "heading": "13. Änderungen dieser Richtlinie",
       "blocks": [
         {
           "kind": "p",
@@ -182,7 +200,7 @@
     },
     {
       "id": "sec-13",
-      "heading": "13. Sprache",
+      "heading": "14. Sprache",
       "blocks": [
         {
           "kind": "p",
@@ -192,7 +210,7 @@
     },
     {
       "id": "sec-14",
-      "heading": "14. Kontakt",
+      "heading": "15. Kontakt",
       "blocks": [
         {
           "kind": "p",

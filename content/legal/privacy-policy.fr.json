@@ -171,8 +171,26 @@
       ]
     },
     {
+      "id": "sec-google-drive",
+      "heading": "12. Accès à Google Drive (Usage Limité)",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Lorsque vous connectez un dossier Google Drive, RAGfly demande un accès en **lecture seule** (portée `drive.readonly`) pour lire les documents du dossier que vous sélectionnez et les transformer en contexte récupérable par vos propres agents d'IA. RAGfly ne modifie, ne crée ni ne supprime jamais rien dans votre Google Drive."
+        },
+        {
+          "kind": "p",
+          "text": "Les fichiers sont téléchargés dans le navigateur de l'utilisateur, le texte est extrait localement et seul le texte extrait (chiffré) est envoyé à notre backend ; le fichier original n'est pas stocké sur les serveurs de RAGfly."
+        },
+        {
+          "kind": "p",
+          "text": "L'utilisation par RAGfly des informations reçues des API de Google est conforme à la **Politique relative aux données utilisateur des services d'API Google**, y compris aux exigences d'**Usage Limité (Limited Use)**. Nous ne vendons pas ces données et ne les utilisons pas pour entraîner des modèles d'IA généralistes."
+        }
+      ]
+    },
+    {
       "id": "sec-12",
-      "heading": "12. Modifications de cette Politique",
+      "heading": "13. Modifications de cette Politique",
       "blocks": [
         {
           "kind": "p",
@@ -182,7 +200,7 @@
     },
     {
       "id": "sec-13",
-      "heading": "13. Langue",
+      "heading": "14. Langue",
       "blocks": [
         {
           "kind": "p",
@@ -192,7 +210,7 @@
     },
     {
       "id": "sec-14",
-      "heading": "14. Contact",
+      "heading": "15. Contact",
       "blocks": [
         {
           "kind": "p",
