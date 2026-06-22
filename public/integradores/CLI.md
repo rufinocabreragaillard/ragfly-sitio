@@ -16,10 +16,15 @@ The `ragfly` binary lets you operate RAGfly from the terminal or scripts without
 ## Installation
 
 ```bash
-pip install ragfly
+pip install ragfly-cli
 ragfly version
-# RAGfly Desktop v2.x.x
+# RAGfly Cliente v1.16.0
 ```
+
+> **Three different packages — don't confuse them:**
+> - `pip install ragfly-cli` → the **`ragfly` binary** for terminal/CI (this doc). Lightweight.
+> - `pip install ragfly` → the **Python SDK** (`import ragfly`), for embedding RAGfly in your code.
+> - **RAGfly Desktop** (DMG/exe) → bundles the local file worker for `ragfly local scan/sync/daemon`.
 
 ---
 
@@ -40,12 +45,20 @@ ragfly login
 export RAGFLY_TOKEN=slm_live_xxxxxxxxxx   # the CLI picks it up automatically
 ```
 
-Or create one from the CLI:
+Create one from the CLI:
 
 ```bash
 ragfly cloud api-key crear --nombre "pipeline-ci" --rol DOC-ADMIN
-# → api_key: slm_live_...  (save now — not shown again)
+# ✓ API Key creada — guardala AHORA (no se vuelve a mostrar):
+#   slm_live_a1b2c3...
+ragfly cloud api-key listar              # prefijos, rol, último uso, estado
+ragfly cloud api-key revocar slm_live_a1b2c3   # por prefijo
 ```
+
+You can also create it from the web app (**API Keys** screen) or the REST API
+(`POST /auth/api-key`). The key authenticates as `Authorization: Bearer
+slm_live_…` against every REST endpoint, and the CLI consumes it via
+`RAGFLY_TOKEN` on any `ragfly cloud …` command (verified).
 
 ---
 
@@ -53,19 +66,22 @@ ragfly cloud api-key crear --nombre "pipeline-ci" --rol DOC-ADMIN
 
 ```
 ragfly
-├── login / logout / version / config
-├── local       ← operations on the local filesystem (scan, sync, daemon)
+├── login / logout / version
 └── cloud       ← operations against the remote API (api.ragfly.ai)
     ├── me
+    ├── grupo       listar | cambiar | limpiar
+    ├── api-key     crear | listar | revocar
     ├── documento   listar | ver
     ├── espacio     listar | ver
-    ├── habilidad   listar | ver | ejecutar
     ├── cola        ver | ejecuciones
-    ├── api-key     crear | listar | revocar
-    └── chat        enviar
+    ├── habilidad   listar | ver | ejecutar
+    ├── catalogo
+    ├── buscar
+    └── chat        preguntar
 ```
 
-Legacy commands (`ragfly escanear`, `ragfly sync`, etc.) still work as aliases for `ragfly local <cmd>` for compatibility with existing scripts.
+> `ragfly local <cmd>` (filesystem scan/sync/daemon) ships with **RAGfly Desktop**,
+> not with `ragfly-cli`. Install the desktop app to use those.
 
 ---
 
@@ -134,10 +150,10 @@ ragfly cloud cola ejecuciones --limite 10
 
 ```bash
 # New thread
-ragfly cloud chat enviar "Summarize the 2024 lease contracts"
+ragfly cloud chat preguntar "Summarize the 2024 lease contracts"
 
 # Continue existing thread
-ragfly cloud chat enviar --conversacion 512 "Which ones have a price adjustment clause?"
+ragfly cloud chat preguntar --conversacion 512 "Which ones have a price adjustment clause?"
 ```
 
 ---
@@ -172,14 +188,14 @@ ragfly cloud documento listar --estado CHUNKEADO -o json \
 
 ---
 
-## Local operations (`ragfly local`)
+## Local operations (`ragfly local`) — ships with RAGfly Desktop
 
-To scan the filesystem and sync with the cloud:
+Scanning the local filesystem and syncing it to the cloud needs the local file
+worker (text extraction, watcher), which is **not** part of `ragfly-cli`. Install
+**RAGfly Desktop** (DMG/exe) to get these:
 
 ```bash
 ragfly local escanear /path/to/my/documents
 ragfly local sync
-ragfly local daemon   # daemon mode — watches for changes and syncs automatically
+ragfly local daemon   # watches for changes and syncs automatically
 ```
-
-These operations require the client to be configured pointing to your cloud group.
