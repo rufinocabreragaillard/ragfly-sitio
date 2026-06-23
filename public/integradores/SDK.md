@@ -1,6 +1,6 @@
 ---
 status: live
-last_updated: 2026-06-18
+last_updated: 2026-06-23
 audience: external integrators — Python developers
 see_also:
   - INTEGRATION.md

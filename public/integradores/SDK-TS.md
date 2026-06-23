@@ -1,6 +1,6 @@
 ---
 status: live
-last_updated: 2026-06-20
+last_updated: 2026-06-23
 audience: external integrators — TypeScript/JavaScript developers
 see_also:
   - INTEGRATION.md
