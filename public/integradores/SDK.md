@@ -24,7 +24,7 @@ pip install ragfly
 
 Requires Python 3.10+. Single dependency: `httpx`.
 
-- **PyPI**: [pypi.org/project/ragfly](https://pypi.org/project/ragfly/0.1.0/)
+- **PyPI**: [pypi.org/project/ragfly](https://pypi.org/project/ragfly/)
 - **GitHub**: [github.com/rufinocabreragaillard/ragfly-python](https://github.com/rufinocabreragaillard/ragfly-python)
 
 ---
