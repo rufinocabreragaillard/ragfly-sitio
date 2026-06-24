@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "RAGfly — Multi-tenant RAG framework for AI agents",
+    "title": "RAGfly — Multi-tenant RAG service for AI agents",
     "description": "Multi-tenant retrieval-augmented generation (RAG) infrastructure for AI agents, with client isolation and verifiable privacy for each deployment mode. Connect a directory via MCP, REST, CLI or SDK.",
     "keywords": [
-      "RAG framework",
+      "RAG service",
       "RAG infrastructure",
       "managed RAG",
       "RAG as a service",
@@ -36,7 +36,7 @@
     "cta": "Start free"
   },
   "hero": {
-    "eyebrow": "RAG Framework",
+    "eyebrow": "RAG Service",
     "headlineLead": "Augmented retrieval",
     "headlineAccent": "for your agents.",
     "slogan": "Simple, private, and precise. And every one of your clients, in their own space.",

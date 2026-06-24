@@ -1,6 +1,6 @@
 # RAGfly
 
-> RAG Framework multi-tenant para agentes de IA. Convierte cualquier corpus de documentos en una base de recuperación segura, aislada por cliente y lista para producción — sin construir ni mantener un pipeline RAG. Vía MCP, REST y CLI.
+> Servicio de RAG multi-tenant para agentes de IA. Convierte cualquier corpus de documentos en una base de recuperación segura, aislada por cliente y lista para producción — sin construir ni mantener un pipeline RAG. Vía MCP, REST y CLI.
 
 RAGfly es la capa de contexto documental para agentes: apuntas a un directorio de documentos y el sistema los escanea, vectoriza e indexa automáticamente. Tu agente obtiene respuestas con citas a la fuente, a escala y aislado por cliente.
 

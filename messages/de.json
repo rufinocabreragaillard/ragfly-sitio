@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "RAGfly — Multi-tenant RAG-Framework für KI-Agenten",
+    "title": "RAGfly — Multi-tenant RAG-Dienst für KI-Agenten",
     "description": "Mandantenfähige RAG-Infrastruktur für KI-Agenten, mit Kundenisolation und überprüfbarem Datenschutz je Bereitstellungsmodus. Verbinde ein Verzeichnis per MCP, REST, CLI oder SDK.",
     "keywords": [
-      "RAG Framework",
+      "RAG-Dienst",
       "RAG-Infrastruktur",
       "Managed RAG",
       "RAG as a Service",
@@ -36,7 +36,7 @@
     "cta": "Kostenlos starten"
   },
   "hero": {
-    "eyebrow": "RAG Framework",
+    "eyebrow": "RAG-Dienst",
     "headlineLead": "Augmented Retrieval",
     "headlineAccent": "für deine Agenten.",
     "slogan": "Einfach, privat und präzise. Und jeder deiner Kunden in seinem eigenen Bereich.",

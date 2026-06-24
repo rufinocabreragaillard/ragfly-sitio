@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "RAGfly — RAG framework multi-tenant para agentes de IA",
+    "title": "RAGfly — Servicio de RAG multi-tenant para agentes de IA",
     "description": "Infraestructura de recuperación aumentada (RAG) multi-tenant para agentes de IA, con aislamiento por cliente y privacidad verificable por modo de despliegue. Conecta un directorio vía MCP, REST, CLI o SDK.",
     "keywords": [
-      "RAG framework",
+      "Servicio de RAG",
       "infraestructura RAG",
       "RAG gestionado",
       "managed RAG",
@@ -37,7 +37,7 @@
     "cta": "Empieza gratis"
   },
   "hero": {
-    "eyebrow": "RAG Framework",
+    "eyebrow": "Servicio de RAG",
     "headlineLead": "Simple, privado y preciso.",
     "headlineAccent": "Y cada uno de tus clientes, en su propio espacio.",
     "slogan": "Recuperación aumentada para tus agentes.",
