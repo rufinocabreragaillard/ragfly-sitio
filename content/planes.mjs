@@ -33,9 +33,10 @@ export const planes = [
     cta: 'Empezar gratis',
     limites: {
       tokens: '~1.000 páginas procesadas incluidas',
-      vectores: '1 entidad',
+      vectores: '2 entidades aisladas',
     },
     features: [
+      'Multi-tenant: un corpus aislado por cliente',
       'MCP, REST, CLI y SDK',
       'Recuperación con citas',
       'Página adicional Fast $0,02 / Hi-res $0,05',
@@ -49,7 +50,7 @@ export const planes = [
     cta: 'Empezar',
     limites: {
       tokens: '~4.000 páginas procesadas incluidas',
-      vectores: '1 entidad',
+      vectores: '5 entidades aisladas',
     },
     features: [
       'Todo lo de Free',
@@ -66,11 +67,10 @@ export const planes = [
     cta: 'Empezar',
     limites: {
       tokens: '~10.000 páginas procesadas incluidas',
-      vectores: 'Hasta 3 entidades aisladas',
+      vectores: 'Hasta 25 entidades aisladas',
     },
     features: [
       'Todo lo de Starter',
-      'Multi-tenant: un corpus aislado por cliente',
       'Control por Área y perfil',
       'Panel único para todas las entidades',
     ],
@@ -83,7 +83,7 @@ export const planes = [
     cta: 'Empezar',
     limites: {
       tokens: '~60.000 páginas procesadas incluidas',
-      vectores: 'Hasta 15 entidades aisladas',
+      vectores: 'Hasta 150 entidades aisladas',
     },
     features: [
       'Todo lo de Team',
@@ -99,7 +99,7 @@ export const planes = [
     resaltado: false,
     cta: 'Hablar con nosotros',
     limites: {
-      tokens: 'Páginas y entidades a definir',
+      tokens: 'Páginas a definir · entidades ilimitadas',
       vectores: 'Despliegue managed u on-prem/soberano',
     },
     features: [
